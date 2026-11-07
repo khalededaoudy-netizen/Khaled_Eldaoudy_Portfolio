@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  
+  html {
+    background-color: #060709;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #060709;
+    color: #f4f6fa;
+    overflow-x: hidden;
+  }
+
+  /* Custom high-tech scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0a0c10;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #222736;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #c8f202;
+  }
+}
+
+/* Technical grid and subtle scanline overlay */
+.bg-tech-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.bg-circuit-dots {
+  background-image: radial-gradient(rgba(200, 242, 2, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Glassmorphism cards */
+.glass-panel {
+  background: rgba(15, 17, 23, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.glass-panel-glow {
+  background: rgba(15, 17, 23, 0.85);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(200, 242, 2, 0.25);
+  box-shadow: 0 0 30px rgba(200, 242, 2, 0.06);
+}
+
+/* Corner bracket tech accents */
+.tech-bracket {
+  position: relative;
+}
+.tech-bracket::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid #c8f202;
+  border-left: 2px solid #c8f202;
+  pointer-events: none;
+}
+.tech-bracket::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 8px;
+  height: 8px;
+  border-bottom: 2px solid #c8f202;
+  border-right: 2px solid #c8f202;
+  pointer-events: none;
+}
+
+/* Glow utility */
+.lime-glow-text {
+  text-shadow: 0 0 16px rgba(200, 242, 2, 0.4);
+}
+
+.cyan-glow-text {
+  text-shadow: 0 0 16px rgba(0, 229, 255, 0.4);
+}
+
+/* Monospace telemetry pill */
+.telemetry-pill {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Selection style */
+::selection {
+  background: #c8f202;
+  color: #060709;
+}
