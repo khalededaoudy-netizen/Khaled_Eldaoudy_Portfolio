@@ -11,7 +11,7 @@ interface ProjectsProps {
 export const ProjectsSection: React.FC<ProjectsProps> = ({ lang }) => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  // Technical Schematic Illustration for each verified project
+  // Technical Schematic Illustration for each engineering project
   const renderProjectIllustration = (projId: string) => {
     switch (projId) {
       case 'smart-home-iti':

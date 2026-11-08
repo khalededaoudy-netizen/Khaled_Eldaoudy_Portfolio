@@ -76,7 +76,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
             <div className="text-[10px] text-steel-400 text-left md:text-right rtl:md:text-left">
               STATUS: NOMINAL<br />
               FRAMEWORK: REACT 18 + TS + THREE.JS<br />
-              ACCESSIBILITY: WCAG 2.2 AA VERIFIED
+              ACCESSIBILITY: WCAG 2.2 AA COMPLIANT
             </div>
           </div>
 

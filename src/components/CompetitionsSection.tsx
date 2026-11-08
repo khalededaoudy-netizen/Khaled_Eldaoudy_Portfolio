@@ -159,7 +159,7 @@ export const CompetitionsSection: React.FC<CompetitionsProps> = ({ lang }) => {
                 <div className="p-3 rounded bg-dark-950 border border-steel-800/80 text-xs font-mono space-y-1">
                   <span className="text-[10px] text-lime uppercase font-semibold flex items-center gap-1">
                     <Sparkles size={11} />
-                    {lang === 'en' ? 'VERIFIED RECORD' : 'الإنجاز المعتمد'}
+                    {lang === 'en' ? 'KEY ACHIEVEMENT' : 'الإنجاز الأبرز'}
                   </span>
                   <p className="text-steel-300 leading-normal">
                     {lang === 'en' ? comp.technicalImpact : comp.technicalImpactAr}

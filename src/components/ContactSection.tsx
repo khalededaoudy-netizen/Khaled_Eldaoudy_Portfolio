@@ -72,7 +72,7 @@ export const ContactSection: React.FC<ContactProps> = ({ lang }) => {
         {/* 2-Column Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 items-stretch">
           
-          {/* Left Column: Direct Channels & Verified CV Information */}
+          {/* Left Column: Direct Communication Channels & Information */}
           <div className="lg:col-span-5 flex flex-col justify-between space-y-6 sm:space-y-8">
             <div className="space-y-5 sm:space-y-6">
               <h3 className="text-xl sm:text-2xl font-bold text-white font-sans">

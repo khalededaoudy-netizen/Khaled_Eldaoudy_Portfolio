@@ -214,7 +214,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose, la
           {/* Key Implementation Highlights */}
           <div className="space-y-2.5">
             <h3 className="text-sm font-bold text-white uppercase font-mono tracking-wider">
-              {lang === 'en' ? 'Verified Project Highlights' : 'أبرز مميزات ومخرجات المشروع'}
+              {lang === 'en' ? 'Technical Highlights & Deliverables' : 'أبرز مميزات ومخرجات المشروع'}
             </h3>
             <ul className="space-y-2">
               {(lang === 'en' ? project.highlights : project.highlightsAr).map((item, idx) => (

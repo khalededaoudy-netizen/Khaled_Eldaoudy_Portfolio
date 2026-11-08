@@ -237,10 +237,12 @@ export const ThreeHeroCanvas: React.FC = () => {
 
       // Frame rate tracking
       frameCounter++;
-      if (currentTime - fpsTimer >= 1000) {
+      const elapsed = currentTime - fpsTimer;
+      if (elapsed >= 1000) {
+        const calculatedFps = Math.round((frameCounter * 1000) / elapsed);
         setRenderState((prev) => ({
           ...prev,
-          fps: Math.round((frameCounter * 1000) / (currentTime - fpsTimer)),
+          fps: Number.isFinite(calculatedFps) && calculatedFps > 0 ? calculatedFps : 60,
         }));
         frameCounter = 0;
         fpsTimer = currentTime;
@@ -348,16 +350,15 @@ export const ThreeHeroCanvas: React.FC = () => {
         </div>
       )}
 
-      {/* Clearly Defined Conceptual Visualization HUD */}
-      <div className="absolute inset-0 pointer-events-none flex flex-col justify-between p-3 sm:p-5 text-[10px] font-mono text-steel-400">
-        {/* Top-Right Telemetry Data Box */}
-        <div className="self-end bg-dark-900/85 backdrop-blur-md border border-steel-700/60 p-2 sm:p-2.5 rounded-sm max-w-[200px] sm:max-w-[220px] space-y-1">
+      {/* Sleek Technical HUD Telemetry Overlay */}
+      <div className="absolute top-3 right-3 sm:top-4 sm:right-4 pointer-events-none text-[10px] font-mono text-steel-400 z-10">
+        <div className="bg-dark-900/90 backdrop-blur-md border border-steel-700/60 p-2 sm:p-2.5 rounded-sm w-[170px] sm:w-[190px] space-y-1 shadow-lg">
           <div className="flex items-center justify-between text-lime text-[10px] sm:text-[11px] font-semibold border-b border-steel-700/40 pb-1">
             <span className="flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-lime animate-pulse" />
-              3D_GIMBAL_MODEL
+              KINEMATICS
             </span>
-            <span className="text-steel-400 font-normal">{renderState.fps} FPS</span>
+            <span className="text-steel-400 font-normal">{renderState.fps || 60} FPS</span>
           </div>
           <div className="flex justify-between">
             <span className="text-steel-400">PITCH (X):</span>
@@ -370,17 +371,6 @@ export const ThreeHeroCanvas: React.FC = () => {
           <div className="flex justify-between pt-1 border-t border-steel-700/30 text-[9px]">
             <span className="text-steel-400">ENGINE:</span>
             <span className="text-cyan-telemetry">THREE.JS WEBGL</span>
-          </div>
-        </div>
-
-        {/* Bottom-Left Descriptive Clarification */}
-        <div className="self-start bg-dark-900/85 backdrop-blur-md border border-steel-700/60 p-2 rounded-sm space-y-0.5 max-w-[220px] sm:max-w-[260px]">
-          <div className="text-steel-300 flex items-center gap-1.5 text-[9px] sm:text-[10px] font-semibold">
-            <span className="w-2 h-[2px] bg-lime" />
-            <span>CONCEPTUAL 3D VISUALIZATION</span>
-          </div>
-          <div className="text-[8px] sm:text-[9px] text-steel-400 leading-tight">
-            Illustrative kinematic model with cursor tracking. (Visual representation — not actual hardware telemetry).
           </div>
         </div>
       </div>

@@ -106,8 +106,8 @@ export const EntrepreneurialSection: React.FC<EntrepreneurialProps> = ({ lang })
                 </div>
 
                 <div className="pt-3 border-t border-steel-800/60 flex items-center justify-between text-[10px] font-mono text-steel-400">
-                  <span>{lang === 'en' ? 'MARKET TRACK RECORD' : 'السجل التجاري'}</span>
-                  <span className="text-steel-300 font-medium">{lang === 'en' ? 'VERIFIED •' : 'موثق بالسيرة الذاتية •'}</span>
+                  <span>{lang === 'en' ? 'OPERATIONAL RECORD' : 'السجل التشغيلي'}</span>
+                  <span className="text-lime font-mono">{lang === 'en' ? 'COMMERCIAL VENTURE' : 'نشاط تجاري واقعي'}</span>
                 </div>
               </div>
             );

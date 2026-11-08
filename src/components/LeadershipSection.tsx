@@ -144,8 +144,8 @@ export const LeadershipSection: React.FC<LeadershipProps> = ({ lang }) => {
                 </div>
 
                 <div className="pt-3 border-t border-steel-800/60 text-[10px] font-mono text-steel-400 uppercase flex justify-between">
-                  <span>{lang === 'en' ? 'VERIFIED ROLE' : 'خبرة موثقة'}</span>
-                  <span className="text-steel-400">CV RECORD</span>
+                  <span>{lang === 'en' ? 'LEADERSHIP & GOVERNANCE' : 'القيادة والتمثيل'}</span>
+                  <span className="text-steel-400">{lang === 'en' ? 'STUDENT LEADERSHIP' : 'العمل الطلابي'}</span>
                 </div>
               </div>
             );
