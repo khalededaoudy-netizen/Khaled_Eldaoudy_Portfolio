@@ -10,12 +10,29 @@
   html {
     background-color: #060709;
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
+    -webkit-text-size-adjust: 100%;
   }
 
   body {
     background-color: #060709;
     color: #f4f6fa;
     overflow-x: hidden;
+    width: 100%;
+    position: relative;
+  }
+
+  /* Arabic typography adjustments */
+  html[lang="ar"] body {
+    font-family: 'Noto Sans Arabic', 'Space Grotesk', system-ui, sans-serif;
+    letter-spacing: normal;
+  }
+
+  /* Accessible focus indicators across the entire site */
+  :focus-visible {
+    outline: 2px solid #c8f202 !important;
+    outline-offset: 2px !important;
   }
 
   /* Custom high-tech scrollbar */
@@ -90,6 +107,20 @@
   pointer-events: none;
 }
 
+/* RTL-aware tech bracket accents */
+[dir="rtl"] .tech-bracket::before {
+  left: auto;
+  right: -1px;
+  border-left: none;
+  border-right: 2px solid #c8f202;
+}
+[dir="rtl"] .tech-bracket::after {
+  right: auto;
+  left: -1px;
+  border-right: none;
+  border-left: 2px solid #c8f202;
+}
+
 /* Glow utility */
 .lime-glow-text {
   text-shadow: 0 0 16px rgba(200, 242, 2, 0.4);
@@ -111,4 +142,46 @@
 ::selection {
   background: #c8f202;
   color: #060709;
+}
+
+/* Skip link for keyboard and screen-reader accessibility */
+.skip-link {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 100;
+  padding: 0.75rem 1.25rem;
+  background-color: #c8f202;
+  color: #060709;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: 0.875rem;
+  border-radius: 0.25rem;
+  transform: translateY(-180%);
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 0 20px rgba(200, 242, 2, 0.5);
+}
+.skip-link:focus {
+  transform: translateY(0%);
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+[dir="rtl"] .skip-link {
+  left: auto;
+  right: 1rem;
+}
+
+/* Respect user's motion preferences (WCAG 2.2 Criterion 2.3.3) */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

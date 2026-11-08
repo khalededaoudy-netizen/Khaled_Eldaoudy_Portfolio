@@ -26,18 +26,28 @@ export const App: React.FC = () => {
   const toggleLang = () => {
     const nextLang = lang === 'en' ? 'ar' : 'en';
     setLang(nextLang);
-    document.documentElement.dir = nextLang === 'ar' ? 'rtl' : 'ltr';
-    document.documentElement.lang = nextLang;
   };
 
   useEffect(() => {
-    // Initial sound engine configuration
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    document.documentElement.lang = lang;
+    document.title = lang === 'en' 
+      ? 'Khaled Eldaoudy — Mechatronics Engineering & Embedded Robotics'
+      : 'خالد الداودي — هندسة الميكاترونكس والأنظمة المدمجة والروبوتات';
+  }, [lang]);
+
+  useEffect(() => {
     sound.enabled = soundEnabled;
   }, [soundEnabled]);
 
   return (
-    <div className={`min-h-screen bg-dark-950 text-steel-100 ${lang === 'ar' ? 'font-sans' : 'font-sans'}`}>
-      {/* Precision Custom Cursor */}
+    <div className={`min-h-screen bg-dark-950 text-steel-100 ${lang === 'ar' ? 'font-sans' : 'font-sans'} overflow-x-hidden w-full relative`}>
+      {/* Skip to Content for Keyboard and Screen-Reader Users */}
+      <a href="#main-content" className="skip-link">
+        {lang === 'en' ? 'Skip to main content' : 'الانتقال إلى المحتوى الرئيسي'}
+      </a>
+
+      {/* Cybernetic Custom Cursor */}
       <CustomCursor />
 
       {/* Main HUD Navigation Bar */}
@@ -48,8 +58,8 @@ export const App: React.FC = () => {
         toggleLang={toggleLang}
       />
 
-      {/* Main Layout Stream */}
-      <main>
+      {/* Main Landmark */}
+      <main id="main-content" tabIndex={-1} className="outline-none">
         <Hero lang={lang} />
         <AboutSection lang={lang} />
         <SkillsSection lang={lang} />
@@ -61,7 +71,7 @@ export const App: React.FC = () => {
         <ContactSection lang={lang} />
       </main>
 
-      {/* Engineering Blueprint Footer */}
+      {/* Engineering Footer */}
       <Footer lang={lang} />
     </div>
   );

@@ -100,3 +100,4 @@ The optimized static assets will be output to the `dist/` directory, ready to de
 - **LinkedIn**: [linkedin.com/in/khaledeldaoudy](https://linkedin.com/in/khaledeldaoudy)
 - **Phone**: +20 102 560 2440
 - **Location**: 10th of Ramadan City, Sharqia, Egypt
+

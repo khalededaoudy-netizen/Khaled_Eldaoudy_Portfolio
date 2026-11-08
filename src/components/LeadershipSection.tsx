@@ -16,6 +16,8 @@ export const LeadershipSection: React.FC<LeadershipProps> = ({ lang }) => {
     'labtronic-visit': Plane,
   };
 
+  const flagshipRole = LEADERSHIP_EXPERIENCE[0];
+
   return (
     <section id="leadership" className="relative py-24 bg-dark-900/40 border-t border-steel-800/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -51,27 +53,25 @@ export const LeadershipSection: React.FC<LeadershipProps> = ({ lang }) => {
                 </div>
                 <div>
                   <span className="text-[11px] font-mono text-lime font-bold uppercase tracking-wider block">
-                    FLAGSHIP EXECUTIVE POSITION // 2023 – PRESENT
+                    {lang === 'en' ? 'ELECTED EXECUTIVE ROLE // 2023 – PRESENT' : 'منصب قيادي تنفيذي منتخب // 2023 - حتى الآن'}
                   </span>
                   <h3 className="text-xl sm:text-2xl font-bold text-white font-display">
-                    President, Engineering College Student Union
+                    {lang === 'en' ? flagshipRole.title : flagshipRole.titleAr}
                   </h3>
                   <p className="text-xs font-mono text-steel-400">
-                    Zagazig National University (ZNU) &middot; Faculty of Engineering
+                    {flagshipRole.organization}
                   </p>
                 </div>
               </div>
 
               <p className="text-sm text-steel-300 leading-relaxed font-sans">
-                Elected to direct student governance for one of Egypt's foremost national engineering institutions. Serves as the primary bridge between the university deanship, academic departments, and the engineering student body.
+                {lang === 'en'
+                  ? 'Serving as President of the Engineering College Student Union at Zagazig National University, acting as the primary liaison between students and faculty leadership.'
+                  : 'رئيس اتحاد طلاب كلية الهندسة بجامعة الزقازيق الأهلية، والممثل الرسمي للطلاب لتنسيق التواصل مع عمادة الكلية وإدارة الجامعة.'}
               </p>
 
               <div className="space-y-2 pt-2">
-                {[
-                  "Represented Zagazig National University at the 9th UniEgypt Higher Education Expo, presenting student Mechatronics & Civil Engineering projects and receiving commendations from the Minister of Higher Education for student innovation.",
-                  "Orchestrated campus-wide engineering symposiums, robotics workshops, peer-tutoring networks, and industrial field trips.",
-                  "Managed high-level communications and administrative problem-solving to advocate for engineering undergraduates across all departments."
-                ].map((item, idx) => (
+                {(lang === 'en' ? flagshipRole.achievements : flagshipRole.achievementsAr).map((item, idx) => (
                   <div key={idx} className="flex items-start gap-2.5 text-xs text-steel-300 font-sans">
                     <CheckCircle2 size={15} className="text-lime flex-shrink-0 mt-0.5" />
                     <span>{item}</span>
@@ -80,22 +80,22 @@ export const LeadershipSection: React.FC<LeadershipProps> = ({ lang }) => {
               </div>
             </div>
 
-            {/* Quick Badges Box */}
+            {/* Authentic Governance Stats (No Invented Numbers) */}
             <div className="bg-dark-900 p-4 rounded border border-steel-800 font-mono text-xs space-y-2 min-w-[240px]">
-              <span className="text-[10px] text-steel-500 uppercase font-bold block border-b border-steel-800 pb-1">
-                GOVERNANCE STATS
+              <span className="text-[10px] text-steel-400 uppercase font-bold block border-b border-steel-800 pb-1">
+                {lang === 'en' ? 'GOVERNANCE OVERVIEW' : 'بيانات المنصب'}
               </span>
               <div className="flex justify-between">
-                <span className="text-steel-400">CONSTITUENCY:</span>
-                <span className="text-white font-bold">1,000+ Engineers</span>
+                <span className="text-steel-400">{lang === 'en' ? 'ENTITY:' : 'الجهة:'}</span>
+                <span className="text-white font-bold">{lang === 'en' ? 'Faculty of Engineering' : 'كلية الهندسة'}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-steel-400">TENURE:</span>
+                <span className="text-steel-400">{lang === 'en' ? 'TENURE:' : 'الفترة:'}</span>
                 <span className="text-lime">2023 – Present</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-steel-400">KEY FORUM:</span>
-                <span className="text-cyan-telemetry">UniEgypt Expo</span>
+                <span className="text-steel-400">{lang === 'en' ? 'EXPO COMMENDATION:' : 'المعرض القومي:'}</span>
+                <span className="text-cyan-telemetry">9th UniEgypt Expo</span>
               </div>
             </div>
           </div>
@@ -115,7 +115,7 @@ export const LeadershipSection: React.FC<LeadershipProps> = ({ lang }) => {
                   <div className="flex items-center justify-between text-xs font-mono">
                     <span className="text-lime font-medium">{item.period}</span>
                     <span className="text-steel-400 text-[10px] bg-dark-900 px-2 py-0.5 rounded border border-steel-800">
-                      {item.roleType}
+                      {lang === 'en' ? item.roleType : item.roleTypeAr}
                     </span>
                   </div>
 
@@ -125,7 +125,7 @@ export const LeadershipSection: React.FC<LeadershipProps> = ({ lang }) => {
                     </div>
                     <div>
                       <h4 className="text-base font-bold text-white font-display group-hover:text-lime transition-colors">
-                        {item.title}
+                        {lang === 'en' ? item.title : item.titleAr}
                       </h4>
                       <p className="text-xs font-mono text-steel-400">
                         {item.organization}
@@ -134,7 +134,7 @@ export const LeadershipSection: React.FC<LeadershipProps> = ({ lang }) => {
                   </div>
 
                   <div className="space-y-2 pt-2">
-                    {item.achievements.map((ach, idx) => (
+                    {(lang === 'en' ? item.achievements : item.achievementsAr).map((ach, idx) => (
                       <div key={idx} className="flex items-start gap-2 text-xs text-steel-300 leading-relaxed font-sans">
                         <span className="text-lime font-mono text-sm leading-none">&bull;</span>
                         <span>{ach}</span>
@@ -143,9 +143,9 @@ export const LeadershipSection: React.FC<LeadershipProps> = ({ lang }) => {
                   </div>
                 </div>
 
-                <div className="pt-3 border-t border-steel-800/60 text-[10px] font-mono text-steel-500 uppercase flex justify-between">
-                  <span>IMPACT VERIFIED</span>
-                  <span className="text-steel-400">ZNU LEADERSHIP LOG</span>
+                <div className="pt-3 border-t border-steel-800/60 text-[10px] font-mono text-steel-400 uppercase flex justify-between">
+                  <span>{lang === 'en' ? 'VERIFIED ROLE' : 'خبرة موثقة'}</span>
+                  <span className="text-steel-400">CV RECORD</span>
                 </div>
               </div>
             );
