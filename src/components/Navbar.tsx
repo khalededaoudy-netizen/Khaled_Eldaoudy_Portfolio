@@ -99,7 +99,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             href="#hero"
             onMouseEnter={() => sound.playHover()}
             onClick={() => sound.playClick()}
-            className="flex items-center gap-2.5 sm:gap-3 group min-h-[44px] min-w-[44px] focus-visible:ring-2 focus-visible:ring-lime"
+            className="flex items-center gap-2.5 sm:gap-3 group min-h-[44px] min-w-[44px] flex-shrink-0 focus-visible:ring-2 focus-visible:ring-lime"
           >
             <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-sm bg-dark-900 border border-steel-700/80 group-hover:border-lime flex items-center justify-center transition-colors">
               <span className="font-mono text-xs sm:text-sm font-bold tracking-tighter text-steel-100 group-hover:text-lime transition-colors">
@@ -118,8 +118,8 @@ export const Navbar: React.FC<NavbarProps> = ({
             </div>
           </a>
 
-          {/* Center Telemetry Banner (Desktop) */}
-          <div className="hidden lg:flex items-center gap-3 px-3 py-1 rounded bg-dark-900/60 border border-steel-700/40 text-[11px] font-mono text-steel-400" aria-hidden="true">
+          {/* Center Telemetry Banner (Wide Desktop Only) */}
+          <div className="hidden 2xl:flex items-center gap-3 px-3 py-1 rounded bg-dark-900/60 border border-steel-700/40 text-[11px] font-mono text-steel-400" aria-hidden="true">
             <span className="flex items-center gap-1.5 text-lime">
               <span className="w-1.5 h-1.5 rounded-full bg-lime" />
               SENIOR '26
@@ -131,7 +131,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
 
           {/* Desktop Nav Links */}
-          <nav className="hidden xl:flex items-center gap-5 text-xs font-mono" aria-label={lang === 'en' ? 'Desktop Main Navigation' : 'شريط التنقل الرئيسي'}>
+          <nav className="hidden xl:flex items-center gap-4 2xl:gap-5 text-xs font-mono" aria-label={lang === 'en' ? 'Desktop Main Navigation' : 'شريط التنقل الرئيسي'}>
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -147,7 +147,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           </nav>
 
           {/* Quick Action Controls */}
-          <div className="flex items-center gap-2 sm:gap-2.5">
+          <div className="flex items-center gap-2 sm:gap-2.5 flex-shrink-0">
             {/* Audio Toggle */}
             <button
               onClick={() => {
