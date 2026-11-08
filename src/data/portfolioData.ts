@@ -117,6 +117,7 @@ export const PERSONAL_INFO = {
   whatsapp: "https://wa.me/201027159784",
   linkedin: "https://www.linkedin.com/in/khaledeldaoudy/",
   github: "https://github.com/khaledeldaoudy",
+  profileImage: "/images/khaled-profile.png",
   cvFile: "/Khaled_CV.pdf",
   stats: [
     { label: "Technical Training", labelAr: "تدريب فني معتمد", value: "400+", unit: "Hours", unitAr: "ساعة", detail: "ITI, NTI, Obour Land" },

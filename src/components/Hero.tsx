@@ -1,5 +1,5 @@
-import React from 'react';
-import { ArrowDown, Download, ChevronRight, Cpu, Compass, Activity, ExternalLink } from 'lucide-react';
+import React, { useState } from 'react';
+import { ArrowDown, Download, ChevronRight, Cpu, Compass, Activity, ExternalLink, User } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 import { ThreeHeroCanvas } from './ThreeHeroCanvas';
 import { sound } from '../utils/soundEffects';
@@ -9,6 +9,7 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ lang }) => {
+  const [displayMode, setDisplayMode] = useState<'3d' | 'portrait'>('3d');
   return (
     <section id="hero" className="relative min-h-screen w-full pt-20 sm:pt-24 pb-12 flex flex-col justify-between overflow-hidden bg-tech-grid" aria-labelledby="hero-title">
       {/* Subtle Ambient Radial Lighting */}
@@ -22,18 +23,35 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
           {/* Left Column: Expressive Editorial Typography & Copy */}
           <div className="lg:col-span-7 flex flex-col space-y-5 sm:space-y-6 pt-2 sm:pt-4 lg:pt-0">
             
-            {/* Status Line */}
-            <div
-              className="inline-flex items-center gap-2.5 sm:gap-3 w-fit px-3 sm:px-3.5 py-1.5 rounded-full bg-dark-900/90 border border-steel-700/60 shadow-inner max-w-full"
-              role="status"
-            >
-              <span className="relative flex h-2 w-2 flex-shrink-0" aria-hidden="true">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-lime opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-lime" />
-              </span>
-              <span className="font-mono text-[11px] sm:text-xs text-steel-300 tracking-wide font-medium truncate">
-                {lang === 'en' ? PERSONAL_INFO.status : PERSONAL_INFO.statusAr}
-              </span>
+            {/* Status Line with Portrait Identity Badge */}
+            <div className="flex items-center gap-3 sm:gap-4">
+              <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-lg overflow-hidden border border-steel-700/80 bg-dark-900 flex-shrink-0 group hover:border-lime transition-colors shadow-md">
+                <img
+                  src={PERSONAL_INFO.profileImage}
+                  alt={lang === 'en' ? 'Khaled Hamdy Eldaoudy' : 'خالد حمدي الداودي'}
+                  className="w-full h-full object-cover object-top"
+                  loading="eager"
+                />
+                <span className="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-lime border-2 border-dark-950" title="Active Candidate" />
+              </div>
+
+              <div className="flex flex-col gap-1 min-w-0">
+                <div
+                  className="inline-flex items-center gap-2 sm:gap-2.5 w-fit px-3 sm:px-3.5 py-1 rounded-full bg-dark-900/90 border border-steel-700/60 shadow-inner max-w-full"
+                  role="status"
+                >
+                  <span className="relative flex h-2 w-2 flex-shrink-0" aria-hidden="true">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-lime opacity-75" />
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-lime" />
+                  </span>
+                  <span className="font-mono text-[10px] sm:text-xs text-steel-300 tracking-wide font-medium truncate">
+                    {lang === 'en' ? PERSONAL_INFO.status : PERSONAL_INFO.statusAr}
+                  </span>
+                </div>
+                <span className="text-[10px] font-mono text-steel-400 pl-1 rtl:pl-0 rtl:pr-1">
+                  {lang === 'en' ? 'OFFICIAL CANDIDATE // ZNU MECHATRONICS' : 'المرشح الرسمي // هندسة الميكاترونكس'}
+                </span>
+              </div>
             </div>
 
             {/* Editorial Title */}
@@ -159,40 +177,122 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
             {/* Architectural Frame Border */}
             <div className="relative w-full h-[360px] xs:h-[420px] sm:h-[500px] lg:h-[580px] rounded-lg bg-dark-900/40 border border-steel-700/50 backdrop-blur-md overflow-hidden shadow-2xl flex flex-col justify-between">
               
-              {/* Header: Transparently Labeled as Conceptual 3D Model */}
-              <div className="flex items-center justify-between px-3 sm:px-4 py-2 sm:py-2.5 border-b border-steel-700/40 bg-dark-900/80 text-[10px] font-mono text-steel-400">
-                <div className="flex items-center gap-2">
-                  <Cpu size={13} className="text-lime" />
-                  <span className="text-steel-200 font-semibold tracking-wider text-[9px] sm:text-[10px]">
-                    {lang === 'en' ? 'CONCEPTUAL 3D VISUALIZATION' : 'محاكاة بصرية ثلاثية الأبعاد'}
-                  </span>
+              {/* Header: Transparently Labeled as Conceptual 3D Model / Authentic Portrait Switcher */}
+              <div className="flex items-center justify-between px-3 sm:px-4 py-2 sm:py-2.5 border-b border-steel-700/40 bg-dark-900/80 text-[10px] font-mono text-steel-400 gap-2">
+                <div className="flex items-center gap-2 truncate">
+                  {displayMode === '3d' ? (
+                    <>
+                      <Cpu size={13} className="text-lime flex-shrink-0" />
+                      <span className="text-steel-200 font-semibold tracking-wider text-[9px] sm:text-[10px] truncate">
+                        {lang === 'en' ? 'CONCEPTUAL 3D VISUALIZATION' : 'محاكاة بصرية ثلاثية الأبعاد'}
+                      </span>
+                    </>
+                  ) : (
+                    <>
+                      <User size={13} className="text-lime flex-shrink-0" />
+                      <span className="text-steel-200 font-semibold tracking-wider text-[9px] sm:text-[10px] truncate">
+                        {lang === 'en' ? 'OFFICIAL PORTRAIT' : 'الصورة الشخصية الرسمية'}
+                      </span>
+                    </>
+                  )}
                 </div>
-                <div className="flex items-center gap-2 text-steel-400 text-[9px] sm:text-[10px]">
-                  <Activity size={12} className="text-cyan-telemetry animate-pulse" />
-                  <span>{lang === 'en' ? 'INTERACTIVE' : 'تفاعلي'}</span>
+
+                {/* Mode Switcher Tabs */}
+                <div className="flex items-center gap-1 bg-dark-950 p-0.5 rounded border border-steel-700/60 flex-shrink-0" role="tablist" aria-label={lang === 'en' ? 'Hero visual mode' : 'طريقة العرض'}>
+                  <button
+                    type="button"
+                    role="tab"
+                    aria-selected={displayMode === '3d'}
+                    onClick={() => {
+                      setDisplayMode('3d');
+                      sound.playClick();
+                    }}
+                    className={`px-2 py-1 rounded text-[9px] sm:text-[10px] font-mono transition-colors min-h-[30px] flex items-center ${
+                      displayMode === '3d'
+                        ? 'bg-lime text-dark-950 font-bold'
+                        : 'text-steel-400 hover:text-white'
+                    }`}
+                  >
+                    3D
+                  </button>
+                  <button
+                    type="button"
+                    role="tab"
+                    aria-selected={displayMode === 'portrait'}
+                    onClick={() => {
+                      setDisplayMode('portrait');
+                      sound.playClick();
+                    }}
+                    className={`px-2 py-1 rounded text-[9px] sm:text-[10px] font-mono transition-colors min-h-[30px] flex items-center gap-1 ${
+                      displayMode === 'portrait'
+                        ? 'bg-lime text-dark-950 font-bold'
+                        : 'text-steel-400 hover:text-white'
+                    }`}
+                  >
+                    <User size={10} aria-hidden="true" />
+                    <span>{lang === 'en' ? 'PORTRAIT' : 'الصورة'}</span>
+                  </button>
                 </div>
               </div>
 
-              {/* 3D Three.js Viewport */}
-              <div className="relative flex-1 w-full h-full min-h-0">
-                <ThreeHeroCanvas />
-              </div>
+              {/* Viewport: Three.js or Official Portrait */}
+              {displayMode === '3d' ? (
+                <div className="relative flex-1 w-full h-full min-h-0">
+                  <ThreeHeroCanvas />
+                </div>
+              ) : (
+                <div className="relative flex-1 w-full h-full min-h-0 overflow-hidden bg-dark-950 flex items-center justify-center group">
+                  <img
+                    src={PERSONAL_INFO.profileImage}
+                    alt={lang === 'en' ? 'Professional portrait of Khaled Hamdy Eldaoudy' : 'صورة شخصية رسمية للمهندس خالد حمدي الداودي'}
+                    className="w-full h-full object-cover object-[50%_18%] transition-transform duration-700 group-hover:scale-102"
+                    loading="eager"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/20 to-transparent pointer-events-none" />
+                  <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs font-mono pointer-events-none">
+                    <div className="bg-dark-900/90 backdrop-blur-md px-2.5 py-1 rounded border border-steel-700/80 text-steel-200 text-[10px]">
+                      {lang === 'en' ? 'ENG. KHALED ELDAOUDY' : 'م. خالد الداودي'}
+                    </div>
+                    <div className="bg-lime/10 backdrop-blur-md px-2 py-1 rounded border border-lime/30 text-lime text-[10px] flex items-center gap-1 font-bold">
+                      <span className="w-1.5 h-1.5 rounded-full bg-lime animate-pulse" />
+                      {lang === 'en' ? 'VERIFIED 2026' : 'معتمد 2026'}
+                    </div>
+                  </div>
+                </div>
+              )}
 
-              {/* Footer: Honest Graphic Render Specification */}
-              <div className="grid grid-cols-3 border-t border-steel-700/40 bg-dark-900/80 text-[9px] sm:text-[10px] font-mono text-steel-400 divide-x rtl:divide-x-reverse divide-steel-700/40 text-center py-1.5 sm:py-2">
-                <div>
-                  <span className="text-steel-400 block text-[8px] sm:text-[9px]">RENDER:</span>
-                  <span className="text-steel-200 font-medium">Three.js WebGL</span>
+              {/* Footer: Contextual Specifications */}
+              {displayMode === '3d' ? (
+                <div className="grid grid-cols-3 border-t border-steel-700/40 bg-dark-900/80 text-[9px] sm:text-[10px] font-mono text-steel-400 divide-x rtl:divide-x-reverse divide-steel-700/40 text-center py-1.5 sm:py-2">
+                  <div>
+                    <span className="text-steel-400 block text-[8px] sm:text-[9px]">RENDER:</span>
+                    <span className="text-steel-200 font-medium">Three.js WebGL</span>
+                  </div>
+                  <div>
+                    <span className="text-steel-400 block text-[8px] sm:text-[9px]">FREEDOM:</span>
+                    <span className="text-lime font-medium">3-Axis Rotation</span>
+                  </div>
+                  <div>
+                    <span className="text-steel-400 block text-[8px] sm:text-[9px]">INPUT:</span>
+                    <span className="text-cyan-telemetry font-medium">Cursor Responsive</span>
+                  </div>
                 </div>
-                <div>
-                  <span className="text-steel-400 block text-[8px] sm:text-[9px]">FREEDOM:</span>
-                  <span className="text-lime font-medium">3-Axis Rotation</span>
+              ) : (
+                <div className="grid grid-cols-3 border-t border-steel-700/40 bg-dark-900/80 text-[9px] sm:text-[10px] font-mono text-steel-400 divide-x rtl:divide-x-reverse divide-steel-700/40 text-center py-1.5 sm:py-2">
+                  <div>
+                    <span className="text-steel-400 block text-[8px] sm:text-[9px]">SOURCE:</span>
+                    <span className="text-steel-200 font-medium">Verified Studio</span>
+                  </div>
+                  <div>
+                    <span className="text-steel-400 block text-[8px] sm:text-[9px]">STATUS:</span>
+                    <span className="text-lime font-medium">Active Senior</span>
+                  </div>
+                  <div>
+                    <span className="text-steel-400 block text-[8px] sm:text-[9px]">SPECIALTY:</span>
+                    <span className="text-cyan-telemetry font-medium">Mechatronics</span>
+                  </div>
                 </div>
-                <div>
-                  <span className="text-steel-400 block text-[8px] sm:text-[9px]">INPUT:</span>
-                  <span className="text-cyan-telemetry font-medium">Cursor Responsive</span>
-                </div>
-              </div>
+              )}
 
               {/* Technical Notch Corner Markers */}
               <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-lime pointer-events-none" aria-hidden="true" />

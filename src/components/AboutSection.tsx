@@ -88,19 +88,34 @@ export const AboutSection: React.FC<AboutProps> = ({ lang }) => {
 
             {/* Top Identity Block */}
             <div className="relative z-10 space-y-4">
-              <div className="flex items-center justify-between border-b border-steel-800 pb-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded bg-dark-850 border border-lime/40 flex items-center justify-center font-mono font-bold text-lg text-lime">
-                    KE
+              {/* Authentic Owner Portrait */}
+              <div className="relative w-full h-80 sm:h-96 rounded-lg overflow-hidden border border-steel-700/80 bg-dark-900 group shadow-lg">
+                <img
+                  src={PERSONAL_INFO.profileImage}
+                  alt={lang === 'en' ? 'Professional portrait of Khaled Hamdy Eldaoudy' : 'صورة شخصية رسمية للمهندس خالد حمدي الداودي'}
+                  className="w-full h-full object-cover object-[50%_18%] transition-transform duration-500 group-hover:scale-102"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/20 to-transparent" />
+                <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+                  <div className="font-mono text-[10px] text-steel-200 bg-dark-950/90 px-2.5 py-1 rounded border border-steel-700/80 backdrop-blur-md">
+                    {lang === 'en' ? 'ENG. KHALED ELDAOUDY' : 'م. خالد الداودي'}
                   </div>
-                  <div>
-                    <h3 className="font-display font-bold text-white text-base">
-                      {lang === 'en' ? PERSONAL_INFO.name : PERSONAL_INFO.nameAr}
-                    </h3>
-                    <p className="font-mono text-[11px] text-steel-400">
-                      {lang === 'en' ? 'Mechatronics Engineering Senior' : 'طالب بالسنة الرابعة - هندسة ميكاترونكس'}
-                    </p>
+                  <div className="font-mono text-[10px] text-lime bg-lime/10 px-2.5 py-1 rounded border border-lime/30 backdrop-blur-md flex items-center gap-1.5 font-bold">
+                    <span className="w-1.5 h-1.5 rounded-full bg-lime animate-pulse" />
+                    {lang === 'en' ? 'VERIFIED IDENTITY' : 'هوية معتمدة'}
                   </div>
+                </div>
+              </div>
+
+              <div className="flex items-center justify-between border-b border-steel-800 pb-3">
+                <div>
+                  <h3 className="font-display font-bold text-white text-base">
+                    {lang === 'en' ? PERSONAL_INFO.name : PERSONAL_INFO.nameAr}
+                  </h3>
+                  <p className="font-mono text-[11px] text-steel-400">
+                    {lang === 'en' ? 'Mechatronics Engineering Senior' : 'طالب بالسنة الرابعة - هندسة ميكاترونكس'}
+                  </p>
                 </div>
                 <div className="text-right font-mono text-[10px] text-lime flex items-center gap-1.5 bg-lime/10 px-2 py-1 rounded border border-lime/20">
                   <span className="w-1.5 h-1.5 rounded-full bg-lime animate-pulse" />
