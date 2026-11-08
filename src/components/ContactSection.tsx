@@ -134,7 +134,7 @@ export const ContactSection: React.FC<ContactProps> = ({ lang }) => {
                     <div className="truncate">
                       <span className="text-[10px] font-mono text-steel-400 uppercase block">{lang === 'en' ? 'PHONE & WHATSAPP' : 'الهاتف والواتساب'}</span>
                       <a
-                        href="tel:+201025602440"
+                        href={`tel:${PERSONAL_INFO.phone.replace(/\s+/g, '')}`}
                         className="text-xs sm:text-sm font-mono text-white hover:text-cyan-telemetry transition-colors truncate block focus-visible:ring-1 focus-visible:ring-lime"
                       >
                         {PERSONAL_INFO.phone}
@@ -142,11 +142,11 @@ export const ContactSection: React.FC<ContactProps> = ({ lang }) => {
                     </div>
                   </div>
                   <a
-                    href="https://wa.me/201025602440"
+                    href={PERSONAL_INFO.whatsapp}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="min-h-[44px] px-3.5 py-2 rounded bg-dark-850 text-[10px] font-mono text-steel-300 hover:text-white border border-steel-700 hover:border-steel-500 transition-colors flex items-center justify-center flex-shrink-0 focus-visible:ring-2 focus-visible:ring-lime"
-                    aria-label={lang === 'en' ? 'Open WhatsApp chat with Khaled' : 'محادثة عبر تطبيق واتساب'}
+                    aria-label={lang === 'en' ? 'WHATSAPP - Open chat with Khaled' : 'واتساب - محادثة عبر تطبيق واتساب'}
                   >
                     WHATSAPP
                   </a>
@@ -177,7 +177,7 @@ export const ContactSection: React.FC<ContactProps> = ({ lang }) => {
                     onMouseEnter={() => sound.playHover()}
                     onClick={() => sound.playClick()}
                     className="min-h-[44px] p-3 rounded bg-dark-900 border border-steel-800 hover:border-lime/60 transition-colors flex items-center justify-between group focus-visible:ring-2 focus-visible:ring-lime"
-                    aria-label="Khaled Eldaoudy on LinkedIn (opens in new tab)"
+                    aria-label="LINKEDIN - Khaled Eldaoudy profile (opens in new tab)"
                   >
                     <div className="flex items-center gap-2">
                       <Linkedin size={16} className="text-steel-400 group-hover:text-lime transition-colors" aria-hidden="true" />
@@ -195,7 +195,7 @@ export const ContactSection: React.FC<ContactProps> = ({ lang }) => {
                     onMouseEnter={() => sound.playHover()}
                     onClick={() => sound.playClick()}
                     className="min-h-[44px] p-3 rounded bg-dark-900 border border-steel-800 hover:border-lime/60 transition-colors flex items-center justify-between group focus-visible:ring-2 focus-visible:ring-lime"
-                    aria-label="Khaled Eldaoudy on GitHub (opens in new tab)"
+                    aria-label="GITHUB - Khaled Eldaoudy repository profile (opens in new tab)"
                   >
                     <div className="flex items-center gap-2">
                       <Github size={16} className="text-steel-400 group-hover:text-lime transition-colors" aria-hidden="true" />

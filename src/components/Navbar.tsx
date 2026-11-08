@@ -96,7 +96,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           
           {/* Logo / Monogram */}
           <a
-            href="#"
+            href="#hero"
             onMouseEnter={() => sound.playHover()}
             onClick={() => sound.playClick()}
             className="flex items-center gap-2.5 sm:gap-3 group min-h-[44px] min-w-[44px] focus-visible:ring-2 focus-visible:ring-lime"

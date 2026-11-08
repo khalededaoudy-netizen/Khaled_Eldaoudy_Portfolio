@@ -26,6 +26,16 @@ async function runAudit() {
   });
 
   const page = await browser.newPage();
+
+  const consoleErrors = [];
+  page.on('console', msg => {
+    if (msg.type() === 'error') {
+      consoleErrors.push(msg.text());
+    }
+  });
+  page.on('pageerror', err => {
+    consoleErrors.push(err.toString());
+  });
   const results = {
     viewports: [],
     axeViolations: [],
@@ -187,6 +197,85 @@ async function runAudit() {
     };
   });
   console.log('Language switch outcome:', rtlCheck);
+
+  // 5. Broken-link & Security Attributes Audit
+  console.log('\n--- 5. BROKEN-LINK & TARGET VERIFICATION AUDIT ---');
+  await page.setViewport({ width: 1440, height: 900 });
+  await page.goto('http://localhost:3000/', { waitUntil: 'networkidle0' });
+
+  const linkAudit = await page.evaluate(() => {
+    const anchors = Array.from(document.querySelectorAll('a'));
+    const internalHashes = [];
+    const externalLinks = [];
+    const downloads = [];
+    const errors = [];
+
+    anchors.forEach(a => {
+      const href = a.getAttribute('href');
+      if (!href) {
+        errors.push({ text: a.textContent.trim(), issue: 'Missing href attribute' });
+        return;
+      }
+
+      if (href.startsWith('#')) {
+        const target = href === '#' ? null : document.querySelector(href);
+        internalHashes.push({ href, found: !!target });
+        if (href !== '#' && !target) {
+          errors.push({ href, issue: 'Target element not found in DOM' });
+        }
+      } else if (href.startsWith('http')) {
+        const hasRel = (a.getAttribute('rel') || '').includes('noopener') && (a.getAttribute('rel') || '').includes('noreferrer');
+        const hasTarget = a.getAttribute('target') === '_blank';
+        externalLinks.push({ href, target: a.getAttribute('target'), rel: a.getAttribute('rel'), secure: hasRel && hasTarget });
+        if (!hasRel || !hasTarget) {
+          errors.push({ href, issue: 'Missing target="_blank" or rel="noopener noreferrer"' });
+        }
+      } else if (href.includes('.pdf')) {
+        downloads.push({ href, download: a.getAttribute('download') });
+      }
+    });
+
+    return { totalAnchors: anchors.length, internalHashes, externalLinks, downloads, errors };
+  });
+
+  console.log(`Audited ${linkAudit.totalAnchors} anchor elements:`);
+  console.log(`- Internal navigation anchors: ${linkAudit.internalHashes.length} (Broken: ${linkAudit.internalHashes.filter(h => !h.found).length})`);
+  console.log(`- External secure links: ${linkAudit.externalLinks.length} (Insecure/broken: ${linkAudit.externalLinks.filter(e => !e.secure).length})`);
+  console.log(`- File download links: ${linkAudit.downloads.length}`);
+  if (linkAudit.errors.length > 0) {
+    console.log('❌ Link Errors:', linkAudit.errors);
+  } else {
+    console.log('✅ 100% PASS: All internal anchors exist and external links have secure attributes!');
+  }
+
+  // 6. Contact Data & Publication Preferences Verification
+  console.log('\n--- 6. VERIFIED PUBLICATION DATA AUDIT ---');
+  const contactAudit = await page.evaluate(() => {
+    const text = document.body.innerText;
+    const phoneFound = text.includes('+20 102 715 9784');
+    const waLink = document.querySelector('a[href="https://wa.me/201027159784"]');
+    const githubLink = document.querySelector('a[href="https://github.com/khaledeldaoudy"]');
+    const linkedinLink = document.querySelector('a[href="https://www.linkedin.com/in/khaledeldaoudy/"]');
+    const cvLink = document.querySelector('a[href="/Khaled_CV.pdf"]');
+
+    return {
+      phoneFound,
+      waLinkFound: !!waLink,
+      githubLinkFound: !!githubLink,
+      linkedinLinkFound: !!linkedinLink,
+      cvLinkFound: !!cvLink
+    };
+  });
+  console.log('Publication verification:', contactAudit);
+
+  // 7. Browser Console Error Check
+  console.log('\n--- 7. BROWSER CONSOLE ERROR CHECK ---');
+  console.log(`Captured Console Errors: ${consoleErrors.length}`);
+  if (consoleErrors.length > 0) {
+    console.log('❌ Errors logged:', consoleErrors);
+  } else {
+    console.log('✅ 0 CONSOLE ERRORS DETECTED: Clean browser execution!');
+  }
 
   await browser.close();
   console.log('\n Audit complete.');

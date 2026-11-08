@@ -10,7 +10,7 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ lang }) => {
   return (
-    <section className="relative min-h-screen w-full pt-20 sm:pt-24 pb-12 flex flex-col justify-between overflow-hidden bg-tech-grid" aria-labelledby="hero-title">
+    <section id="hero" className="relative min-h-screen w-full pt-20 sm:pt-24 pb-12 flex flex-col justify-between overflow-hidden bg-tech-grid" aria-labelledby="hero-title">
       {/* Subtle Ambient Radial Lighting */}
       <div className="absolute top-1/4 right-1/4 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-lime/5 rounded-full blur-[100px] sm:blur-[130px] pointer-events-none" aria-hidden="true" />
       <div className="absolute bottom-10 left-10 w-[250px] sm:w-[400px] h-[250px] sm:h-[400px] bg-cyan-telemetry/5 rounded-full blur-[90px] sm:blur-[110px] pointer-events-none" aria-hidden="true" />

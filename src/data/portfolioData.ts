@@ -112,8 +112,10 @@ export const PERSONAL_INFO = {
   location: "10th of Ramadan City, Sharqia, Egypt",
   locationAr: "مدينة العاشر من رمضان، الشرقية، مصر",
   email: "KhaledEdaoudy@gmail.com",
-  phone: "+20 102 560 2440",
-  linkedin: "https://linkedin.com/in/khaledeldaoudy",
+  phone: "+20 102 715 9784",
+  phoneAlt: "+20 102 560 2440",
+  whatsapp: "https://wa.me/201027159784",
+  linkedin: "https://www.linkedin.com/in/khaledeldaoudy/",
   github: "https://github.com/khaledeldaoudy",
   cvFile: "/Khaled_CV.pdf",
   stats: [

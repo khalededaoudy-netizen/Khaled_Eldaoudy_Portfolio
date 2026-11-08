@@ -94,7 +94,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-steel-200 min-h-[44px] inline-flex items-center"
-              aria-label="Khaled's LinkedIn profile"
+              aria-label="LINKEDIN - Khaled Eldaoudy profile (opens in new tab)"
             >
               LINKEDIN
             </a>
@@ -104,7 +104,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-steel-200 min-h-[44px] inline-flex items-center"
-              aria-label="Khaled's GitHub profile"
+              aria-label="GITHUB - Khaled Eldaoudy profile (opens in new tab)"
             >
               GITHUB
             </a>

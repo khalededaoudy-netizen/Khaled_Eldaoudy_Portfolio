@@ -2,7 +2,7 @@
 
 > **Mechatronics Engineering Senior &middot; Embedded Systems & Robotics Developer**  
 > President, Engineering College Student Union &middot; Zagazig National University  
-> 10th of Ramadan City, Sharqia, Egypt &middot; Coordinates: 30.2981° N, 31.7416° E
+> 10th of Ramadan City, Sharqia, Egypt
 
 ---
 
@@ -40,7 +40,7 @@ An award-winning, cybernetic, and production-grade personal portfolio designed a
 7. **Leadership Record**: President of the Engineering College Student Union, ZNU Robotics community co-founder, Labtronic aerospace visit.
 8. **Credentials**: ITI Embedded Systems (162 Hours), NTI Machine Learning (120 Hours, 89%), Obour Land Tetra Pak A3-Speed (120 Hours), SolidWorks.
 9. **Commercial Execution**: E-Commerce brand management (CTRL Store), digital marketing, and multi-store operations.
-10. **Transmission Dispatcher**: Interactive contact terminal, instant email copy with visual feedback, WhatsApp link, and GPS coordinates.
+10. **Transmission Dispatcher**: Interactive contact terminal, instant email copy with visual feedback, and direct WhatsApp / LinkedIn communication channels.
 
 ---
 
@@ -97,7 +97,8 @@ The optimized static assets will be output to the `dist/` directory, ready to de
 
 - **Khaled Hamdy Eldaoudy**
 - **Email**: [KhaledEdaoudy@gmail.com](mailto:KhaledEdaoudy@gmail.com)
-- **LinkedIn**: [linkedin.com/in/khaledeldaoudy](https://linkedin.com/in/khaledeldaoudy)
-- **Phone**: +20 102 560 2440
+- **LinkedIn**: [linkedin.com/in/khaledeldaoudy](https://www.linkedin.com/in/khaledeldaoudy/)
+- **GitHub**: [github.com/khaledeldaoudy](https://github.com/khaledeldaoudy)
+- **Phone / WhatsApp**: [+20 102 715 9784](https://wa.me/201027159784)
 - **Location**: 10th of Ramadan City, Sharqia, Egypt
 
