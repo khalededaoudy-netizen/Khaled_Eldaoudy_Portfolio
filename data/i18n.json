@@ -1,0 +1,438 @@
+{
+  "nav": {
+    "brand": {
+      "en": "KHALED ELDAOUDY",
+      "ar": "خالد الداودي"
+    },
+    "role": {
+      "en": "MECHATRONICS ENGINEER",
+      "ar": "مهندس ميكاترونكس"
+    },
+    "about": {
+      "en": "Biography",
+      "ar": "السيرة"
+    },
+    "skills": {
+      "en": "Expertise",
+      "ar": "الخبرات التقنية"
+    },
+    "projects": {
+      "en": "Selected Works",
+      "ar": "الأعمال المختارة"
+    },
+    "competitions": {
+      "en": "Honors",
+      "ar": "الجوائز والمسابقات"
+    },
+    "leadership": {
+      "en": "Leadership",
+      "ar": "القيادة والمجتمع"
+    },
+    "training": {
+      "en": "Credentials",
+      "ar": "التدريب والاعتمادات"
+    },
+    "entrepreneurship": {
+      "en": "Ventures",
+      "ar": "الريادة والأعمال"
+    },
+    "contact": {
+      "en": "Inquiries",
+      "ar": "التواصل"
+    },
+    "hire_me": {
+      "en": "Initiate Contact",
+      "ar": "تواصل معي"
+    },
+    "switch_lang": {
+      "en": "العربية",
+      "ar": "English"
+    },
+    "theme_toggle": {
+      "en": "Toggle Mode",
+      "ar": "تبديل الوضع"
+    }
+  },
+  "hero": {
+    "status": {
+      "en": "MECHATRONICS ENGINEER — 2027",
+      "ar": "مهندس ميكاترونكس — 2027"
+    },
+    "greeting": {
+      "en": "Engineering",
+      "ar": "هندسة"
+    },
+    "title_highlight": {
+      "en": "Intelligence",
+      "ar": "الأنظمة الذاتية"
+    },
+    "title_sub": {
+      "en": "at the Convergence of Mechanics & Code.",
+      "ar": "عند نقطة التقاء الميكانيكا والبرمجيات الدقيقة."
+    },
+    "lead": {
+      "en": "Mechatronics Engineering scholar (Year 4, ZNU) combining low-level C/C++ firmware, kinematics, and closed-loop control to build resilient autonomous systems.",
+      "ar": "طالب هندسة ميكاترونكس بالفرقة الرابعة بجامعة الزقازيق الأهلية، يجمع بين برمجيات C/C++ المدمجة وعلم الحركيات ونظم التحكم المغلقة لبناء أنظمة ذاتية ذكية."
+    },
+    "cta_projects": {
+      "en": "Explore Works",
+      "ar": "استعراض الأعمال"
+    },
+    "cta_contact": {
+      "en": "Initiate Inquiries",
+      "ar": "بدء التواصل"
+    },
+    "cta_cv": {
+      "en": "Curriculum Vitae",
+      "ar": "السيرة الذاتية"
+    },
+    "terminal_title": {
+      "en": "mechatronics-core // v4.2",
+      "ar": "نواة-الميكاترونكس // الإصدار 4.2"
+    },
+    "terminal_user": {
+      "en": "khaled — mechatronics engineer",
+      "ar": "خالد — مهندس ميكاترونكس"
+    },
+    "terminal_status": {
+      "en": "building · learning · competing",
+      "ar": "بناء · تعلم · منافسة"
+    },
+    "masthead_inst": {
+      "en": "ZAGAZIG NATIONAL UNIVERSITY // CREDIT-HOUR SYSTEM",
+      "ar": "جامعة الزقازيق الأهلية // نظام الساعات المعتمدة"
+    },
+    "caption_name": {
+      "en": "KHALED H. ELDAOUDY",
+      "ar": "خالد حمدي الداودي"
+    },
+    "caption_role": {
+      "en": "MECHATRONICS RESEARCHER",
+      "ar": "باحث ميكاترونكس"
+    },
+    "laurel_robosoccer": {
+      "en": "2nd Place RoboSoccer • Prime Minister Signed",
+      "ar": "المركز الثاني RoboSoccer • توقيع رئيس الوزراء"
+    },
+    "laurel_projects": {
+      "en": "10+ Technical Projects",
+      "ar": "+10 مشاريع تقنية"
+    }
+  },
+  "about": {
+    "eyebrow": {
+      "en": "// 01 BIOGRAPHY",
+      "ar": "// 01 نبذة تعريفية"
+    },
+    "quote": {
+      "en": "Engineering is the disciplined synthesis of mechanical physics, microsecond firmware timing, and mathematical control theory.",
+      "ar": "الهندسة هي التناغم المنضبط بين فيزياء الميكانيكا، ودقة توقيت البرمجيات المدمجة، ونظرية التحكم الرياضي."
+    },
+    "education_title": {
+      "en": "ACADEMIC FOUNDATION",
+      "ar": "المسار الأكاديمي المعتمد"
+    },
+    "education_system": {
+      "en": "Credit-Hour System",
+      "ar": "نظام الساعات المعتمدة"
+    },
+    "attr_location": {
+      "en": "LOCATION:",
+      "ar": "الموقع:"
+    },
+    "attr_location_val": {
+      "en": "10th of Ramadan City, Sharqia, Egypt",
+      "ar": "مدينة العاشر من رمضان، الشرقية، مصر"
+    },
+    "attr_specialization": {
+      "en": "SPECIALIZATION:",
+      "ar": "مجال التخصص:"
+    },
+    "attr_specialization_val": {
+      "en": "Embedded Firmware, PID Control, Autonomous Robotics",
+      "ar": "برمجيات الأنظمة المدمجة، تحكم PID، الروبوتات الذاتية"
+    },
+    "attr_academic_level": {
+      "en": "ACADEMIC LEVEL:",
+      "ar": "المستوى الأكاديمي:"
+    },
+    "attr_academic_val": {
+      "en": "Year 4 Mechatronics • Expected Graduation: 2027",
+      "ar": "الفرقة الرابعة هندسة ميكاترونكس • سنة التخرج المتوقعة: 2027"
+    },
+    "title": {
+      "en": "Engineering across mechanics, electronics & code",
+      "ar": "الهندسة عبر الميكانيكا، الإلكترونيات والبرمجيات"
+    },
+    "lead": {
+      "en": "I'm a detail-oriented Mechatronics Engineering student who learns by building. From autonomous sumo robots to a full smart-home control system, I enjoy closing the loop between hardware and software.",
+      "ar": "طالب هندسة ميكاترونكس شغوف بالتطبيق العملي. من روبوتات السومو الذاتية وحتى أنظمة التحكم بالمنزل الذكي، أستمتع بربط العتاد والبرمجيات في أنظمة متناغمة وموثوقة."
+    },
+    "education_title": {
+      "en": "Academic Foundation",
+      "ar": "المسار الأكاديمي"
+    },
+    "skills_title": {
+      "en": "Core Technical Disciplines",
+      "ar": "المجالات والمهارات التقنية"
+    }
+  },
+  "skills": {
+    "eyebrow": {
+      "en": "DISCIPLINES // TECHNICAL EXPERTISE",
+      "ar": "المجالات // الخبرات والمهارات التقنية"
+    },
+    "title": {
+      "en": "Multidisciplinary Engineering Stack",
+      "ar": "المصفوفة الهندسية متعددة التخصصات"
+    },
+    "lead": {
+      "en": "A taxonomy of verified competencies across embedded microcontrollers, control loops, robotics, software, and mechanical CAD.",
+      "ar": "تصنيف شامل للمهارات والكفاءات في المتحكمات المدمجة، ونظم التحكم، والروبوتات، والبرمجيات، والتصميم الميكانيكي CAD."
+    }
+  },
+  "projects": {
+    "eyebrow": {
+      "en": "// 02 SPEC SHEETS & PROJECTS",
+      "ar": "// 02 المشاريع الهندسية"
+    },
+    "title": {
+      "en": "Featured Engineering Projects",
+      "ar": "المشاريع الهندسية المميزة"
+    },
+    "lead": {
+      "en": "Personal and academic engineering projects in embedded systems, control, and robotics.",
+      "ar": "مشاريع هندسية شخصية وأكاديمية في الأنظمة المدمجة، ونظم التحكم، والروبوتات."
+    },
+    "filter_all": {
+      "en": "All Systems",
+      "ar": "كافة الأنظمة"
+    },
+    "filter_embedded": {
+      "en": "Embedded",
+      "ar": "أنظمة مدمجة"
+    },
+    "filter_robotics": {
+      "en": "Robotics",
+      "ar": "روبوتات"
+    },
+    "filter_cad": {
+      "en": "CAD / Simulation",
+      "ar": "تصميم ومحاكاة"
+    },
+    "view_project": {
+      "en": "Open Spec Sheet",
+      "ar": "فتح بطاقة المواصفات"
+    },
+    "modal_close": {
+      "en": "Close Spec Sheet",
+      "ar": "إغلاق المواصفات"
+    },
+    "modal_tech": {
+      "en": "Hardware & Tech Stack:",
+      "ar": "العتاد والتقنيات المستخدمة:"
+    },
+    "modal_role": {
+      "en": "Engineering Role:",
+      "ar": "الدور الهندسي:"
+    },
+    "modal_platform": {
+      "en": "Hardware Platform:",
+      "ar": "المنصة العتادية:"
+    }
+  },
+  "competitions": {
+    "eyebrow": {
+      "en": "// 03 COMPETITIONS & ACHIEVEMENTS",
+      "ar": "// 03 المسابقات والجوائز"
+    },
+    "title": {
+      "en": "Robotics Competitions & Recognitions",
+      "ar": "مسابقات الروبوتات والتكريمات"
+    },
+    "lead": {
+      "en": "Participation, awards, and recognitions across university and national robotics competitions.",
+      "ar": "مشاركات وجوائز وشهادات تقدير في مسابقات الروبوتات الجامعية والوطنية."
+    },
+    "rank_label": {
+      "en": "Placement",
+      "ar": "المركز"
+    },
+    "recognition_badge": {
+      "en": "Honors & Technical Contribution",
+      "ar": "تكريم ومساهمة تقنية"
+    }
+  },
+  "leadership": {
+    "eyebrow": {
+      "en": "// 04 LEADERSHIP & IMPACT",
+      "ar": "// 04 القيادة والأنشطة الطلابية"
+    },
+    "title": {
+      "en": "Student Governance & Community Impact",
+      "ar": "القيادة الطلابية والأثر المجتمعي"
+    },
+    "lead": {
+      "en": "Student union leadership, robotics community building, and regional forum representation.",
+      "ar": "قيادة اتحاد الطلاب، وتأسيس مجتمع الروبوتات، وتمثيل الجامعة في المنتديات الإقليمية."
+    }
+  },
+  "training": {
+    "eyebrow": {
+      "en": "// 05 TRAINING & CREDENTIALS",
+      "ar": "// 05 التدريب المهني والشهادات"
+    },
+    "title": {
+      "en": "Industrial Training & Accredited Certifications",
+      "ar": "التدريب الصناعي والشهادات المعتمدة"
+    },
+    "lead": {
+      "en": "Over 400 hours of technical training programs, hands-on lab work, and certified workshops.",
+      "ar": "أكثر من 400 ساعة من التدريب التقني والعمل المخبري الميداني والشهادات المعتمدة."
+    },
+    "tab_training": {
+      "en": "Training Programs",
+      "ar": "البرامج التدريبية"
+    },
+    "tab_certs": {
+      "en": "Accredited Certifications",
+      "ar": "الشهادات والدورات"
+    },
+    "hours_suffix": {
+      "en": "Hours",
+      "ar": "ساعة"
+    },
+    "score_label": {
+      "en": "Score:",
+      "ar": "النتيجة:"
+    }
+  },
+  "certificates": {
+    "eyebrow": {
+      "en": "CREDENTIALS",
+      "ar": "الاعتمادات"
+    },
+    "title": {
+      "en": "Verified Diplomas & Certifications",
+      "ar": "الشهادات والدبلومات المعتمدة"
+    }
+  },
+  "entrepreneurship": {
+    "eyebrow": {
+      "en": "// 06 ENTREPRENEURSHIP & FREELANCE",
+      "ar": "// 06 الريادة والعمل الحر"
+    },
+    "title": {
+      "en": "E-Commerce, Digital Marketing & Growth",
+      "ar": "التجارة الإلكترونية والتسويق الرقمي"
+    },
+    "lead": {
+      "en": "Proven track record launching e-commerce brands, driving paid acquisition campaigns, and managing marketplace operations.",
+      "ar": "سجل عملي في إطلاق وإدارة المتاجر الإلكترونية، والحملات الإعلانية الممولة، وتداول المنتجات على المنصات الكبرى."
+    }
+  },
+  "contact": {
+    "eyebrow": {
+      "en": "INQUIRIES // COLLABORATION & ENGAGEMENT",
+      "ar": "التواصل // الاستفسارات والتعاون الهندسي"
+    },
+    "title": {
+      "en": "Let's Shape the Future of Autonomous Systems.",
+      "ar": "لنصنع معاً مستقبل الأنظمة الذاتية والذكية."
+    },
+    "lead": {
+      "en": "Available for mechatronics internships, embedded systems roles, and specialized technical engineering collaborations.",
+      "ar": "متاح لفرص التدريب في هندسة الميكاترونكس، وتطوير الأنظمة المدمجة، والشراكات الهندسية المتخصصة."
+    },
+    "name_label": {
+      "en": "Your Name / Organization",
+      "ar": "الاسم / الجهة"
+    },
+    "name_placeholder": {
+      "en": "Dr. Ahmed Mostafa",
+      "ar": "د. أحمد مصطفى"
+    },
+    "email_label": {
+      "en": "Direct Email Address",
+      "ar": "البريد الإلكتروني المباشر"
+    },
+    "email_placeholder": {
+      "en": "ahmed@organization.com",
+      "ar": "ahmed@organization.com"
+    },
+    "message_label": {
+      "en": "Project Specification / Inquiry",
+      "ar": "تفاصيل المشروع / الاستفسار"
+    },
+    "message_placeholder": {
+      "en": "Let's discuss an engineering challenge or mechatronics engagement...",
+      "ar": "دعنا نناقش تحدياً هندسياً أو فرصة تدريب في هندسة الميكاترونكس..."
+    },
+    "send_btn": {
+      "en": "Transmit Inquiry",
+      "ar": "إرسال الاستفسار"
+    },
+    "direct_coordinates": {
+      "en": "DIRECT COORDINATES",
+      "ar": "بيانات التواصل المباشر"
+    },
+    "electronic_mail": {
+      "en": "ELECTRONIC MAIL",
+      "ar": "البريد الإلكتروني المباشر"
+    },
+    "professional_network": {
+      "en": "PROFESSIONAL NETWORK",
+      "ar": "شبكة التواصل المهني"
+    },
+    "curriculum_vitae": {
+      "en": "CURRICULUM VITAE",
+      "ar": "السيرة الذاتية الرسمية"
+    },
+    "download_cv_btn": {
+      "en": "Download Verified CV (PDF)",
+      "ar": "تحميل السيرة الذاتية المعتمدة (PDF)"
+    },
+    "geographic_base": {
+      "en": "GEOGRAPHIC BASE",
+      "ar": "المقر الجغرافي"
+    },
+    "geographic_val": {
+      "en": "10th of Ramadan City, Sharqia, Egypt • UTC+02:00",
+      "ar": "مدينة العاشر من رمضان، الشرقية، مصر • UTC+02:00"
+    },
+    "sending": {
+      "en": "Sending...",
+      "ar": "جاري الإرسال..."
+    },
+    "success_msg": {
+      "en": "Message transmitted successfully! I will respond shortly.",
+      "ar": "تم إرسال رسالتك بنجاح! سأتواصل معك في أقرب وقت."
+    },
+    "error_msg": {
+      "en": "Transmission failed. Please email directly.",
+      "ar": "تعذر الإرسال عبر النموذج. يرجى المراسلة عبر البريد مباشرة."
+    },
+    "download_cv": {
+      "en": "Download CV (PDF)",
+      "ar": "تحميل السيرة الذاتية (PDF)"
+    }
+  },
+  "footer": {
+    "copy": {
+      "en": "© 2026 Khaled Hamdy Eldaoudy. All rights reserved.",
+      "ar": "© 2026 خالد حمدي الداودي. جميع الحقوق محفوظة."
+    },
+    "tagline": {
+      "en": "Engineered with precision across mechanics, electronics & code",
+      "ar": "صُمم ونُفّذ بدقة هندسية تجمع بين الميكانيكا، الإلكترونيات والبرمجيات"
+    },
+    "coordinates": {
+      "en": "CAIRO // UTC+02:00",
+      "ar": "القاهرة // UTC+02:00"
+    },
+    "back_to_top": {
+      "en": "RETURN TO TOP",
+      "ar": "العودة إلى الأعلى"
+    }
+  }
+}

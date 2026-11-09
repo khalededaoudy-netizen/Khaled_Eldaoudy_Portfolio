@@ -1,0 +1,132 @@
+[
+  {
+    "id": "cert-solidworks-2026",
+    "title": {
+      "en": "SolidWorks Workshop",
+      "ar": "ورشة عمل SolidWorks"
+    },
+    "issuer": {
+      "en": "2B Digital",
+      "ar": "2B Digital"
+    },
+    "date": "March 2026",
+    "image": ""
+  },
+  {
+    "id": "cert-nti-ml-2025",
+    "title": {
+      "en": "Machine Learning Summer Training (120 Hours)",
+      "ar": "التدريب الصيفي في تعلم الآلة (120 ساعة)"
+    },
+    "issuer": {
+      "en": "NTI / ITIDA",
+      "ar": "NTI / ITIDA"
+    },
+    "date": "Jul – Aug 2025",
+    "image": ""
+  },
+  {
+    "id": "cert-znu-term1-2026",
+    "title": {
+      "en": "Certificate of Achievement, End-of-Term-1 Student Activities",
+      "ar": "شهادة إنجاز، الأنشطة الطلابية لنهاية الفصل الدراسي الأول"
+    },
+    "issuer": {
+      "en": "Zagazig National University",
+      "ar": "جامعة الزقازيق الأهلية"
+    },
+    "date": "2026",
+    "image": ""
+  },
+  {
+    "id": "cert-error-sumo-2025",
+    "title": {
+      "en": "Error Competition 2025 (Sumo Robot)",
+      "ar": "مسابقة Error 2025 (روبوت السومو)"
+    },
+    "issuer": {
+      "en": "IEEE HTI Student Branch",
+      "ar": "فرع جمعية IEEE بمعهد التكنولوجيا العالي"
+    },
+    "date": "October 2025",
+    "image": ""
+  },
+  {
+    "id": "cert-maharatech-c-2025",
+    "title": {
+      "en": "C Programming: From Basics to Mastery",
+      "ar": "برمجة لغة C: من الأساسيات إلى الاحتراف"
+    },
+    "issuer": {
+      "en": "MaharaTech",
+      "ar": "MaharaTech"
+    },
+    "date": "August 2025",
+    "image": ""
+  },
+  {
+    "id": "cert-dassault-solidworks-2025",
+    "title": {
+      "en": "3DExperience SOLIDWORKS Essentials Seminar",
+      "ar": "ندوة أساسيات 3DExperience SOLIDWORKS"
+    },
+    "issuer": {
+      "en": "Dassault Systèmes / EUE",
+      "ar": "Dassault Systèmes / EUE"
+    },
+    "date": "2025",
+    "image": ""
+  },
+  {
+    "id": "cert-bue-ai-2023",
+    "title": {
+      "en": "Artificial Intelligence",
+      "ar": "الذكاء الاصطناعي"
+    },
+    "issuer": {
+      "en": "The British University in Egypt",
+      "ar": "الجامعة البريطانية في مصر"
+    },
+    "date": "2023",
+    "image": ""
+  },
+  {
+    "id": "cert-zewail-ai-2023",
+    "title": {
+      "en": "Introduction to AI & Applications",
+      "ar": "مقدمة في الذكاء الاصطناعي وتطبيقاته"
+    },
+    "issuer": {
+      "en": "Zewail City of Science and Technology",
+      "ar": "مدينة زويل للعلوم والتكنولوجيا"
+    },
+    "date": "2023",
+    "image": ""
+  },
+  {
+    "id": "cert-udemy-solidworks-2022",
+    "title": {
+      "en": "SolidWorks Associate",
+      "ar": "شهادة SolidWorks Associate"
+    },
+    "issuer": {
+      "en": "Udemy",
+      "ar": "Udemy"
+    },
+    "date": "2022",
+    "image": ""
+  },
+  {
+    "id": "cert-coursera-programming-2024",
+    "title": {
+      "en": "Programming & Data Analysis",
+      "ar": "البرمجة وتحليل البيانات"
+    },
+    "issuer": {
+      "en": "Coursera and Satr",
+      "ar": "Coursera and Satr"
+    },
+    "date": "2022 – 2024",
+    "image": ""
+  }
+]

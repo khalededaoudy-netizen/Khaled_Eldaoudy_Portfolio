@@ -1,9 +1,66 @@
-node_modules
-dist
-dist-ssr
-*.local
-.DS_Store
+# Dependencies & Build Output
+node_modules/
+dist/
+
+# Environment variables & secrets
 .env
 .env.*
 !.env.example
 
+# Local review screenshots & capture directories
+screenshots/
+assets-original-backup/
+
+# Private Internal Audit & Review Reports (Retained locally, never pushed to Git)
+DESIGN_AUDIT.md
+DESIGN_SYSTEM.md
+REDESIGN_REPORT.md
+PRE_DEPLOYMENT_AUDIT.md
+CONTENT_VERIFICATION_REPORT.md
+DEPLOYMENT_GUIDE.md
+RELEASE_CHECKLIST.md
+FINAL_QA_CHECKLIST.md
+FINAL_GIT_PREPARATION.md
+DIST_BUILD_AUDIT.md
+
+# Development-only test & capture scripts (Only scripts/validate-data.js is needed for build)
+scripts/audit-viewports.py
+scripts/capture-all-sections.py
+scripts/capture-hero-viewports.py
+scripts/capture-modal.py
+scripts/capture-projects.py
+scripts/check-scrolled-modal.py
+scripts/optimize-images.js
+scripts/sync-images.js
+scripts/technical-audit.py
+scripts/verify-all-features.py
+scripts/verify-modals.py
+scripts/verify-site.py
+scripts/verify-dist.py
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# IDE and Editor configurations
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary & cache
+tmp/
+temp/
+.cache/
+.playwright/

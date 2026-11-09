@@ -1,39 +1,639 @@
 <!DOCTYPE html>
-<html lang="en" class="dark scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- Primary Meta Tags -->
-    <title>Khaled Eldaoudy — Mechatronics Engineering & Embedded Robotics</title>
-    <meta name="title" content="Khaled Eldaoudy — Mechatronics Engineering & Embedded Robotics" />
-    <meta name="description" content="Portfolio of Khaled Hamdy Eldaoudy — 4th-Year Mechatronics Engineering Student, Embedded Systems & Robotics Developer, Student Union President at Zagazig National University." />
-    <meta name="keywords" content="Khaled Eldaoudy, Mechatronics Engineer, Embedded Systems, Robotics, Zagazig National University, STM32, Arduino, AVR, SolidWorks, PID Control, Egypt" />
-    <meta name="author" content="Khaled Hamdy Eldaoudy" />
-    <meta name="theme-color" content="#060709" />
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://khaledeldaoudy.dev/" />
-    <meta property="og:title" content="Khaled Eldaoudy — Mechatronics Engineering & Embedded Robotics" />
-    <meta property="og:description" content="Explore hardware schematics, autonomous sumo robotics, embedded firmware, and technical achievements of Khaled Hamdy Eldaoudy." />
-    <meta property="og:image" content="/og-preview.png" />
+<html lang="en" dir="ltr" data-theme="luxury-dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khaled Eldaoudy &mdash; Mechatronics Engineer &bull; Editorial Portfolio</title>
+  <meta name="description" content="Editorial digital portfolio of Khaled Hamdy Eldaoudy — Mechatronics Engineering scholar at ZNU specializing in embedded firmware, control loops, and autonomous robotics.">
+  <meta name="author" content="Khaled Hamdy Eldaoudy">
+  <meta name="theme-color" content="#090909">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content="Khaled Eldaoudy — Mechatronics Engineering & Embedded Robotics" />
-    <meta property="twitter:description" content="Explore hardware schematics, autonomous sumo robotics, embedded firmware, and technical achievements of Khaled Hamdy Eldaoudy." />
-    <meta property="twitter:image" content="/og-preview.png" />
+  <!-- Open Graph & Social Cards -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Khaled Eldaoudy &mdash; Mechatronics Engineer &bull; Editorial Portfolio">
+  <meta property="og:description" content="Autonomous Intelligence, Embedded Firmware &amp; Kinematics Portfolio.">
+  <meta property="og:image" content="/assets/profile/profile.png">
+  <meta name="twitter:card" content="summary_large_image">
 
-    <!-- Google Fonts: Space Grotesk, Syne, JetBrains Mono -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@500;700;800&family=Noto+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet" />
-  </head>
-  <body class="bg-dark-950 text-steel-100 font-sans selection:bg-lime selection:text-dark-950 overflow-x-hidden antialiased">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%23090909'/><circle cx='50' cy='50' r='36' fill='none' stroke='%23C6A66B' stroke-width='3'/><circle cx='50' cy='50' r='12' fill='%23C6A66B'/><text x='50' y='55' font-size='16' text-anchor='middle' fill='%23090909' font-family='serif' font-weight='bold'>K</text></svg>">
+
+  <!-- Typography: Cormorant Garamond (Editorial Serif), Inter (Modern Body), IBM Plex Sans Arabic, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Three.js Library via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Editorial Luxury Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Minimalist Luxury Header -->
+  <header class="luxury-header" id="navbar">
+    <div class="luxury-container header-container">
+      
+      <!-- Wordmark -->
+      <a href="#hero" class="brand-wordmark" aria-label="Khaled Eldaoudy Home">
+        <span class="brand-name" data-i18n="nav.brand">KHALED ELDAOUDY</span>
+        <span class="brand-role font-mono" data-i18n="nav.role">MECHATRONICS ENGINEER</span>
+      </a>
+
+      <!-- Desktop Editorial Navigation -->
+      <nav class="editorial-nav" id="navMenu" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link font-mono" data-i18n="nav.about">Biography</a></li>
+          <li><a href="#skills" class="nav-link font-mono" data-i18n="nav.skills">Expertise</a></li>
+          <li><a href="#projects" class="nav-link font-mono" data-i18n="nav.projects">Selected Works</a></li>
+          <li><a href="#competitions" class="nav-link font-mono" data-i18n="nav.competitions">Honors</a></li>
+          <li><a href="#leadership" class="nav-link font-mono" data-i18n="nav.leadership">Leadership</a></li>
+          <li><a href="#training" class="nav-link font-mono" data-i18n="nav.training">Credentials</a></li>
+          <li><a href="#contact" class="nav-link font-mono nav-link-contact" data-i18n="nav.contact">Inquiries</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Controls -->
+      <div class="header-actions">
+        <!-- Language Switcher Pill -->
+        <button class="lang-switch-btn font-mono lang-toggle-btn" aria-label="Switch Language (English / العربية)">
+          <span class="lang-label">العربية</span>
+        </button>
+
+        <!-- Direct Inquiry CTA -->
+        <a href="#contact" class="luxury-cta-btn font-mono" data-i18n="nav.hire_me">Get in Touch</a>
+
+        <!-- Mobile Drawer Toggle -->
+        <button class="mobile-menu-toggle" id="navToggle" aria-label="Toggle Navigation" aria-expanded="false" aria-controls="navMenu">
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Main Content Stage -->
+  <main id="mainContent">
+
+    <!-- ======================================================================
+         SECTION 1: HERO (Cinematic Editorial Composition)
+         ====================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="luxury-container hero-container">
+        
+        <!-- Top Editorial Masthead Index -->
+        <div class="hero-masthead">
+          <div class="masthead-left font-mono">
+            <span class="gold-indicator" aria-hidden="true"></span>
+            <span class="masthead-status" data-i18n="hero.status">MECHATRONICS ENGINEER — 2027</span>
+          </div>
+          <div class="masthead-right font-mono">
+            <span data-i18n="hero.masthead_inst">ZAGAZIG NATIONAL UNIVERSITY // CREDIT-HOUR SYSTEM</span>
+          </div>
+        </div>
+
+        <!-- Main Editorial Grid -->
+        <div class="hero-editorial-grid">
+          
+          <!-- Column 1: Grand Literary Statement & CTAs -->
+          <div class="hero-narrative">
+            <h1 class="hero-grand-title" id="heroGrandTitle">
+              <span class="title-serif-main">Engineering</span>
+              <span class="title-serif-italic">Intelligence</span>
+              <span class="title-serif-sub">at the Convergence of Mechanics &amp; Code.</span>
+            </h1>
+
+            <p class="hero-lead-text" id="heroLeadText" data-i18n="hero.lead">
+              Mechatronics Engineering scholar (Year 4, ZNU) combining low-level C/C++ firmware, kinematics, and closed-loop control to build resilient autonomous systems.
+            </p>
+
+            <!-- Refined CTAs -->
+            <div class="hero-actions">
+              <a href="#projects" class="luxury-btn luxury-btn-gold" data-i18n="hero.cta_projects">
+                <span>Explore Works</span>
+                <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+              </a>
+              <a href="/assets/cv/Khaled_CV.pdf" target="_blank" rel="noopener noreferrer" class="luxury-btn luxury-btn-ghost font-mono" data-i18n="hero.cta_cv">
+                <span>Curriculum Vitae (PDF)</span>
+              </a>
+            </div>
+
+            <!-- Key Editorial Metadata Badges -->
+            <div class="hero-laurels">
+              <div class="laurel-pill">
+                <span class="laurel-icon" aria-hidden="true">🥈</span>
+                <span class="laurel-text" data-i18n="hero.laurel_robosoccer">2nd Place RoboSoccer &bull; Prime Minister Signed</span>
+              </div>
+              <div class="laurel-pill">
+                <span class="laurel-icon" aria-hidden="true">⚡</span>
+                <span class="laurel-text" data-i18n="hero.laurel_projects">10+ Technical Projects</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Personal Portrait & Kinematic Three.js Gimbal Layer -->
+          <div class="hero-visual-stage">
+            
+            <!-- Portrait Container with Dark Editorial Mask -->
+            <div class="portrait-frame">
+              <div class="portrait-mask">
+                <picture>
+                  <source srcset="/assets/profile/profile.webp" type="image/webp">
+                  <img 
+                    src="/assets/profile/profile.png" 
+                    alt="Khaled Hamdy Eldaoudy — Mechatronics Engineer" 
+                    class="portrait-img"
+                    loading="eager"
+                    width="480"
+                    height="640"
+                  >
+                </picture>
+              </div>
+              
+              <!-- Subtle Gold Hairline Border Frame -->
+              <div class="portrait-border-frame" aria-hidden="true"></div>
+
+              <!-- Floating Editorial Caption -->
+              <div class="portrait-caption font-mono">
+                <span class="caption-title" data-i18n="hero.caption_name">KHALED H. ELDAOUDY</span>
+                <span class="caption-sub" data-i18n="hero.caption_role">MECHATRONICS RESEARCHER</span>
+              </div>
+            </div>
+
+            <!-- Three.js Kinematic Gimbal Mount -->
+            <div class="gimbal-mount-wrapper" id="heroCanvasMount" aria-hidden="true">
+              <!-- Three.js Canvas mounts here -->
+            </div>
+
+            <!-- Precision Telemetry HUD Overlay -->
+            <div class="telemetry-hud font-mono" id="gimbalTelemetry" aria-hidden="true">
+              <div class="hud-header">
+                <span class="hud-pulse"></span>
+                <span>KINEMATICS</span>
+              </div>
+              <div class="hud-row">
+                <span class="hud-lbl">PITCH (X):</span>
+                <span class="hud-val" id="gimbalPitchVal">0.0°</span>
+              </div>
+              <div class="hud-row">
+                <span class="hud-lbl">YAW (Y):</span>
+                <span class="hud-val" id="gimbalYawVal">0.0°</span>
+              </div>
+              <div class="hud-row">
+                <span class="hud-lbl">ROLL (Z):</span>
+                <span class="hud-val" id="gimbalRollVal">0.0°</span>
+              </div>
+              <div class="hud-footer">
+                <span>ENGINE: THREE.JS WEBGL</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Integrated Editorial Metrics Strip -->
+        <div class="hero-metrics-strip" id="heroStats">
+          <!-- Dynamically populated from profile.json -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 2: ABOUT (Editorial Biography & Academic Lineage)
+         ====================================================================== -->
+    <section class="section about-section" id="about">
+      <div class="luxury-container">
+        
+        <div class="editorial-section-tag font-mono">
+          <span class="gold-num">01</span>
+          <span class="tag-title" data-i18n="about.eyebrow">BIOGRAPHY // PROFILE</span>
+        </div>
+
+        <div class="about-editorial-grid">
+          
+          <!-- Grand Editorial Pull Quote -->
+          <div class="about-quote-col">
+            <blockquote class="grand-editorial-quote" id="aboutGrandQuote" data-i18n="about.quote">
+              &ldquo;Engineering is the disciplined synthesis of mechanical physics, microsecond firmware timing, and mathematical control theory.&rdquo;
+            </blockquote>
+
+            <!-- Academic Lineage Block -->
+            <div class="academic-credential-card">
+              <div class="card-label font-mono" data-i18n="about.education_title">ACADEMIC FOUNDATION</div>
+              <h3 class="credential-degree" id="aboutEduDegree">Bachelor of Mechatronics Engineering</h3>
+              <p class="credential-inst" id="aboutEduInst">Zagazig National University (ZNU), Egypt</p>
+              <div class="credential-meta font-mono">
+                <span class="meta-tag gold-tag" id="aboutEduStatus">Expected Graduation: 2027</span>
+                <span class="meta-tag" data-i18n="about.education_system">Credit-Hour System</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Extended Biography Narrative -->
+          <div class="about-narrative-col">
+            <div class="narrative-body">
+              <p class="narrative-p lead-p" id="aboutBioText">
+                Loading biography narrative...
+              </p>
+              <div class="narrative-separator" aria-hidden="true"></div>
+              <div class="narrative-attributes font-mono">
+                <div class="attr-item">
+                  <span class="attr-label" data-i18n="about.attr_location">LOCATION:</span>
+                  <span class="attr-val" data-i18n="about.attr_location_val">10th of Ramadan City, Sharqia, Egypt</span>
+                </div>
+                <div class="attr-item">
+                  <span class="attr-label" data-i18n="about.attr_specialization">SPECIALIZATION:</span>
+                  <span class="attr-val" data-i18n="about.attr_specialization_val">Embedded Firmware, PID Control, Autonomous Robotics</span>
+                </div>
+                <div class="attr-item">
+                  <span class="attr-label" data-i18n="about.attr_academic_level">ACADEMIC LEVEL:</span>
+                  <span class="attr-val" data-i18n="about.attr_academic_val">Year 4 Mechatronics &bull; Expected Graduation: 2027</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 3: TECHNICAL EXPERTISE (Architectural Discipline Matrix)
+         ====================================================================== -->
+    <section class="section skills-section" id="skills">
+      <div class="luxury-container">
+        
+        <div class="editorial-section-tag font-mono">
+          <span class="gold-num">02</span>
+          <span class="tag-title" data-i18n="skills.eyebrow">DISCIPLINES // TECHNICAL EXPERTISE</span>
+        </div>
+
+        <div class="section-heading-block">
+          <h2 class="editorial-section-title" data-i18n="skills.title">Multidisciplinary Engineering Stack</h2>
+          <p class="editorial-section-subtitle" data-i18n="skills.lead">A taxonomy of verified competencies across embedded microcontrollers, control loops, robotics, software, and mechanical CAD.</p>
+        </div>
+
+        <!-- 7 Categorized Technical Domains -->
+        <div class="expertise-matrix-grid" id="skillsGrid">
+          <!-- Dynamically populated from profile.json -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 4: SELECTED WORKS (Curated Projects Showcase)
+         ====================================================================== -->
+    <section class="section projects-section" id="projects">
+      <div class="luxury-container">
+        
+        <div class="editorial-section-tag font-mono">
+          <span class="gold-num">03</span>
+          <span class="tag-title" data-i18n="projects.eyebrow">PORTFOLIO // SELECTED WORKS</span>
+        </div>
+
+        <div class="projects-editorial-header">
+          <div>
+            <h2 class="editorial-section-title" data-i18n="projects.title">Featured Engineering Projects</h2>
+            <p class="editorial-section-subtitle" data-i18n="projects.lead">Hands-on systems spanning embedded firmware, autonomous robotics, sensors, and structural simulation.</p>
+          </div>
+
+          <!-- Minimalist Filter Tabs -->
+          <div class="editorial-filter-tabs font-mono" role="group" aria-label="Project Category Filters">
+            <button class="filter-tab active" data-filter="all" data-i18n="projects.filter_all">All Systems</button>
+            <button class="filter-tab" data-filter="embedded" data-i18n="projects.filter_embedded">Embedded</button>
+            <button class="filter-tab" data-filter="robotics" data-i18n="projects.filter_robotics">Robotics</button>
+            <button class="filter-tab" data-filter="cad" data-i18n="projects.filter_cad">CAD / Simulation</button>
+          </div>
+        </div>
+
+        <!-- Curated Projects Grid -->
+        <div class="projects-curated-showcase" id="projectsGrid">
+          <!-- Dynamically populated from projects.json -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 5: HONORS & COMPETITIONS (Prestigious Chronicle)
+         ====================================================================== -->
+    <section class="section competitions-section" id="competitions">
+      <div class="luxury-container">
+        
+        <div class="editorial-section-tag font-mono">
+          <span class="gold-num">04</span>
+          <span class="tag-title" data-i18n="competitions.eyebrow">CHRONICLE // HONORS &amp; COMPETITIONS</span>
+        </div>
+
+        <div class="section-heading-block">
+          <h2 class="editorial-section-title" data-i18n="competitions.title">Competitive Robotics &amp; Awards</h2>
+          <p class="editorial-section-subtitle" data-i18n="competitions.lead">National-level robotics tournaments, technical exhibitions, and certified recognitions across universities.</p>
+        </div>
+
+        <!-- Chronological Honor Stack -->
+        <div class="honors-timeline" id="competitionsTimeline">
+          <!-- Dynamically populated from competitions.json -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 6: LEADERSHIP & GOVERNANCE
+         ====================================================================== -->
+    <section class="section leadership-section" id="leadership">
+      <div class="luxury-container">
+        
+        <div class="editorial-section-tag font-mono">
+          <span class="gold-num">05</span>
+          <span class="tag-title" data-i18n="leadership.eyebrow">GOVERNANCE // LEADERSHIP &amp; COMMUNITY</span>
+        </div>
+
+        <div class="section-heading-block">
+          <h2 class="editorial-section-title" data-i18n="leadership.title">Community Building &amp; Executive Leadership</h2>
+          <p class="editorial-section-subtitle" data-i18n="leadership.lead">Directing university robotics communities, serving in student governance, and representing official academic delegations.</p>
+        </div>
+
+        <!-- Leadership Editorial Grid -->
+        <div class="leadership-editorial-grid" id="leadershipGrid">
+          <!-- Dynamically populated from leadership.json -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 7: CREDENTIALS & INDUSTRIAL TRAINING
+         ====================================================================== -->
+    <section class="section training-section" id="training">
+      <div class="luxury-container">
+        
+        <div class="editorial-section-tag font-mono">
+          <span class="gold-num">06</span>
+          <span class="tag-title" data-i18n="training.eyebrow">ACCREDITATION // INDUSTRIAL TRAINING</span>
+        </div>
+
+        <div class="section-heading-block">
+          <h2 class="editorial-section-title" data-i18n="training.title">Industrial Training &amp; Accredited Credentials</h2>
+          <p class="editorial-section-subtitle" data-i18n="training.lead">Over 400+ hours of rigorous embedded systems, machine learning, and manufacturing automation programs.</p>
+        </div>
+
+        <!-- Training Programs Showcase -->
+        <div class="training-programs-list" id="trainingCards">
+          <!-- Dynamically populated from training.json -->
+        </div>
+
+        <!-- Verified Certificates Subsection -->
+        <div class="certificates-editorial-wrapper">
+          <div class="certs-sub-header">
+            <span class="gold-badge font-mono" data-i18n="certificates.eyebrow">CREDENTIALS</span>
+            <h3 class="certs-sub-title" data-i18n="certificates.title">Verified Diplomas &amp; Certifications</h3>
+          </div>
+          <div class="certs-editorial-grid" id="certsGrid">
+            <!-- Dynamically populated from certificates.json -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 8: VENTURES & ENTREPRENEURSHIP
+         ====================================================================== -->
+    <section class="section entrepreneurship-section" id="entrepreneurship">
+      <div class="luxury-container">
+        
+        <div class="editorial-section-tag font-mono">
+          <span class="gold-num">07</span>
+          <span class="tag-title" data-i18n="entrepreneurship.eyebrow">VENTURES // INITIATIVE &amp; EXECUTION</span>
+        </div>
+
+        <div class="section-heading-block">
+          <h2 class="editorial-section-title" data-i18n="entrepreneurship.title">Commercial Ventures &amp; Digital Solutions</h2>
+          <p class="editorial-section-subtitle" data-i18n="entrepreneurship.lead">Commercial initiatives in e-commerce, digital marketing operations, and independent engineering consultation.</p>
+        </div>
+
+        <div class="ventures-editorial-grid" id="entrepreneurshipGrid">
+          <!-- Dynamically populated from entrepreneurship.json -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 9: INQUIRIES & CONTACT
+         ====================================================================== -->
+    <section class="section contact-section" id="contact">
+      <div class="luxury-container">
+        
+        <div class="contact-editorial-wrapper">
+          
+          <div class="contact-editorial-header">
+            <div class="editorial-section-tag font-mono">
+              <span class="gold-num">08</span>
+              <span class="tag-title" data-i18n="contact.eyebrow">INITIATE // INQUIRIES &amp; COLLABORATION</span>
+            </div>
+            <h2 class="contact-grand-title" data-i18n="contact.title">Let's Shape the Future of Autonomous Systems.</h2>
+            <p class="contact-editorial-lead" data-i18n="contact.lead">Available for mechatronics internships, embedded systems roles, and specialized technical engineering collaborations.</p>
+          </div>
+
+          <div class="contact-layout-grid">
+            
+            <!-- Minimalist Luxury Form -->
+            <form class="luxury-contact-form" id="contactForm" action="https://formspree.io/f/xvgzgqpr" method="POST">
+              <!-- Honeypot anti-spam -->
+              <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off">
+
+              <div class="form-field-group">
+                <label for="contactName" class="form-field-label font-mono" data-i18n="contact.name_label">YOUR NAME / ORGANIZATION</label>
+                <input type="text" id="contactName" name="name" class="luxury-form-input" required placeholder="Dr. Ahmed Mostafa" data-i18n-placeholder="contact.name_placeholder">
+              </div>
+
+              <div class="form-field-group">
+                <label for="contactEmail" class="form-field-label font-mono" data-i18n="contact.email_label">DIRECT EMAIL ADDRESS</label>
+                <input type="email" id="contactEmail" name="email" class="luxury-form-input" required placeholder="ahmed@organization.com" data-i18n-placeholder="contact.email_placeholder">
+              </div>
+
+              <div class="form-field-group">
+                <label for="contactMessage" class="form-field-label font-mono" data-i18n="contact.message_label">PROJECT SPECIFICATION / INQUIRY</label>
+                <textarea id="contactMessage" name="message" class="luxury-form-textarea" rows="4" required placeholder="Let's discuss an engineering challenge or mechatronics engagement..." data-i18n-placeholder="contact.message_placeholder"></textarea>
+              </div>
+
+              <button type="submit" class="luxury-btn luxury-btn-gold btn-send font-mono" id="formSubmitBtn">
+                <span data-i18n="contact.send_btn">Transmit Inquiry</span>
+                <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+              </button>
+
+              <div class="form-status-msg font-mono" id="formStatusMsg" role="status" aria-live="polite"></div>
+            </form>
+
+            <!-- Direct Verification & Coordinates -->
+            <div class="contact-coordinates-card">
+              <div class="card-label font-mono" data-i18n="contact.direct_coordinates">DIRECT COORDINATES</div>
+              
+              <div class="coordinate-item">
+                <span class="coord-label font-mono" data-i18n="contact.electronic_mail">ELECTRONIC MAIL</span>
+                <a href="mailto:KhaledEdaoudy@gmail.com" class="coord-value">KhaledEdaoudy@gmail.com</a>
+              </div>
+
+              <div class="coordinate-item">
+                <span class="coord-label font-mono" data-i18n="contact.professional_network">PROFESSIONAL NETWORK</span>
+                <a href="https://linkedin.com/in/khaledeldaoudy" target="_blank" rel="noopener noreferrer" class="coord-value">linkedin.com/in/khaledeldaoudy</a>
+              </div>
+
+              <div class="coordinate-item">
+                <span class="coord-label font-mono" data-i18n="contact.curriculum_vitae">CURRICULUM VITAE</span>
+                <a href="/assets/cv/Khaled_CV.pdf" target="_blank" rel="noopener noreferrer" class="luxury-btn luxury-btn-ghost font-mono btn-dl-cv">
+                  <span data-i18n="contact.download_cv_btn">Download Verified CV (PDF)</span>
+                </a>
+              </div>
+
+              <div class="coordinate-item coord-location">
+                <span class="coord-label font-mono" data-i18n="contact.geographic_base">GEOGRAPHIC BASE</span>
+                <span class="coord-location-val" data-i18n="contact.geographic_val">10th of Ramadan City, Sharqia, Egypt &bull; UTC+02:00</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================================
+       EDITORIAL PROJECT DETAIL MODAL
+       ====================================================================== -->
+  <div class="modal-backdrop-luxury" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+    <div class="modal-dialog-luxury">
+      
+      <!-- Modal Top Bar -->
+      <div class="modal-top-bar">
+        <div class="modal-eyebrow font-mono">
+          <span class="gold-pill" id="modalCategory">EMBEDDED</span>
+          <span class="dim-pill" id="modalYear">2025</span>
+        </div>
+        <button class="modal-dismiss-btn" id="modalCloseBtn" aria-label="Close Specification">&times;</button>
+      </div>
+
+      <!-- Modal Body Content -->
+      <div class="modal-editorial-body">
+        <h2 class="modal-heading-title" id="modalTitle">Project Title</h2>
+
+        <div class="modal-metadata-strip font-mono">
+          <div class="meta-strip-item">
+            <span class="meta-strip-label">ROLE:</span>
+            <span class="meta-strip-val" id="modalRole">Designer &amp; Developer</span>
+          </div>
+          <div class="meta-strip-item">
+            <span class="meta-strip-label">PLATFORM:</span>
+            <span class="meta-strip-val" id="modalPlatform">ATmega32</span>
+          </div>
+        </div>
+
+        <!-- Project Visual Gallery / Lightbox -->
+        <div class="modal-visual-showcase" id="modalGallery">
+          <!-- Dynamically populated -->
+        </div>
+
+        <!-- 6-Part Architectural Engineering Specification -->
+        <div class="modal-specs-container">
+          
+          <!-- 1. Problem / Objective -->
+          <div class="spec-block">
+            <h3 class="spec-label font-mono">
+              <span class="spec-num">01 //</span>
+              <span class="spec-name" id="modalLblProblem">PROBLEM &amp; OBJECTIVE</span>
+            </h3>
+            <p id="modalProblem" class="spec-text modal-p"></p>
+          </div>
+
+          <!-- 2. Engineering Concept -->
+          <div class="spec-block">
+            <h3 class="spec-label font-mono">
+              <span class="spec-num">02 //</span>
+              <span class="spec-name" id="modalLblConcept">ENGINEERING CONCEPT &amp; THEORY</span>
+            </h3>
+            <p id="modalConcept" class="spec-text modal-p"></p>
+          </div>
+
+          <!-- 3. Personal Contribution -->
+          <div class="spec-block">
+            <h3 class="spec-label font-mono">
+              <span class="spec-num">03 //</span>
+              <span class="spec-name" id="modalLblContribution">PERSONAL CONTRIBUTION &amp; ROLE</span>
+            </h3>
+            <p id="modalContribution" class="spec-text modal-p"></p>
+          </div>
+
+          <!-- 4. Hardware & Software Stack -->
+          <div class="spec-block">
+            <h3 class="spec-label font-mono">
+              <span class="spec-num">04 //</span>
+              <span class="spec-name" id="modalLblStack">HARDWARE &amp; SOFTWARE STACK</span>
+            </h3>
+            <div class="modal-tags-grid font-mono" id="modalTechList">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- 5. Implementation -->
+          <div class="spec-block">
+            <h3 class="spec-label font-mono">
+              <span class="spec-num">05 //</span>
+              <span class="spec-name" id="modalLblImplementation">IMPLEMENTATION &amp; ARCHITECTURE</span>
+            </h3>
+            <p id="modalImplementation" class="spec-text modal-p"></p>
+          </div>
+
+          <!-- 6. Validation & Verified Outcome -->
+          <div class="spec-block highlight-outcome">
+            <h3 class="spec-label font-mono">
+              <span class="spec-num">06 //</span>
+              <span class="spec-name" id="modalLblOutcome">VALIDATION &amp; VERIFIED OUTCOME</span>
+            </h3>
+            <p id="modalOutcome" class="spec-text modal-p"></p>
+          </div>
+
+          <!-- Fallback narrative for compatibility -->
+          <p id="modalDescription" style="display:none;"></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       LUXURY FOOTER
+       ====================================================================== -->
+  <footer class="luxury-footer">
+    <div class="luxury-container footer-flex">
+      <div class="footer-left">
+        <span class="footer-brand" data-i18n="nav.brand">KHALED ELDAOUDY</span>
+        <span class="footer-copyright font-mono" data-i18n="footer.copy">&copy; 2026 Khaled Hamdy Eldaoudy. All rights reserved.</span>
+      </div>
+      <div class="footer-center font-mono">
+        <span class="time-stamp" data-i18n="footer.coordinates">CAIRO // UTC+02:00</span>
+      </div>
+      <div class="footer-right">
+        <a href="#hero" class="return-top-btn font-mono">
+          <span data-i18n="footer.back_to_top">RETURN TO TOP</span>
+          <span class="arrow-up" aria-hidden="true">&uarr;</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: Vanilla ES Modules -->
+  <script type="module" src="js/main.js"></script>
+
+</body>
 </html>
-

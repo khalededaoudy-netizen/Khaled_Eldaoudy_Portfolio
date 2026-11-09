@@ -1,0 +1,78 @@
+[
+  {
+    "id": "train-iti-embedded",
+    "provider": {
+      "en": "Information Technology Institute (ITI), Smart Village, Egypt",
+      "ar": "معهد تكنولوجيا المعلومات (ITI)، القرية الذكية، مصر"
+    },
+    "program": {
+      "en": "Embedded Systems Summer Training Program (162 Hours)",
+      "ar": "برنامج التدريب الصيفي في النظم المدمجة (162 ساعة)"
+    },
+    "hours": 162,
+    "period": "Jul – Aug 2025",
+    "score": null,
+    "description": {
+      "en": "Completed an intensive, hands-on training program in Embedded Systems Design and Development. Covered C Programming, Microcontroller Interfacing, Communication Protocols, Real-Time Operating Systems (RTOS), and Embedded Systems Testing. Designed, built, and defended a team capstone project — a Smart Home Control System — demonstrating system integration and real-time control. Supervised by Dr. Heba Saleh, Chairman of ITI.",
+      "ar": "إتمام برنامج تدريبي تطبيقي ومكثف في تصميم وتطوير النظم المدمجة. شمل برمجة C، والتعامل مع ملحقات المتحكم، وبروتوكولات الاتصال، ونظم التشغيل اللحظية (RTOS)، واختبار النظم المدمجة. تم تصميم وبناء ومناقشة مشروع تخرج جماعي — نظام تحكم المنزل الذكي — يوضح تكامل النظام والتحكم في الوقت الحقيقي. تم التدريب تحت إشراف الدكتورة هبة صالح، رئيس معهد تكنولوجيا المعلومات ITI."
+    },
+    "images": []
+  },
+  {
+    "id": "train-nti-machine-learning",
+    "provider": {
+      "en": "National Telecommunication Institute (NTI), in cooperation with ITIDA",
+      "ar": "المعهد القومي للاتصالات (NTI) بالتعاون مع هيئة ITIDA"
+    },
+    "program": {
+      "en": "Machine Learning Summer Training Program (120 Hours: 90 Technical + 30 Freelancing)",
+      "ar": "برنامج التدريب الصيفي في تعلم الآلة (120 ساعة: 90 تقنية + 30 عمل حر)"
+    },
+    "hours": 120,
+    "period": "Jul – Aug 2025",
+    "score": "89%",
+    "description": {
+      "en": "Completed an intensive summer training program covering Machine Learning fundamentals and applications. Combined technical ML training with freelancing and professional skills development. Achieved a final score of 89%.",
+      "ar": "إتمام برنامج تدريبي صيفي مكثف يغطي أساسيات وتطبيقات تعلم الآلة. جمع بين التدريب التقني في تعلم الآلة وتطوير مهارات العمل الحر والمهارات المهنية. حقق نتيجة نهائية 89%."
+    },
+    "images": []
+  },
+  {
+    "id": "train-tetra-pak",
+    "provider": {
+      "en": "Obour Land for Food Industries – Training Center",
+      "ar": "مركز تدريب شركة عبور لاند للصناعات الغذائية"
+    },
+    "program": {
+      "en": "Beginner Technical Training, Tetra Pak A3-Speed Machines (120 Hours)",
+      "ar": "تدريب تقني للمبتدئين على ماكينات Tetra Pak A3-Speed (120 ساعة)"
+    },
+    "hours": 120,
+    "period": "Aug – Sep 2025",
+    "score": null,
+    "description": {
+      "en": "Gained practical experience in food packaging technology and aseptic processing. Covered machine overview, utilities (power, steam, air, H2O2), and automatic splicing & tube forming. Learned filling & sterilization systems, drive & jaw mechanisms, and final folder operations. Participated in an on-site factory tour observing large-scale automation and production workflows.",
+      "ar": "اكتساب خبرة عملية في تكنولوجيا تعبئة الأغذية والمعالجة المعقمة. شمل التدريب نظرة عامة على الماكينات، وخطوط الإمداد (كهرباء، بخار، هواء مضغوط، بيروكسيد الهيدروجين)، واللحام التلقائي وتشكيل الأنابيب، وأنظمة التعبئة والتعقيم، وآليات القيادة والفكوك، وعمليات الطي النهائي، مع جولة ميدانية بالمصنع لمشاهدة الأتمتة وخطوط الإنتاج الكبرى."
+    },
+    "images": []
+  },
+  {
+    "id": "train-labtronic",
+    "provider": {
+      "en": "Labtronic Industries",
+      "ar": "شركة لابترونيك للصناعات المتطورة"
+    },
+    "program": {
+      "en": "Industrial Visit – Aerospace training equipment & engineering educational systems",
+      "ar": "زيارة صناعية – معدات تدريب علوم الطيران والأنظمة التعليمية الهندسية"
+    },
+    "hours": null,
+    "period": "Apr – May 2026",
+    "score": null,
+    "description": {
+      "en": "Represented the Engineering Student Union on an industrial visit exploring real-world aerospace and mechanical engineering applications in 6th of October City. Toured specialized labs including a Wind Tunnel, Cabin Simulator, Landing Gear Mechanism, and Aero Components Stability and force-measurement systems (velocity, lift, drag, thrust). Gained hands-on exposure to engine operation/testing systems and various control, operation, and lighting systems. Helped coordinate the visit to strengthen ties between academic learning and industrial practice for engineering students.",
+      "ar": "مثلت اتحاد طلاب كلية الهندسة في زيارة صناعية لاستكشاف تطبيقات حقيقية لهندسة الطيران والهندسة الميكانيكية بمدينة السادس من أكتوبر. شملت الجولة معامل متخصصة منها نفق الرياح، ومحاكي الكابينة، وميكانيزم معدات الهبوط، وأنظمة قياس القوى واستقرار مكونات الطيران (السرعة، الرفع، السحب، والدفع)، والاطلاع العملي على أنظمة اختبار وتشغيل المحركات وأنظمة التحكم والتشغيل والإضاءة، والمساعدة في تنسيق الزيارة لربط الدراسة الأكاديمية بالواقع العملي."
+    },
+    "images": []
+  }
+]

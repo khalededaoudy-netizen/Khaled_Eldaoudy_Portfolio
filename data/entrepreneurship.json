@@ -1,0 +1,124 @@
+[
+  {
+    "id": "ent-ctrl-store",
+    "role": {
+      "en": "Founder & Manager",
+      "ar": "المؤسس والمدير العام"
+    },
+    "title": {
+      "en": "CTRL Online Store",
+      "ar": "متجر CTRL الإلكتروني"
+    },
+    "platform": "Wuilt Platform",
+    "period": "2024 – Present",
+    "description": {
+      "en": "E-commerce brand selling electronics and accessories on the Wuilt platform. Manage product listings, SEO optimization, and content creation. Lead social media marketing and advertising strategy across TikTok, Facebook, and Instagram.",
+      "ar": "علامة تجارية للتجارة الإلكترونية متخصصة في بيع الإلكترونيات والإكسسوارات على منصة ويلت (Wuilt). إدارة إدراج المنتجات، وتحسين محركات البحث (SEO)، وصناعة المحتوى، وقيادة استراتيجيات التسويق والإعلانات الممولة عبر تيك توك وفيسبوك وإنستغرام."
+    },
+    "tags": [
+      "E-Commerce",
+      "Wuilt",
+      "SEO",
+      "TikTok Ads",
+      "Meta Ads",
+      "Brand Strategy"
+    ]
+  },
+  {
+    "id": "ent-accessory-stores",
+    "role": {
+      "en": "Founder & E-Commerce Manager",
+      "ar": "مؤسس ومدير متاجر إلكترونية"
+    },
+    "title": {
+      "en": "Electronic Accessory E-Commerce Stores",
+      "ar": "متاجر إلكترونيات وإكسسوارات متخصصة"
+    },
+    "platform": "Shopify / WooCommerce",
+    "period": "2019 – 2022",
+    "description": {
+      "en": "Launched and ran 3 Shopify and WooCommerce stores; managed product sourcing, order fulfillment, payment gateways, and customer support. Generated consistent sales across multiple product cycles.",
+      "ar": "إطلاق وإدارة 3 متاجر إلكترونية عبر منصتي شوبيفاي وووكومرس؛ وإدارة سلاسل التوريد وشحن الطلبات وبوابات الدفع وخدمة العملاء، وتحقيق مبيعات مستمرة عبر دورات منتجات متعددة."
+    },
+    "tags": [
+      "Shopify",
+      "WooCommerce",
+      "Sourcing",
+      "Operations",
+      "Fulfillment"
+    ]
+  },
+  {
+    "id": "ent-digital-marketing",
+    "role": {
+      "en": "Digital Marketer & Media Buyer (Freelance)",
+      "ar": "مسوق رقمي ومسؤول إعلانات ممولة (عمل حر)"
+    },
+    "title": {
+      "en": "Paid Acquisition & Performance Marketing",
+      "ar": "التسويق الرقمي وإدارة الحملات الإعلانية"
+    },
+    "platform": "Facebook & Instagram Ads",
+    "period": "2019 – 2022",
+    "description": {
+      "en": "Created and optimized paid advertising campaigns on Facebook and Instagram for small businesses. Improved ROAS through precision audience targeting, creative A/B testing, and sales funnel analysis.",
+      "ar": "إنشاء وإدارة الحملات الإعلانية الممولة على منصتي فيسبوك وإنستغرام للأنشطة التجارية الصغيرة، وتحسين العائد على الإنفاق الإعلاني (ROAS) من خلال الاستهداف الدقيق واختبارات A/B وتحليل مسار تحويل العملاء (Funnels)."
+    },
+    "tags": [
+      "Media Buying",
+      "Meta Ads",
+      "ROAS Optimization",
+      "A/B Testing",
+      "Conversion Funnels"
+    ]
+  },
+  {
+    "id": "ent-graphic-design",
+    "role": {
+      "en": "Graphic Designer (Freelance)",
+      "ar": "مصمم جرافيك (عمل حر)"
+    },
+    "title": {
+      "en": "Brand Visuals & Advertising Creatives",
+      "ar": "الهويات البصرية والتصاميم الإعلانية"
+    },
+    "platform": "Photoshop & Canva",
+    "period": "2019 – 2022",
+    "description": {
+      "en": "Designed social-media marketing visuals, promotional campaign assets, and advertising creatives using Photoshop and Canva. Maintained consistent brand visual identity for small businesses and e-commerce stores.",
+      "ar": "تصميم الهويات البصرية لمنصات التواصل الاجتماعي، وبوسترات الحملات الترويجية، والمواد الإعلانية باستخدام برنامجي فوتوشوب وكانفا، مع الحفاظ على الاتساق البصري للعلامات التجارية والمتاجر."
+    },
+    "tags": [
+      "Photoshop",
+      "Canva",
+      "Social Media Design",
+      "Ad Creatives",
+      "Branding"
+    ]
+  },
+  {
+    "id": "ent-marketplace-seller",
+    "role": {
+      "en": "Product Seller & Affiliate Marketer",
+      "ar": "بائع ومسوق بالعمولة"
+    },
+    "title": {
+      "en": "Noon & Amazon Egypt Marketplace Operations",
+      "ar": "البيع والتسويق عبر منصتي نون وأمازون مصر"
+    },
+    "platform": "Noon & Amazon Egypt",
+    "period": "2019 – 2022",
+    "description": {
+      "en": "Listed trending tech and accessory products on Noon and Amazon Egypt marketplaces. Applied SEO keyword research, optimized product listings, and managed fulfillment workflows (FBA). Analyzed customer behavior and purchasing patterns to boost conversions.",
+      "ar": "إدراج وتداول المنتجات التقنية والإكسسوارات الرائجة على منصتي نون وأمازون مصر؛ وتطبيق استراتيجيات الكلمات المفتاحية وتحسين ظهور المنتجات (Listing SEO) وإدارة عمليات الشحن والتخزين (FBA)، وتحليل سلوك المشترين لرفع نسب الشراء."
+    },
+    "tags": [
+      "Amazon FBA",
+      "Noon Seller",
+      "Affiliate Marketing",
+      "Listing SEO",
+      "Market Analysis"
+    ]
+  }
+]
+

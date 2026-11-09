@@ -1,0 +1,176 @@
+[
+  {
+    "id": "proj-smart-home",
+    "slug": "smart-home",
+    "category": "embedded",
+    "year": 2025,
+    "title": {
+      "en": "Smart Home Control System – ITI Capstone Project (Team of 3)",
+      "ar": "نظام التحكم الذكي بالمنزل – مشروع تخرج معهد ITI (فريق من 3)"
+    },
+    "summary": {
+      "en": "ATmega32-based smart home to control appliances automatically via sensors or manually via Bluetooth.",
+      "ar": "نظام منزل ذكي يعتمد على ATmega32 للتحكم في الأجهزة المنزلية آلياً عبر المستشعرات أو يدوياً عبر البلوتوث."
+    },
+    "description": {
+      "en": "Designed a smart home system to control home appliances automatically via sensors or manually via Bluetooth (Team of 3). Implemented a keypad-based password/security system with LCD display feedback, and Bluetooth control (HC-05 module via UART) from a mobile terminal app. Integrated a temperature sensor (LM35) and an LDR via ADC, a relay module to switch appliances, and PWM-driven motor/LED control. Built and validated the full circuit in Proteus before hardware implementation; presented and defended the project to ITI instructors.",
+      "ar": "تصميم نظام منزل ذكي للتحكم في الأجهزة المنزلية آلياً عبر المستشعرات أو يدوياً عبر البلوتوث (فريق مكون من 3). تنفيذ نظام حماية وأمان بكلمة مرور ولوحة مفاتيح مع شاشة LCD، والتحكم عبر البلوتوث (وحدة HC-05 عبر UART) من تطبيق هاتف. ربط مستشعر حرارة (LM35) ومستشعر إضاءة (LDR) عبر ADC، ووحدة ريلاي لتبديل الأجهزة، وتحكم PWM في المحرك والإضاءة. بناء واختبار الدائرة كاملة في برنامج Proteus قبل التنفيذ العملي؛ وتم تقديم ومناقشة المشروع أمام مدربي معهد ITI."
+    },
+    "role": {
+      "en": "Embedded Systems Developer (Team of 3)",
+      "ar": "مطور أنظمة مدمجة (فريق مكون من 3)"
+    },
+    "tech": [
+      "ATmega32",
+      "AVR",
+      "C (AVR-GCC)",
+      "Proteus",
+      "UART",
+      "ADC",
+      "PWM",
+      "HC-05 Bluetooth",
+      "LM35",
+      "LDR",
+      "Relay Module"
+    ],
+    "platform": "ATmega32 Microcontroller (AVR)",
+    "images": [],
+    "cover": "",
+    "featured": true
+  },
+  {
+    "id": "proj-robotic-arm",
+    "slug": "robotic-arm",
+    "category": "robotics",
+    "year": null,
+    "title": {
+      "en": "Robotic Arm – Pick-and-Place System",
+      "ar": "ذراع روبوتي – نظام الالتقاط والوضع (Pick-and-Place)"
+    },
+    "summary": {
+      "en": "Multi-degree-of-freedom robotic arm using Arduino and servo motors for automated pick-and-place operations.",
+      "ar": "ذراع روبوتي متعدد درجات الحرية باستخدام الأردوينو ومحركات السيرفو لعمليات الالتقاط والوضع المؤتمتة."
+    },
+    "description": {
+      "en": "Designed and built a multi-degree-of-freedom robotic arm using Arduino and servo motors for automated pick-and-place operations. Programmed precise motion control and object handling, applying concepts of robotics, kinematics, and embedded systems. Built for educational and industrial simulation purposes, integrating mechanical assembly, electronics, and software control.",
+      "ar": "تصميم وبناء ذراع روبوتي متعدد درجات الحرية باستخدام الأردوينو ومحركات السيرفو لعمليات الالتقاط والوضع المؤتمتة. تمت برمجة تحكم حركي دقيق ومناولة الأجسام مع تطبيق مفاهيم الروبوتات والحركيات (kinematics) والأنظمة المدمجة. تم بناؤه لأغراض المحاكاة التعليمية والصناعية، مع دمج التركيب الميكانيكي والإلكترونيات والتحكم البرمجي."
+    },
+    "role": {
+      "en": "Designer & Developer",
+      "ar": "تصميم وتطوير"
+    },
+    "tech": [
+      "Arduino",
+      "Servo Motors",
+      "Kinematics",
+      "Motion Control",
+      "Robotics",
+      "Embedded Systems"
+    ],
+    "platform": "Arduino & Servo Motors",
+    "images": [],
+    "cover": "",
+    "featured": true
+  },
+  {
+    "id": "proj-earthquake-house",
+    "slug": "earthquake-house",
+    "category": "embedded",
+    "year": null,
+    "title": {
+      "en": "Earthquake Simulation House",
+      "ar": "محاكي الزلازل الإنشائي"
+    },
+    "summary": {
+      "en": "Arduino UNO-based earthquake simulator demonstrating effects of seismic vibration on building structures.",
+      "ar": "محاكي زلازل يعتمد على Arduino UNO لتوضيح تأثير الاهتزازات الزلزالية على المنشآت والمباني."
+    },
+    "description": {
+      "en": "Designed an Arduino UNO-based earthquake simulator to demonstrate the effects of seismic vibration on building structures. Controlled vibration intensity via a potentiometer-driven PWM signal to an L298N motor driver and GA25-370 DC gear motor, with a custom mechanical cam mechanism generating variable shaking levels. Integrated an SW-420 vibration sensor, LED indicators, and an SG90 servo motor to simulate automatic emergency response. Built as an educational demonstration tool for civil engineering, mechatronics, and disaster-awareness applications.",
+      "ar": "تصميم محاكي زلازل يعتمد على Arduino UNO لتوضيح تأثير الاهتزاز الزلزالي على هياكل المباني. التحكم في شدة الاهتزاز عبر إشارة PWM بمقاومة متغيرة إلى مشغل محركات L298N ومحرك تروس GA25-370 DC، مع ميكانيزم كامة ميكانيكي مخصص لتوليد مستويات اهتزاز متغيرة. دمج مستشعر اهتزاز SW-420 ومؤشرات LED ومحرك سيرفو SG90 لمحاكاة استجابة الطوارئ التلقائية. بُني كأداة توضيحية تعليمية للهندسة المدنية والميكاترونكس والتوعية بالكوارث."
+    },
+    "role": {
+      "en": "Designer & Developer",
+      "ar": "تصميم وتطوير"
+    },
+    "tech": [
+      "Arduino UNO",
+      "L298N Driver",
+      "GA25-370 DC Motor",
+      "PWM",
+      "SW-420 Sensor",
+      "SG90 Servo",
+      "Mechanical Cam"
+    ],
+    "platform": "Arduino UNO & Mechanical Cam Mechanism",
+    "images": [],
+    "cover": "",
+    "featured": false
+  },
+  {
+    "id": "proj-vibration-alarm",
+    "slug": "vibration-alarm",
+    "category": "embedded",
+    "year": null,
+    "title": {
+      "en": "Vibration Alarm & Smart Safety System",
+      "ar": "نظام إنذار الاهتزاز والسلامة الذكية"
+    },
+    "summary": {
+      "en": "Smart vibration-based security system detecting abnormal movement or intrusion attempts.",
+      "ar": "نظام أمان وإنذار ذكي قائم على الاهتزاز لكشف الحركة غير الطبيعية ومحاولات التسلل."
+    },
+    "description": {
+      "en": "Built a smart vibration-based security and alarm system using Arduino UNO and an SW-420 sensor to detect abnormal movement or intrusion attempts. Programmed real-time monitoring logic to trigger buzzers, warning LEDs, and an SG90 servo-actuated safety door mechanism upon detecting excessive vibration. Demonstrates integration of embedded systems, sensors, actuators, and automated emergency response for smart security applications.",
+      "ar": "بناء نظام أمان وإنذار ذكي قائم على الاهتزاز باستخدام Arduino UNO ومستشعر SW-420 لكشف الحركة غير الطبيعية ومحاولات التسلل. تمت برمجة منطق مراقبة لحظي لتشغيل صفارات الإنذار، ومؤشرات LED التحذيرية، وآلية باب أمان تعمل بمحرك سيرفو SG90 عند اكتشاف اهتزاز زائد. يوضح المشروع دمج الأنظمة المدمجة والمستشعرات والمشغلات والاستجابة التلقائية للطوارئ في تطبيقات الأمان الذكية."
+    },
+    "role": {
+      "en": "Designer & Developer",
+      "ar": "تصميم وتطوير"
+    },
+    "tech": [
+      "Arduino UNO",
+      "SW-420 Sensor",
+      "SG90 Servo",
+      "Buzzer",
+      "LEDs",
+      "Embedded Systems"
+    ],
+    "platform": "Arduino UNO & SW-420 Sensor",
+    "images": [],
+    "cover": "",
+    "featured": false
+  },
+  {
+    "id": "proj-line-follower",
+    "slug": "line-follower",
+    "category": "robotics",
+    "year": 2023,
+    "title": {
+      "en": "Autonomous Robot — IEEE Robotics Competition 2023",
+      "ar": "روبوت ذاتي — مسابقة IEEE للروبوتات 2023"
+    },
+    "summary": {
+      "en": "Line-following robot with obstacle avoidance and tuned PID control; ranked 4th of 30+ teams at the IEEE Robotics Competition 2023.",
+      "ar": "روبوت تتبع مسار مع تفادي العوائق وتحكم PID؛ حقق المركز الرابع من بين أكثر من 30 فريقاً بمسابقة IEEE للروبوتات 2023."
+    },
+    "description": {
+      "en": "Designed and built a line-following robot with obstacle avoidance. Implemented PID control; ranked 4th of 30+ teams at the IEEE Robotics Competition 2023.",
+      "ar": "تصميم وبناء روبوت تتبع مسار مع تفادي العوائق. تطبيق نظام تحكم PID؛ وحقق المركز الرابع من بين أكثر من 30 فريقاً في مسابقة IEEE للروبوتات 2023."
+    },
+    "role": {
+      "en": "Designer & Developer",
+      "ar": "تصميم وتطوير"
+    },
+    "tech": [
+      "PID Control",
+      "Line Following",
+      "Obstacle Avoidance",
+      "Robotics"
+    ],
+    "platform": "Embedded Controller // PID",
+    "images": [],
+    "cover": "",
+    "featured": true
+  }
+]

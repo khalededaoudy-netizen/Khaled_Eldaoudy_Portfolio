@@ -1,0 +1,177 @@
+{
+  "name": {
+    "en": "Khaled Hamdy Eldaoudy",
+    "ar": "خالد حمدي الداودي"
+  },
+  "title": {
+    "en": "Mechatronics Engineering Student | Embedded Systems & Robotics",
+    "ar": "طالب هندسة ميكاترونكس | الأنظمة المدمجة والروبوتات"
+  },
+  "bio": {
+    "en": "Detail-oriented Mechatronics Engineering student (Year 4) with hands-on experience in embedded systems, control, and robotics. Led 10+ technical projects in competitive settings combining C/C++, Python, and CAD. Completed 400+ hours of embedded systems, machine learning, and industrial training, including intensive programs at the Information Technology Institute (ITI) and the National Telecommunication Institute (NTI). Entrepreneurial background in e-commerce, digital marketing, and graphic design. Seeking an internship to apply multidisciplinary skills and a rapid-learning mindset to real-world engineering challenges.",
+    "ar": "طالب هندسة ميكاترونكس بالفرقة الرابعة ذو خبرة عملية في الأنظمة المدمجة ونظم التحكم والروبوتات. قاد أكثر من 10 مشاريع تقنية في بيئات تنافسية تجمع بين C/C++ وبايثون وتصميم CAD. أتم أكثر من 400 ساعة من التدريب في الأنظمة المدمجة وتعلم الآلة والتدريب الصناعي، بما في ذلك برامج مكثفة بمعهد تكنولوجيا المعلومات (ITI) والمعهد القومي للاتصالات (NTI). خلفية ريادية في التجارة الإلكترونية والتسويق الرقمي والتصميم الجرافيكي. يسعى لفرصة تدريب لتطبيق مهاراته متعددة التخصصات وشغفه بالتعلم السريع في مواجهة التحديات الهندسية الحقيقية."
+  },
+  "location": {
+    "en": "10th of Ramadan City, Sharqia, Egypt",
+    "ar": "مدينة العاشر من رمضان، الشرقية، مصر"
+  },
+  "email": "KhaledEdaoudy@gmail.com",
+  "linkedin": "https://linkedin.com/in/khaledeldaoudy",
+  "cv_path": "/assets/cv/Khaled_CV.pdf",
+  "photo": "/assets/profile/profile.png",
+  "education": {
+    "degree": {
+      "en": "Bachelor of Mechatronics Engineering (Credit-Hour System)",
+      "ar": "بكالوريوس هندسة الميكاترونكس (نظام الساعات المعتمدة)"
+    },
+    "institution": {
+      "en": "Zagazig National University (ZNU), Egypt",
+      "ar": "جامعة الزقازيق الأهلية، مصر"
+    },
+    "status": {
+      "en": "Expected Graduation: 2027",
+      "ar": "سنة التخرج المتوقعة: 2027"
+    },
+    "period": "2022 – Present"
+  },
+  "stats": [
+    {
+      "id": "projects",
+      "value": "10+",
+      "label": {
+        "en": "Technical Projects",
+        "ar": "مشاريع تقنية"
+      }
+    },
+    {
+      "id": "training-hours",
+      "value": "400+",
+      "label": {
+        "en": "Training Hours",
+        "ar": "ساعات التدريب"
+      }
+    },
+    {
+      "id": "robosoccer-place",
+      "value": "🥈 2nd",
+      "label": {
+        "en": "RoboSoccer 2nd",
+        "ar": "المركز 2 RoboSoccer"
+      }
+    },
+    {
+      "id": "graduation",
+      "value": "2027",
+      "label": {
+        "en": "Graduation",
+        "ar": "سنة التخرج"
+      }
+    }
+  ],
+  "skills": [
+    {
+      "category": {
+        "en": "Embedded Systems & Firmware",
+        "ar": "الأنظمة المدمجة والبرمجيات الدقيقة"
+      },
+      "icon": "⚡",
+      "items": [
+        "Arduino",
+        "ESP32",
+        "STM32",
+        "AVR",
+        "Microcontrollers",
+        "C / C++",
+        "Embedded C",
+        "RTOS",
+        "UART",
+        "SPI",
+        "I2C"
+      ]
+    },
+    {
+      "category": {
+        "en": "Control & Simulation",
+        "ar": "أنظمة التحكم والمحاكاة"
+      },
+      "icon": "🎛️",
+      "items": [
+        "PID Control",
+        "MATLAB",
+        "Simulink",
+        "Proteus",
+        "Motion Control"
+      ]
+    },
+    {
+      "category": {
+        "en": "Robotics",
+        "ar": "الروبوتات والأنظمة الذاتية"
+      },
+      "icon": "🤖",
+      "items": [
+        "Mechanical Design",
+        "Sensor Fusion",
+        "Sensor Integration",
+        "Autonomous Navigation",
+        "Motion Control",
+        "Robot Design"
+      ]
+    },
+    {
+      "category": {
+        "en": "Programming & Data",
+        "ar": "البرمجة ومعالجة البيانات"
+      },
+      "icon": "📊",
+      "items": [
+        "Python",
+        "Pandas",
+        "NumPy",
+        "Matplotlib",
+        "Machine Learning (Basics)"
+      ]
+    },
+    {
+      "category": {
+        "en": "CAD & 3D Design",
+        "ar": "التصميم الهندسي ونمذجة CAD"
+      },
+      "icon": "📐",
+      "items": [
+        "SolidWorks",
+        "3D Modeling",
+        "Mechanical Assemblies",
+        "Simulation"
+      ]
+    },
+    {
+      "category": {
+        "en": "Design & Marketing",
+        "ar": "التصميم والتسويق الرقمي"
+      },
+      "icon": "🎨",
+      "items": [
+        "Photoshop",
+        "Canva",
+        "Digital Marketing",
+        "Media Buying",
+        "E-Commerce SEO"
+      ]
+    },
+    {
+      "category": {
+        "en": "Soft Skills",
+        "ar": "المهارات الشخصية والقيادية"
+      },
+      "icon": "🤝",
+      "items": [
+        "Teamwork",
+        "Problem Solving",
+        "Time Management",
+        "Leadership",
+        "Communication"
+      ]
+    }
+  ]
+}

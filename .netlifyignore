@@ -1,0 +1,35 @@
+# Netlify Deployment Exclusions
+# Exclude private audit and review reports from the deployed public site
+DESIGN_AUDIT.md
+DESIGN_SYSTEM.md
+REDESIGN_REPORT.md
+PRE_DEPLOYMENT_AUDIT.md
+CONTENT_VERIFICATION_REPORT.md
+DEPLOYMENT_GUIDE.md
+RELEASE_CHECKLIST.md
+FINAL_QA_CHECKLIST.md
+FINAL_GIT_PREPARATION.md
+
+# Exclude local screenshot captures and raw backups
+screenshots/
+assets-original-backup/
+
+# Exclude internal test scripts from production deployment
+scripts/audit-viewports.py
+scripts/capture-all-sections.py
+scripts/capture-hero-viewports.py
+scripts/capture-modal.py
+scripts/capture-projects.py
+scripts/check-scrolled-modal.py
+scripts/optimize-images.js
+scripts/sync-images.js
+scripts/technical-audit.py
+scripts/verify-all-features.py
+scripts/verify-modals.py
+scripts/verify-site.py
+
+# Exclude cache & test artifacts
+.playwright/
+tmp/
+temp/
+

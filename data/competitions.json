@@ -1,0 +1,202 @@
+[
+  {
+    "id": "comp-error-sumo-2025",
+    "slug": "error-sumo-2025",
+    "year": 2025,
+    "month": "October",
+    "name": {
+      "en": "Error Competition 2025 – Sumo Robot (2nd Edition)",
+      "ar": "مسابقة Error 2025 – روبوت السومو (النسخة الثانية)"
+    },
+    "organizer": {
+      "en": "IEEE HTI Student Branch, Higher Technological Institute",
+      "ar": "فرع IEEE للطلاب بمعهد التكنولوجيا العالي"
+    },
+    "result": {
+      "en": "NASA Team from the ZNU Robotics Community placed 2nd among 20+ university teams; received a Certificate of Appreciation for technical contribution in robot design, programming, and control systems.",
+      "ar": "حقق فريق NASA التابع لمجتمع روبوتات ZNU المركز الثاني بين أكثر من 20 فريقاً جامعياً، وحصلت على شهادة تقدير لمساهمتي التقنية في تصميم الروبوت وبرمجته وأنظمة التحكم."
+    },
+    "rank": null,
+    "description": {
+      "en": "Competed as part of Team ZNUS under the ZNU Robotics Community, representing Zagazig National University. Designed and programmed three autonomous sumo robots for Egypt's national Sumorobot qualifying competition for the international championship in Japan. NASA Team, from the same community, achieved 2nd place among 20+ university teams. Awarded a Certificate of Appreciation for technical contribution in robot design, programming, and control systems.",
+      "ar": "شاركت ضمن فريق ZNUS التابع لمجتمع روبوتات ZNU ممثلاً لجامعة الزقازيق الأهلية. قمت بتصميم وبرمجة ثلاثة روبوتات سومو ذاتية لتصفيات بطولة السومو الوطنية المؤهلة للبطولة الدولية في اليابان. حقق فريق NASA من نفس المجتمع المركز الثاني بين أكثر من 20 فريقاً جامعياً. حصلت على شهادة تقدير لمساهمتي التقنية في تصميم الروبوت وبرمجته وأنظمة التحكم."
+    },
+    "images": [],
+    "cover": ""
+  },
+  {
+    "id": "comp-robosoccer-2025",
+    "slug": "robosoccer-2025",
+    "year": 2025,
+    "month": "August",
+    "name": {
+      "en": "RoboSoccer Competition",
+      "ar": "مسابقة روبوتات كرة القدم (RoboSoccer)"
+    },
+    "organizer": {
+      "en": "IEEE HTI Student Branch",
+      "ar": "فرع جمعية IEEE بمعهد التكنولوجيا العالي"
+    },
+    "result": {
+      "en": "2nd place (Team ZNUS) and 5th place (Team ZUNBots) among top Egyptian universities; received a certificate signed by Egypt's Prime Minister, Mostafa Madbouly, for national-level recognition.",
+      "ar": "المركز الثاني (فريق ZNUS) والمركز الخامس (فريق ZUNBots) بين كبرى الجامعات المصرية؛ وحصلت على شهادة موقعة من رئيس مجلس الوزراء المصري، مصطفى مدبولي، تقديراً على المستوى الوطني."
+    },
+    "rank": 2,
+    "description": {
+      "en": "Secured 2nd place with Team ZNUS and 5th place with Team ZUNBots among top Egyptian universities. Led control system design and tuning for stable, precise robot performance during matches. Received a certificate signed by Egypt's Prime Minister, Mostafa Madbouly, for national-level recognition.",
+      "ar": "حققت المركز الثاني مع فريق ZNUS والمركز الخامس مع فريق ZUNBots بين كبرى الجامعات المصرية. قدت تصميم نظام التحكم وضبطه لأداء مستقر ودقيق للروبوت أثناء المباريات. حصلت على شهادة موقعة من رئيس مجلس الوزراء المصري، مصطفى مدبولي، تقديراً على المستوى الوطني."
+    },
+    "images": [],
+    "cover": ""
+  },
+  {
+    "id": "comp-conference-2025",
+    "slug": "conference-2025",
+    "year": 2025,
+    "month": "May",
+    "name": {
+      "en": "Scientific Participation – National Conference on Sustainable Development",
+      "ar": "مشاركة علمية – المؤتمر القومي للتنمية المستدامة"
+    },
+    "organizer": {
+      "en": "National Conference on Sustainable Development",
+      "ar": "المؤتمر القومي للتنمية المستدامة"
+    },
+    "result": {
+      "en": "Earned a conference shield and participation certificate",
+      "ar": "الحصول على درع المؤتمر وشهادة مشاركة"
+    },
+    "rank": null,
+    "description": {
+      "en": "Presented sustainability ideas aligned with Egypt Vision 2030. Earned a conference shield and participation certificate.",
+      "ar": "قدمت أفكاراً للاستدامة متوافقة مع رؤية مصر 2030. حصلت على درع المؤتمر وشهادة مشاركة."
+    },
+    "images": [],
+    "cover": ""
+  },
+  {
+    "id": "comp-national-robotics",
+    "slug": "national-robotics",
+    "year": 2025,
+    "month": "March",
+    "name": {
+      "en": "National Robotics Competition",
+      "ar": "مسابقة الروبوتات الوطنية"
+    },
+    "organizer": {
+      "en": "Ministry of Youth and Sports",
+      "ar": "وزارة الشباب والرياضة"
+    },
+    "result": {
+      "en": "Honored for innovation and problem-solving by ministry officials",
+      "ar": "تكريم للابتكار وحل المشكلات من مسؤولي الوزارة"
+    },
+    "rank": null,
+    "description": {
+      "en": "Optimized Embedded C++ code for motion control; honored for innovation and problem-solving by ministry officials.",
+      "ar": "تحسين كود Embedded C++ للتحكم في الحركة؛ تم التكريم للابتكار وحل المشكلات من مسؤولي الوزارة."
+    },
+    "images": [],
+    "cover": ""
+  },
+  {
+    "id": "comp-ieee-recognition",
+    "slug": "ieee-recognition",
+    "year": 2025,
+    "month": "March",
+    "name": {
+      "en": "IEEE Egypt Section Team Recognition",
+      "ar": "تكريم قسم IEEE مصر للفرق"
+    },
+    "organizer": {
+      "en": "IEEE Egypt Section",
+      "ar": "قسم IEEE مصر"
+    },
+    "result": {
+      "en": "Recognized for strong team performance",
+      "ar": "تكريم للأداء القوي للفريق"
+    },
+    "rank": null,
+    "description": {
+      "en": "Represented the ZNU Robotics Team; recognized for strong team performance.",
+      "ar": "مثلت فريق روبوتات ZNU؛ تم التكريم لأداء الفريق القوي."
+    },
+    "images": [],
+    "cover": ""
+  },
+  {
+    "id": "comp-robot-sumo-3",
+    "slug": "robot-sumo-3",
+    "year": 2025,
+    "month": "February",
+    "name": {
+      "en": "Robot Sumo 3",
+      "ar": "مسابقة Robot Sumo 3"
+    },
+    "organizer": {
+      "en": "Egyptian Russian University",
+      "ar": "الجامعة المصرية الروسية"
+    },
+    "result": {
+      "en": "Received Certificate of Appreciation for hardware/software integration",
+      "ar": "الحصول على شهادة تقدير لتكامل العتاد والبرمجيات"
+    },
+    "rank": null,
+    "description": {
+      "en": "Integrated AI decision logic on STM32 as a member of NASA Team. Received Certificate of Appreciation for hardware/software integration.",
+      "ar": "دمج منطق اتخاذ القرار بالذكاء الاصطناعي على STM32 كعضو في فريق NASA. حصلت على شهادة تقدير لتكامل العتاد والبرمجيات."
+    },
+    "images": [],
+    "cover": ""
+  },
+  {
+    "id": "comp-robot-sumo-4",
+    "slug": "robot-sumo-4",
+    "year": 2025,
+    "month": "",
+    "name": {
+      "en": "Robot Sumo Competition 4",
+      "ar": "مسابقة Robot Sumo 4"
+    },
+    "organizer": {
+      "en": "Egyptian Russian University – Huawei ICT Academy Branch",
+      "ar": "الجامعة المصرية الروسية – فرع أكاديمية هواوي ICT"
+    },
+    "result": {
+      "en": "Received a Certificate of Appreciation for contribution to the competition",
+      "ar": "الحصول على شهادة تقدير للمساهمة في المسابقة"
+    },
+    "rank": null,
+    "description": {
+      "en": "Contributed to the design and development of an autonomous sumo robot for the competition's 4th edition. Received a Certificate of Appreciation for contribution to the competition.",
+      "ar": "ساهمت في تصميم وتطوير روبوت سومو ذاتي للنسخة الرابعة من المسابقة. حصلت على شهادة تقدير للمساهمة في المسابقة."
+    },
+    "images": [],
+    "cover": ""
+  },
+  {
+    "id": "comp-robotics-demo",
+    "slug": "robotics-demo",
+    "year": 2025,
+    "month": "",
+    "name": {
+      "en": "Interactive Robotics Demo",
+      "ar": "عرض الروبوتات التفاعلي"
+    },
+    "organizer": {
+      "en": "Zagazig National University",
+      "ar": "جامعة الزقازيق الأهلية"
+    },
+    "result": {
+      "en": "Co-organized live showcase and delivered technical workshops",
+      "ar": "المشاركة في تنظيم العرض الحي وتقديم ورش العمل التقنية"
+    },
+    "rank": null,
+    "description": {
+      "en": "Co-organized the university's first live robotics showcase. Delivered workshops on C++/Python programming and CAD.",
+      "ar": "شاركت في تنظيم أول عرض حي للروبوتات بالجامعة. قدمت ورش عمل حول البرمجة بلغات C++/Python والتصميم ببرامج CAD."
+    },
+    "images": [],
+    "cover": ""
+  }
+]

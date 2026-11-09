@@ -1,0 +1,87 @@
+[
+  {
+    "id": "lead-student-union",
+    "role": {
+      "en": "President, Engineering College Student Union",
+      "ar": "رئيس اتحاد طلاب كلية الهندسة"
+    },
+    "organization": {
+      "en": "Zagazig National University",
+      "ar": "جامعة الزقازيق الأهلية"
+    },
+    "period": "2023 – Present",
+    "description": {
+      "en": "Represented the university and Faculty of Engineering at the 9th UniEgypt Higher Education Expo, showcasing Mechatronics and Civil Engineering projects; received commendation from the Minister for innovation. Coordinate communication between students and faculty; organize student activities and events.",
+      "ar": "مثلت الجامعة وكلية الهندسة في معرض UniEgypt التاسع للتعليم العالي، مع عرض مشاريع في هندسة الميكاترونكس والهندسة المدنية؛ وحصلت على إشادة من الوزير للابتكار. التنسيق والتواصل بين الطلاب وأعضاء هيئة التدريس؛ وتنظيم الأنشطة والفعاليات الطلابية."
+    },
+    "images": []
+  },
+  {
+    "id": "lead-robotics-community",
+    "role": {
+      "en": "Member, ZNU Robotics Community",
+      "ar": "عضو بمجتمع روبوتات ZNU"
+    },
+    "organization": {
+      "en": "Zagazig National University",
+      "ar": "جامعة الزقازيق الأهلية"
+    },
+    "period": "2024 – Present",
+    "description": {
+      "en": "Co-founded the community and helped organize workshops, hackathons, competitions, and peer mentoring.",
+      "ar": "شاركت في تأسيس المجتمع والمساعدة في تنظيم ورش العمل، والهاكاثونات، والمسابقات، والتوجيه والإرشاد للزملاء."
+    },
+    "images": []
+  },
+  {
+    "id": "lead-uniegypt-expo",
+    "role": {
+      "en": "Representative of ZNU and the Faculty of Engineering",
+      "ar": "ممثل جامعة الزقازيق الأهلية وكلية الهندسة"
+    },
+    "organization": {
+      "en": "9th UniEgypt Higher Education Expo",
+      "ar": "معرض UniEgypt التاسع للتعليم العالي"
+    },
+    "period": "2024",
+    "description": {
+      "en": "Represented the university and Faculty of Engineering at the 9th UniEgypt Higher Education Expo, showcasing Mechatronics and Civil Engineering projects; received a commendation from the Minister for innovation.",
+      "ar": "مثلت الجامعة وكلية الهندسة في معرض UniEgypt التاسع للتعليم العالي، وعرضت مشاريع في هندسة الميكاترونكس والهندسة المدنية؛ وحصلت على إشادة من الوزير للابتكار."
+    },
+    "images": []
+  },
+  {
+    "id": "lead-leaders-forum",
+    "role": {
+      "en": "Representative, 2nd Leaders Forum – Canal & Sinai Universities Alliance",
+      "ar": "ممثل في ملتقى قادة الجامعات الثاني – تحالف جامعات إقليم القناة وسيناء"
+    },
+    "organization": {
+      "en": "New Ismailia National University, in cooperation with Suez Canal University",
+      "ar": "جامعة الإسماعيلية الجديدة الأهلية، بالتعاون مع جامعة قناة السويس"
+    },
+    "period": "Feb 2026",
+    "description": {
+      "en": "Represented Zagazig National University and the Engineering Student Union at a regional leadership forum bringing together student leaders from the Canal and Sinai universities alliance under the theme 'Leaders by Will'.",
+      "ar": "مثلت جامعة الزقازيق الأهلية واتحاد طلاب كلية الهندسة في ملتقى قيادي إقليمي جمع قادة الطلاب من تحالف جامعات إقليم القناة وسيناء تحت شعار «قادة بالإرادة»."
+    },
+    "images": []
+  },
+  {
+    "id": "lead-we-help-you-build-yourself",
+    "role": {
+      "en": "Supervisor, 'We Help You Build Yourself' Student Initiative",
+      "ar": "مشرف مبادرة «بنساعدك تبني نفسك» الطلابية"
+    },
+    "organization": {
+      "en": "Engineering Student Union, Zagazig National University",
+      "ar": "اتحاد طلاب كلية الهندسة، جامعة الزقازيق الأهلية"
+    },
+    "period": "2026",
+    "description": {
+      "en": "Supervised and coordinated the initiative's activities as a representative of the Engineering Student Union, ensuring smooth execution and a productive, motivating environment for participants. Recognized with a Certificate of Appreciation for leadership, responsibility, and continuous support throughout the initiative.",
+      "ar": "أشرفت ونسقت أنشطة المبادرة كممثل لاتحاد طلاب كلية الهندسة، لضمان التنفيذ السلس وتوفير بيئة محفزة ومثمرة للمشاركين. حصلت على شهادة تقدير للقيادة والمسؤولية والدعم المستمر طوال فترة المبادرة."
+    },
+    "images": []
+  }
+]
