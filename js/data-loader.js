@@ -635,6 +635,35 @@ export class PortfolioDataManager {
     }
   }
 
+  // Lightbox Modal for Event Galleries
+  openLightbox(src, caption) {
+    const modal = document.getElementById('imageLightboxModal');
+    if (!modal) return;
+
+    const img = document.getElementById('lightboxImage');
+    const cap = document.getElementById('lightboxCaption');
+
+    if (img && src) {
+      img.src = src;
+      img.alt = caption || 'Event Photograph';
+    }
+    if (cap && caption) {
+      cap.textContent = caption;
+    }
+
+    modal.classList.add('active');
+    document.body.classList.add('modal-open');
+    modal.focus();
+  }
+
+  closeLightbox() {
+    const modal = document.getElementById('imageLightboxModal');
+    if (modal) {
+      modal.classList.remove('active');
+      document.body.classList.remove('modal-open');
+    }
+  }
+
   // 5. Honors & Competitions (Prestigious Chronicle)
   renderCompetitions() {
     const container = document.getElementById('competitionsTimeline');
@@ -705,17 +734,81 @@ export class PortfolioDataManager {
 
     const isRtl = i18n.getLang() === 'ar';
 
-    container.innerHTML = this.data.leadership.map((item, idx) => `
-      <article class="leadership-editorial-card">
-        <div class="leadership-top font-mono">
-          <span class="gov-idx">${isRtl ? 'القيادة والمجتمع // 0' : 'GOVERNANCE // 0'}${idx + 1}</span>
-          <span class="gov-period">${localizeDateStr(item.period, isRtl)}</span>
-        </div>
-        <h3 class="leadership-role-title">${i18n.getText(item.role)}</h3>
-        <div class="leadership-org-label font-mono">${i18n.getText(item.organization)}</div>
-        <p class="leadership-narrative-text">${i18n.getText(item.description)}</p>
-      </article>
-    `).join('');
+    container.innerHTML = this.data.leadership.map((item, idx) => {
+      const hasGallery = Array.isArray(item.images) && item.images.length > 0;
+      const displayTitle = item.title ? i18n.getText(item.title) : i18n.getText(item.role);
+      const descText = i18n.getText(item.description);
+      const descHtml = descText
+        .split('\n\n')
+        .map(paragraph => `<p class="leadership-narrative-text">${paragraph.replace(/\n/g, '<br>')}</p>`)
+        .join('');
+
+      return `
+        <article class="leadership-editorial-card ${hasGallery ? 'has-gallery' : ''}" data-lead-id="${item.id}">
+          <div class="leadership-top font-mono">
+            <span class="gov-idx">${isRtl ? 'القيادة والمجتمع // 0' : 'GOVERNANCE // 0'}${idx + 1}</span>
+            <span class="gov-period">${localizeDateStr(item.period, isRtl)}</span>
+          </div>
+
+          <h3 class="leadership-role-title">${displayTitle}</h3>
+
+          ${item.title && item.role ? `
+            <div class="leadership-role-badge font-mono">
+              <span>🎖️ ${i18n.getText(item.role)}</span>
+            </div>
+          ` : ''}
+
+          <div class="leadership-meta-strip font-mono">
+            <span class="leadership-org-label">🏛️ ${i18n.getText(item.organization)}</span>
+            ${item.event ? `<span class="leadership-event-tag">• 📍 ${i18n.getText(item.event)}</span>` : ''}
+          </div>
+
+          ${item.patronage ? `
+            <div class="leadership-patronage">
+              <p class="patronage-text font-mono">✦ ${i18n.getText(item.patronage)}</p>
+            </div>
+          ` : ''}
+
+          ${hasGallery ? `
+            <div class="leadership-gallery-grid">
+              ${item.images.map((imgSrc, imgIdx) => `
+                <div class="leadership-gallery-item"
+                     role="button"
+                     tabindex="0"
+                     data-img-src="${imgSrc}"
+                     data-caption="${displayTitle}"
+                     aria-label="${isRtl ? 'عرض صورة المعرض ' + (imgIdx + 1) + ' بدقة كاملة' : 'View event photograph ' + (imgIdx + 1) + ' in full resolution'}">
+                  <img src="${imgSrc}" alt="${displayTitle} - ${imgIdx + 1}" class="leadership-gallery-thumb" loading="lazy" />
+                  <div class="gallery-item-overlay">
+                    <span class="gallery-zoom-icon font-mono">
+                      <span>🔍</span>
+                      <span>${isRtl ? 'تكبير' : 'Enlarge'}</span>
+                    </span>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          ` : ''}
+
+          <div class="leadership-narrative-group">
+            ${descHtml}
+          </div>
+        </article>
+      `;
+    }).join('');
+
+    // Attach click and keyboard listeners for gallery thumbnails
+    container.querySelectorAll('.leadership-gallery-item').forEach(itemEl => {
+      const src = itemEl.getAttribute('data-img-src');
+      const caption = itemEl.getAttribute('data-caption') || '';
+      itemEl.addEventListener('click', () => this.openLightbox(src, caption));
+      itemEl.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          this.openLightbox(src, caption);
+        }
+      });
+    });
   }
 
   // 7. Industrial Training & Credentials

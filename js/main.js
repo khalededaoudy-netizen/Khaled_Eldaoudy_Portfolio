@@ -103,6 +103,17 @@ function initModalListeners() {
     });
   }
 
+  // Event Image Lightbox Modal Listeners
+  const lightboxModal = document.getElementById('imageLightboxModal');
+  const lightboxCloseBtn = document.getElementById('lightboxCloseBtn');
+
+  if (lightboxCloseBtn) lightboxCloseBtn.addEventListener('click', () => dataManager.closeLightbox());
+  if (lightboxModal) {
+    lightboxModal.addEventListener('click', (e) => {
+      if (e.target === lightboxModal) dataManager.closeLightbox();
+    });
+  }
+
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       if (modal && modal.classList.contains('active')) {
@@ -110,6 +121,9 @@ function initModalListeners() {
       }
       if (certModal && certModal.classList.contains('active')) {
         dataManager.closeCertificateModal();
+      }
+      if (lightboxModal && lightboxModal.classList.contains('active')) {
+        dataManager.closeLightbox();
       }
     }
   });

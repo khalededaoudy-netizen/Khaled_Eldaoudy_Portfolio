@@ -34,21 +34,37 @@
     "images": []
   },
   {
-    "id": "lead-uniegypt-expo",
+    "id": "lead-youm7-fair",
+    "title": {
+      "en": "Representing Zagazig National University at the 9th Youm7 Higher Education Fair",
+      "ar": "تمثيل جامعة الزقازيق الأهلية في معرض اليوم السابع التاسع للتعليم العالي"
+    },
     "role": {
-      "en": "Representative of ZNU and the Faculty of Engineering",
-      "ar": "ممثل جامعة الزقازيق الأهلية وكلية الهندسة"
+      "en": "President of the Engineering Student Union",
+      "ar": "رئيس اتحاد طلاب كلية الهندسة"
+    },
+    "event": {
+      "en": "9th Youm7 Higher Education Fair – Uni Egypt",
+      "ar": "معرض اليوم السابع التاسع للتعليم العالي – Uni Egypt"
     },
     "organization": {
-      "en": "9th UniEgypt Higher Education Expo",
-      "ar": "معرض UniEgypt التاسع للتعليم العالي"
+      "en": "Zagazig National University (ZNU EGYPT) • Faculty of Engineering",
+      "ar": "جامعة الزقازيق الأهلية • كلية الهندسة"
+    },
+    "patronage": {
+      "en": "Held under the patronage of Prime Minister Dr. Mostafa Madbouly and inaugurated by Dr. Ayman Ashour, Minister of Higher Education and Scientific Research.",
+      "ar": "أقيم الحدث تحت رعاية دولة رئيس مجلس الوزراء الدكتور مصطفى مدبولي، وافتتح الحدث الدكتور أيمن عاشور وزير التعليم العالي والبحث العلمي."
     },
     "period": "2024",
     "description": {
-      "en": "Represented the university and Faculty of Engineering at the 9th UniEgypt Higher Education Expo, showcasing Mechatronics and Civil Engineering projects; received a commendation from the Minister for innovation.",
-      "ar": "مثلت الجامعة وكلية الهندسة في معرض UniEgypt التاسع للتعليم العالي، وعرضت مشاريع في هندسة الميكاترونكس والهندسة المدنية؛ وحصلت على إشادة من الوزير للابتكار."
+      "en": "Proud to represent Zagazig National University and the Faculty of Engineering as President of the Engineering Student Union at the 9th Youm7 Higher Education Fair – Uni Egypt.\n\nAt the university booth, we showcased selected student projects from Mechatronics Engineering and Civil Engineering (Construction), alongside the innovative creations of Team ZNUS Robotics. These projects demonstrated how engineering ideas can become functional prototypes addressing real-world challenges through robotics and applied engineering.\n\nThe event provided an opportunity to present our students' technical capabilities, creativity, and vision to leaders in Egypt's higher education sector.",
+      "ar": "تشرفت بتمثيل جامعة الزقازيق الأهلية وكلية الهندسة بصفتي رئيس اتحاد طلاب كلية الهندسة، خلال فعاليات معرض اليوم السابع التاسع للتعليم العالي – Uni Egypt.\n\nاستعرضنا في جناح الجامعة مجموعة من مشروعات الطلاب المتميزة بقسمي هندسة الميكاترونكس والهندسة المدنية (تشييد)، إلى جانب ابتكارات فريق ZNUS Robotics، والتي جسدت قدرة الطلاب على تحويل الأفكار الهندسية إلى نماذج أولية عملية تقدم حلولًا لتحديات واقعية من خلال تطبيقات الروبوتات والهندسة.\n\nوقد أتاح الحدث فرصة لعرض الرؤية والإبداع والإمكانات التقنية لطلاب الجامعة أمام قيادات قطاع التعليم العالي في مصر."
     },
-    "images": []
+    "images": [
+      "assets/images/events/youm7-higher-education-fair/youm7-fair-1.jpg",
+      "assets/images/events/youm7-higher-education-fair/youm7-fair-2.jpg",
+      "assets/images/events/youm7-higher-education-fair/youm7-fair-3.jpg"
+    ]
   },
   {
     "id": "lead-leaders-forum",

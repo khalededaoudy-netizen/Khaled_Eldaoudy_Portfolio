@@ -143,6 +143,9 @@ function validateLeadership() {
     checkBilingual(item.role, file, id, 'role');
     checkBilingual(item.organization, file, id, 'organization');
     checkBilingual(item.description, file, id, 'description');
+    if (item.title) checkBilingual(item.title, file, id, 'title');
+    if (item.event) checkBilingual(item.event, file, id, 'event');
+    if (item.patronage) checkBilingual(item.patronage, file, id, 'patronage');
 
     if (Array.isArray(item.images)) {
       item.images.forEach((img, i) => checkFileExists(img, file, id, `images[${i}]`));
