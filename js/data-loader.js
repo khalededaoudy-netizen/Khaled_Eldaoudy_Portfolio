@@ -784,6 +784,27 @@ export class PortfolioDataManager {
             </div>
           ` : ''}
 
+          ${Array.isArray(comp.images) && comp.images.length > 0 ? `
+            <div class="competition-gallery-grid">
+              ${comp.images.map((imgSrc, imgIdx) => `
+                <div class="competition-gallery-item"
+                     role="button"
+                     tabindex="0"
+                     data-img-src="${imgSrc}"
+                     data-caption="${i18n.getText(comp.name)}"
+                     aria-label="${isRtl ? 'تكبير صورة المسابقة ' + (imgIdx + 1) : 'Enlarge competition photograph ' + (imgIdx + 1)}">
+                  <img src="${imgSrc}" alt="${i18n.getText(comp.name)} - ${imgIdx + 1}" class="competition-gallery-thumb" loading="lazy" />
+                  <div class="gallery-item-overlay">
+                    <span class="gallery-zoom-icon font-mono">
+                      <span>🔍</span>
+                      <span>${isRtl ? 'تكبير' : 'Enlarge'}</span>
+                    </span>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          ` : ''}
+
           <p class="honor-narrative">${i18n.getText(comp.description)}</p>
 
           ${Array.isArray(comp.skills) && comp.skills.length > 0 ? `
@@ -794,6 +815,19 @@ export class PortfolioDataManager {
         </article>
       `;
     }).join('');
+
+    // Attach click and keyboard listeners for competition gallery thumbnails
+    container.querySelectorAll('.competition-gallery-item').forEach(itemEl => {
+      const src = itemEl.getAttribute('data-img-src');
+      const caption = itemEl.getAttribute('data-caption') || '';
+      itemEl.addEventListener('click', () => this.openLightbox(src, caption));
+      itemEl.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          this.openLightbox(src, caption);
+        }
+      });
+    });
   }
 
   // 6. Leadership & Governance
@@ -1121,7 +1155,13 @@ export class PortfolioDataManager {
           ${cert.competition_id ? `
             <div class="credential-honor-link font-mono">
               <a href="#competitions" class="honor-anchor-link">
-                <span>🏆 ${isRtl ? 'مرتبط بإنجاز مسابقة RoboSoccer' : 'Linked to RoboSoccer Honor'} &rarr;</span>
+                <span>🏆 ${
+                  cert.competition_id === 'comp-robosoccer-2025'
+                    ? (isRtl ? 'مرتبط بإنجاز مسابقة RoboSoccer' : 'Linked to RoboSoccer Honor')
+                    : cert.competition_id === 'comp-error-sumo-2025'
+                      ? (isRtl ? 'مرتبط بمسابقة Error 2025 – تحدي السومو' : 'Linked to Error Competition 2025 – Sumo Robot')
+                      : (isRtl ? 'مرتبط بإنجاز المسابقات' : 'Linked to Competition Honor')
+                } &rarr;</span>
               </a>
             </div>
           ` : ''}

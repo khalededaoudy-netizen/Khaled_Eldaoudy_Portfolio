@@ -1344,6 +1344,50 @@ img {
   margin-top: 0.25rem;
 }
 
+.competition-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 600px) {
+  .competition-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.competition-gallery-item {
+  position: relative;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  background: #000;
+  cursor: pointer;
+  aspect-ratio: 16 / 10;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.competition-gallery-item:hover,
+.competition-gallery-item:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--accent-gold);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.7);
+  outline: none;
+}
+
+.competition-gallery-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.competition-gallery-item:hover .competition-gallery-thumb {
+  transform: scale(1.03);
+}
+
 /* ==========================================================================
    10. Section 05: Leadership & Governance
    ========================================================================== */
@@ -1504,7 +1548,11 @@ img {
 }
 
 .leadership-gallery-item:hover .gallery-item-overlay,
-.leadership-gallery-item:focus-visible .gallery-item-overlay {
+.leadership-gallery-item:focus-visible .gallery-item-overlay,
+.competition-gallery-item:hover .gallery-item-overlay,
+.competition-gallery-item:focus-visible .gallery-item-overlay,
+.training-gallery-item:hover .gallery-item-overlay,
+.training-gallery-item:focus-visible .gallery-item-overlay {
   opacity: 1;
 }
 

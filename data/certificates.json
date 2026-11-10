@@ -283,14 +283,47 @@
   {
     "id": "cert-error-sumo-2025",
     "title": {
-      "en": "Error Competition 2025 (Sumo Robot)",
-      "ar": "مسابقة Error 2025 (روبوت السومو)"
+      "en": "Error Competition 2025 – Sumo Robot Challenge (Certificate of Appreciation)",
+      "ar": "مسابقة Error 2025 – تحدي روبوت السومو (شهادة تقدير)"
     },
     "issuer": {
-      "en": "IEEE HTI Student Branch",
-      "ar": "فرع جمعية IEEE بمعهد التكنولوجيا العالي"
+      "en": "IEEE HTI Student Branch, Higher Technological Institute",
+      "ar": "فرع IEEE للطلاب بمعهد التكنولوجيا العالي"
+    },
+    "category": {
+      "en": "Robotics & Autonomous Systems",
+      "ar": "الروبوتات والأنظمة ذاتية الحركة"
+    },
+    "type": {
+      "en": "Certificate of Appreciation",
+      "ar": "شهادة تقدير ومشاركة"
+    },
+    "status": {
+      "en": "Official Certificate of Appreciation Awarded",
+      "ar": "شهادة تقدير رسمية ممنوحة"
+    },
+    "team": {
+      "en": "ZNUS Team – ZNU Robotics Community",
+      "ar": "فريق ZNUS – مجتمع روبوتات ZNU"
+    },
+    "role": {
+      "en": "Autonomous Robot Design & Embedded Programming",
+      "ar": "تصميم وبرمجة الروبوتات الذاتية"
     },
     "date": "October 2025",
+    "competition_id": "comp-error-sumo-2025",
+    "skills": [
+      "Robotics",
+      "Autonomous Systems",
+      "Sumo Robots",
+      "Embedded Systems",
+      "Sensor Integration",
+      "Team Collaboration"
+    ],
+    "description": {
+      "en": "Certificate of Appreciation awarded by IEEE HTI Student Branch at the Higher Technological Institute for active participation in the Error Competition 2025 – Sumo Robot Challenge. Competed as part of ZNUS Team representing ZNU Robotics Community (Zagazig National University) with three autonomous sumo robots designed, assembled, and programmed by our members. Also celebrated our community peers in NASA Team who earned 2nd Place in the competition.",
+      "ar": "شهادة تقدير ممنوحة من فرع IEEE للطلاب بمعهد التكنولوجيا العالي (HTI) للمشاركة الفعالة في مسابقة Error 2025 – تحدي روبوت السومو. شاركت كعضو في فريق ZNUS ممثلاً لمجتمع روبوتات ZNU (جامعة الزقازيق الأهلية) بثلاثة روبوتات سومو ذاتية الحركة تم تصميمها وتجميعها وبرمجتها من قِبل أعضاء الفريق، والاحتفاء بفوز فريق NASA من نفس المجتمع بالمركز الثاني."
+    },
     "image": ""
   },
   {

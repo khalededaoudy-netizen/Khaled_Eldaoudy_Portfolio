@@ -5,24 +5,46 @@
     "year": 2025,
     "month": "October",
     "name": {
-      "en": "Error Competition 2025 – Sumo Robot (2nd Edition)",
-      "ar": "مسابقة Error 2025 – روبوت السومو (النسخة الثانية)"
+      "en": "Error Competition 2025 – Sumo Robot Challenge",
+      "ar": "مسابقة Error 2025 – تحدي روبوت السومو"
     },
     "organizer": {
       "en": "IEEE HTI Student Branch, Higher Technological Institute",
       "ar": "فرع IEEE للطلاب بمعهد التكنولوجيا العالي"
     },
+    "team": {
+      "en": "ZNUS Team – ZNU Robotics Community",
+      "ar": "فريق ZNUS – مجتمع روبوتات ZNU"
+    },
+    "role": {
+      "en": "Autonomous Robot Design, Assembly & Embedded Programming",
+      "ar": "تصميم وتجميع وبرمجة الأنظمة المدمجة للروبوتات الذاتية"
+    },
     "result": {
-      "en": "NASA Team from the ZNU Robotics Community placed 2nd among 20+ university teams; received a Certificate of Appreciation for technical contribution in robot design, programming, and control systems.",
-      "ar": "حقق فريق NASA التابع لمجتمع روبوتات ZNU المركز الثاني بين أكثر من 20 فريقاً جامعياً، وحصلت على شهادة تقدير لمساهمتي التقنية في تصميم الروبوت وبرمجته وأنظمة التحكم."
+      "en": "Certificate of Appreciation for active participation with three autonomous robots (NASA Team from ZNU Robotics Community achieved 2nd Place)",
+      "ar": "شهادة تقدير للمشاركة الفعالة بثلاثة روبوتات سومو ذاتية (وحقق فريق NASA من مجتمع ZNU Robotics المركز الثاني)"
     },
     "rank": null,
+    "skills": [
+      "Robotics",
+      "Autonomous Systems",
+      "Sumo Robots",
+      "Embedded Systems",
+      "Sensor Integration",
+      "Team Collaboration"
+    ],
     "description": {
-      "en": "Competed as part of Team ZNUS under the ZNU Robotics Community, representing Zagazig National University. Designed and programmed three autonomous sumo robots for Egypt's national Sumorobot qualifying competition for the international championship in Japan. NASA Team, from the same community, achieved 2nd place among 20+ university teams. Awarded a Certificate of Appreciation for technical contribution in robot design, programming, and control systems.",
-      "ar": "شاركت ضمن فريق ZNUS التابع لمجتمع روبوتات ZNU ممثلاً لجامعة الزقازيق الأهلية. قمت بتصميم وبرمجة ثلاثة روبوتات سومو ذاتية لتصفيات بطولة السومو الوطنية المؤهلة للبطولة الدولية في اليابان. حقق فريق NASA من نفس المجتمع المركز الثاني بين أكثر من 20 فريقاً جامعياً. حصلت على شهادة تقدير لمساهمتي التقنية في تصميم الروبوت وبرمجته وأنظمة التحكم."
+      "en": "Represented Zagazig National University (ZNU) and the ZNU Robotics Community at the Error Competition 2025 – Sumo Robot Challenge, organized by the IEEE HTI Student Branch at the Higher Technological Institute. Competed as an active member of ZNUS Team, fielding three autonomous sumo robots entirely designed, assembled, and programmed by our team members. In the same competition, our sister team NASA from the ZNU Robotics Community achieved 2nd Place among over 20 competing university teams. Honored with a Certificate of Appreciation for our technical contributions and successful autonomous robot performance on the competition ring.",
+      "ar": "مثّلت جامعة الزقازيق الأهلية (ZNU) ومجتمع روبوتات ZNU في مسابقة Error 2025 – تحدي روبوت السومو، التي نظمها فرع IEEE للطلاب بمعهد التكنولوجيا العالي (HTI). شاركت كعضو في فريق ZNUS بثلاثة روبوتات سومو ذاتية الحركة بالكامل تم تصميمها وتجميعها وبرمجتها بأيدي أعضاء الفريق. وفي نفس المسابقة، حقق فريق NASA التابع لمجتمع ZNU Robotics المركز الثاني من بين أكثر من 20 فريقاً جامعياً متنافساً. ونلت مع الفريق شهادة تقدير لمشاركتنا التقنية الفعالة وأداء الروبوتات الذاتية على حلبة المنافسة."
     },
-    "images": [],
-    "cover": ""
+    "images": [
+      "assets/images/competitions/error-sumo-2025/error-sumo-1.jpg",
+      "assets/images/competitions/error-sumo-2025/error-sumo-2.jpg",
+      "assets/images/competitions/error-sumo-2025/error-sumo-3.jpg",
+      "assets/images/competitions/error-sumo-2025/error-sumo-4.jpg",
+      "assets/images/competitions/error-sumo-2025/error-sumo-5.jpg"
+    ],
+    "cover": "assets/images/competitions/error-sumo-2025/error-sumo-1.jpg"
   },
   {
     "id": "comp-robosoccer-2025",
