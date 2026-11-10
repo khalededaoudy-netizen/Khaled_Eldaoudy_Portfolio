@@ -6,26 +6,64 @@
  * and notifies active renderers to re-draw bilingual content dynamically.
  */
 
+function getStoredLang() {
+  try {
+    return localStorage.getItem('khaled_portfolio_lang');
+  } catch (err) {
+    console.warn('localStorage read bypassed (privacy/restricted environment):', err && err.message);
+    return null;
+  }
+}
+
+function setStoredLang(lang) {
+  try {
+    localStorage.setItem('khaled_portfolio_lang', lang);
+  } catch (err) {
+    console.warn('localStorage write bypassed (privacy/restricted environment):', err && err.message);
+  }
+}
+
 class I18nManager {
   constructor() {
-    const urlLang = new URLSearchParams(window.location.search).get('lang');
+    let urlLang = null;
+    try {
+      urlLang = new URLSearchParams(window.location.search).get('lang');
+    } catch {
+      urlLang = null;
+    }
     this.currentLang = (urlLang === 'ar' || urlLang === 'en')
       ? urlLang
-      : (localStorage.getItem('khaled_portfolio_lang') || 'en');
+      : (getStoredLang() || 'en');
     this.translations = {};
     this.subscribers = [];
   }
 
   async init() {
+    let loadedTranslations = null;
+
+    // 1. Primary relative path
     try {
       const res = await fetch('data/i18n.json');
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      this.translations = await res.json();
-    } catch (err) {
-      console.warn('Could not load i18n.json, fallback in place:', err);
-      this.translations = {};
+      if (res.ok) loadedTranslations = await res.json();
+    } catch {
+      // Primary fetch threw a network error; fall through to fallback
     }
 
+    // 2. Fallback absolute root path (executed at most once)
+    if (!loadedTranslations) {
+      try {
+        const fallbackRes = await fetch('/data/i18n.json');
+        if (fallbackRes.ok) {
+          loadedTranslations = await fallbackRes.json();
+        } else {
+          console.warn(`Could not load i18n.json: HTTP ${fallbackRes.status}`);
+        }
+      } catch (err) {
+        console.warn('Could not load i18n.json, fallback in place:', err);
+      }
+    }
+
+    this.translations = loadedTranslations || {};
     this.applyLanguage(this.currentLang, false);
   }
 
@@ -60,7 +98,7 @@ class I18nManager {
 
   applyLanguage(lang, triggerSubscribers = true) {
     this.currentLang = lang;
-    localStorage.setItem('khaled_portfolio_lang', lang);
+    setStoredLang(lang);
 
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';

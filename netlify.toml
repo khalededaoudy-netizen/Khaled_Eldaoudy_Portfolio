@@ -4,7 +4,7 @@
   command = "npm run build"
   publish = "dist"
 
-# Caching & Security Headers
+# Global Security Headers
 [[headers]]
   for = "/*"
   [headers.values]
@@ -13,13 +13,27 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
+# Static Visual Assets Long-term Caching
 [[headers]]
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# Structured JSON Data Caching
 [[headers]]
   for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+# JavaScript Modules Caching
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+# Stylesheets Caching
+[[headers]]
+  for = "/css/*"
   [headers.values]
     Cache-Control = "public, max-age=3600, must-revalidate"
 

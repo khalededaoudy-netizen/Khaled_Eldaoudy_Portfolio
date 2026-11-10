@@ -196,33 +196,54 @@ export class PortfolioDataManager {
     this.selectedProject = null;
   }
 
+  async fetchJSON(name) {
+    // 1. Primary relative path
+    try {
+      const res = await fetch(`data/${name}`);
+      if (res.ok) return await res.json();
+    } catch {
+      // Primary fetch threw a network error; fall through to fallback
+    }
+
+    // 2. Fallback absolute root path (executed at most once)
+    try {
+      const fallbackRes = await fetch(`/data/${name}`);
+      if (fallbackRes.ok) return await fallbackRes.json();
+      console.warn(`Could not load data/${name}: HTTP ${fallbackRes.status}`);
+    } catch (err) {
+      console.warn(`Could not load data/${name}:`, err);
+    }
+
+    return null;
+  }
+
   async loadAll() {
     try {
       const [
-        profileRes,
-        projectsRes,
-        competitionsRes,
-        leadershipRes,
-        trainingRes,
-        certificatesRes,
-        entrepreneurshipRes
+        profile,
+        projects,
+        competitions,
+        leadership,
+        training,
+        certificates,
+        entrepreneurship
       ] = await Promise.all([
-        fetch('data/profile.json'),
-        fetch('data/projects.json'),
-        fetch('data/competitions.json'),
-        fetch('data/leadership.json'),
-        fetch('data/training.json'),
-        fetch('data/certificates.json'),
-        fetch('data/entrepreneurship.json')
+        this.fetchJSON('profile.json'),
+        this.fetchJSON('projects.json'),
+        this.fetchJSON('competitions.json'),
+        this.fetchJSON('leadership.json'),
+        this.fetchJSON('training.json'),
+        this.fetchJSON('certificates.json'),
+        this.fetchJSON('entrepreneurship.json')
       ]);
 
-      this.data.profile = await profileRes.json();
-      this.data.projects = await projectsRes.json();
-      this.data.competitions = await competitionsRes.json();
-      this.data.leadership = await leadershipRes.json();
-      this.data.training = await trainingRes.json();
-      this.data.certificates = await certificatesRes.json();
-      this.data.entrepreneurship = await entrepreneurshipRes.json();
+      if (profile) this.data.profile = profile;
+      if (Array.isArray(projects)) this.data.projects = projects;
+      if (Array.isArray(competitions)) this.data.competitions = competitions;
+      if (Array.isArray(leadership)) this.data.leadership = leadership;
+      if (Array.isArray(training)) this.data.training = training;
+      if (Array.isArray(certificates)) this.data.certificates = certificates;
+      if (Array.isArray(entrepreneurship)) this.data.entrepreneurship = entrepreneurship;
     } catch (err) {
       console.error('Failed to load portfolio data:', err);
     }

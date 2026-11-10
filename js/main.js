@@ -11,41 +11,57 @@ import { i18n } from './i18n.js';
 import { dataManager } from './data-loader.js';
 import { initLuxuryGimbal } from './three-gimbal.js';
 
-document.addEventListener('DOMContentLoaded', async () => {
-  // 1. Initialize i18n
-  await i18n.init();
+let isInitialized = false;
 
-  // 2. Load & Render Portfolio Data
-  await dataManager.loadAll();
-  dataManager.renderAll();
+async function initApp() {
+  if (isInitialized) return;
+  isInitialized = true;
 
-  // Re-render dynamic sections when language changes
-  i18n.onLanguageChange(() => {
-    dataManager.renderAll();
-  });
-
-  // 3. Initialize Three.js Kinematic Gimbal
   try {
-    initLuxuryGimbal('heroCanvasMount');
-  } catch (e) {
-    console.warn('Gimbal canvas bypass:', e);
+    // 1. Initialize i18n
+    await i18n.init();
+
+    // 2. Load & Render Portfolio Data
+    await dataManager.loadAll();
+    dataManager.renderAll();
+
+    // Re-render dynamic sections when language changes
+    i18n.onLanguageChange(() => {
+      dataManager.renderAll();
+    });
+
+    // 3. Initialize Three.js Kinematic Gimbal
+    try {
+      initLuxuryGimbal('heroCanvasMount');
+    } catch (e) {
+      console.warn('Gimbal canvas bypass:', e);
+    }
+
+    // 4. Setup Project Category Filters
+    initProjectFilters();
+
+    // 5. Setup Project Modal Listeners
+    initModalListeners();
+
+    // 6. Setup Cinematic Scroll Animations & Counters (Progressive Enhancement)
+    initAnimations();
+
+    // 7. Formspree Contact Form Integration
+    initContactForm();
+
+    // 8. Navigation & Header Scrolled State
+    initNavigation();
+  } catch (err) {
+    console.error('Fatal initialization error in initApp:', err);
   }
+}
 
-  // 4. Setup Project Category Filters
-  initProjectFilters();
-
-  // 5. Setup Project Modal Listeners
-  initModalListeners();
-
-  // 6. Setup Cinematic Scroll Animations & Counters (Progressive Enhancement)
-  initAnimations();
-
-  // 7. Formspree Contact Form Integration
-  initContactForm();
-
-  // 8. Navigation & Header Scrolled State
-  initNavigation();
-});
+// Ensure execution whether DOM is already parsed or still loading
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  initApp();
+}
 
 /* ==========================================================================
    1. Project Category Filters
