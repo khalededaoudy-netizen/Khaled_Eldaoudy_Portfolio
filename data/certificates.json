@@ -229,15 +229,43 @@
   {
     "id": "cert-maharatech-c-2025",
     "title": {
-      "en": "C Programming: From Basics to Mastery",
+      "en": "C Programming From Basics to Mastery",
       "ar": "برمجة لغة C: من الأساسيات إلى الاحتراف"
     },
     "issuer": {
-      "en": "MaharaTech",
-      "ar": "MaharaTech"
+      "en": "Mahara-Tech | ITI Platform",
+      "ar": "منصة مهارة تك | معهد تكنولوجيا المعلومات (ITI)"
     },
-    "date": "August 2025",
-    "image": ""
+    "credential_id": "ztZZE8OSe1",
+    "category": {
+      "en": "Programming & Software Development",
+      "ar": "البرمجة وتطوير البرمجيات"
+    },
+    "type": {
+      "en": "Online Course Completion Certificate",
+      "ar": "شهادة إتمام دورة عبر الإنترنت"
+    },
+    "status": {
+      "en": "Successfully Completed",
+      "ar": "أُتمت بنجاح"
+    },
+    "duration": {
+      "en": "5 Hours, 15 Minutes",
+      "ar": "5 ساعات و15 دقيقة"
+    },
+    "date": "25 August 2025",
+    "description": {
+      "en": "Successfully completed the \"C Programming From Basics to Mastery\" course offered through the Mahara-Tech | ITI Platform.\n\nThe 5-hour and 15-minute course strengthened programming fundamentals, problem-solving skills, programming logic, and low-level coding knowledge, providing a foundation relevant to Embedded Systems and Robotics development.",
+      "ar": "أتممت بنجاح دورة \"C Programming From Basics to Mastery\" المقدمة عبر منصة مهارة تك التابعة لمعهد تكنولوجيا المعلومات (ITI)، بإجمالي 5 ساعات و15 دقيقة.\n\nساهمت الدورة في تعزيز فهم أساسيات لغة C ومفاهيم البرمجة، وتنمية مهارات التفكير المنطقي وحل المشكلات، واكتساب معرفة برمجية مهمة في التعامل مع البرمجة منخفضة المستوى، بما يدعم مجال الأنظمة المدمجة والروبوتات."
+    },
+    "skills": [
+      "C Programming",
+      "Low-Level Programming",
+      "Problem Solving",
+      "Programming Logic",
+      "Embedded Systems Foundation"
+    ],
+    "image": "assets/certificates/maharatech-c-programming-basics-to-mastery.jpg"
   },
   {
     "id": "cert-bue-ai-2023",

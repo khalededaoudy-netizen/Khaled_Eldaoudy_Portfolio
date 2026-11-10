@@ -245,6 +245,7 @@ function validateCertificates() {
     if (item.type) checkBilingual(item.type, file, id, 'type');
     if (item.category) checkBilingual(item.category, file, id, 'category');
     if (item.status) checkBilingual(item.status, file, id, 'status');
+    if (item.duration) checkBilingual(item.duration, file, id, 'duration');
     if (item.trainer) checkBilingual(item.trainer, file, id, 'trainer');
     if (item.description) checkBilingual(item.description, file, id, 'description');
     if (item.team) checkBilingual(item.team, file, id, 'team');

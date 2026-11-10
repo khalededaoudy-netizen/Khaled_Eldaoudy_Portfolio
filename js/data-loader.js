@@ -651,6 +651,19 @@ export class PortfolioDataManager {
       }
     }
 
+    const modalDurationItem = document.getElementById('certModalDurationItem');
+    const modalDurationLbl = document.getElementById('certModalDurationLbl');
+    const modalDuration = document.getElementById('certModalDuration');
+    if (modalDurationItem) {
+      if (cert.duration) {
+        modalDurationItem.style.display = '';
+        if (modalDurationLbl) modalDurationLbl.textContent = isRtl ? 'المدة:' : 'DURATION:';
+        if (modalDuration) modalDuration.textContent = i18n.getText(cert.duration);
+      } else {
+        modalDurationItem.style.display = 'none';
+      }
+    }
+
     const modalDesc = document.getElementById('certModalDescription');
     if (modalDesc) {
       if (cert.description) {
@@ -1072,6 +1085,7 @@ export class PortfolioDataManager {
             ${cert.team ? ` &bull; <span class="credential-team-badge">👥 ${i18n.getText(cert.team)}</span>` : ''}
             ${cert.host ? ` &bull; ${isRtl ? 'المستضيف:' : 'Host:'} ${i18n.getText(cert.host)}` : ''}
             ${cert.trainer ? ` &bull; ${isRtl ? 'المدرب:' : 'Trainer:'} ${i18n.getText(cert.trainer)}` : ''}
+            ${cert.duration ? ` &bull; ⏱️ ${i18n.getText(cert.duration)}` : ''}
             ${cert.date ? ` &bull; ${localizeDateStr(cert.date, isRtl)}` : ''}
           </p>
 
