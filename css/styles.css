@@ -1323,6 +1323,27 @@ img {
   line-height: 1.7;
 }
 
+.honor-role-line {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.honor-role-line strong {
+  color: var(--accent-gold);
+}
+
+.honor-team-label {
+  color: var(--accent-gold);
+}
+
+.honor-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.25rem;
+}
+
 /* ==========================================================================
    10. Section 05: Leadership & Governance
    ========================================================================== */
@@ -1563,6 +1584,55 @@ img {
   flex-wrap: wrap;
   gap: 0.4rem;
   margin-top: 0.4rem;
+}
+
+.gold-stamp {
+  color: var(--accent-gold);
+  font-weight: 600;
+}
+
+.credential-team-badge {
+  color: var(--text-secondary);
+}
+
+.credential-role-line {
+  font-size: 0.76rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+  margin-top: 0.15rem;
+}
+
+.credential-role-line strong {
+  color: var(--accent-gold);
+  font-weight: 500;
+}
+
+.credential-honor-link {
+  margin-top: 0.35rem;
+}
+
+.honor-anchor-link {
+  color: var(--accent-gold);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-gold);
+  background: rgba(198, 166, 107, 0.08);
+  transition: all 0.2s ease;
+}
+
+.honor-anchor-link:hover {
+  background: rgba(198, 166, 107, 0.18);
+  transform: translateX(2px);
+}
+
+[dir="rtl"] .honor-anchor-link:hover {
+  transform: translateX(-2px);
 }
 
 .cert-modal-dialog {

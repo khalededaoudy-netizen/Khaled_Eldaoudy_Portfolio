@@ -28,23 +28,52 @@
     "id": "comp-robosoccer-2025",
     "slug": "robosoccer-2025",
     "year": 2025,
-    "month": "August",
+    "month": "11 August",
     "name": {
-      "en": "RoboSoccer Competition",
-      "ar": "مسابقة روبوتات كرة القدم (RoboSoccer)"
+      "en": "RoboSoccer Competition – IEEE HTI",
+      "ar": "مسابقة RoboSoccer – IEEE HTI"
     },
     "organizer": {
       "en": "IEEE HTI Student Branch",
       "ar": "فرع جمعية IEEE بمعهد التكنولوجيا العالي"
     },
+    "team": {
+      "en": "ZNUS Robotics Community – Team ZNUS",
+      "ar": "مجتمع روبوتات ZNU – فريق ZNUS"
+    },
+    "role": {
+      "en": "Control System Design & Tuning",
+      "ar": "تصميم وضبط نظام التحكم"
+    },
     "result": {
-      "en": "2nd place (Team ZNUS) and 5th place (Team ZUNBots) among top Egyptian universities; received a certificate signed by Egypt's Prime Minister, Mostafa Madbouly, for national-level recognition.",
-      "ar": "المركز الثاني (فريق ZNUS) والمركز الخامس (فريق ZUNBots) بين كبرى الجامعات المصرية؛ وحصلت على شهادة موقعة من رئيس مجلس الوزراء المصري، مصطفى مدبولي، تقديراً على المستوى الوطني."
+      "en": "Second Place — Team ZNUS (Team ZUNBots placed Fifth)",
+      "ar": "المركز الثاني — فريق ZNUS (وحقق فريق ZUNBots المركز الخامس)"
     },
     "rank": 2,
+    "team_members": [
+      "Amr Badr",
+      "Mohamed Hosni",
+      "Youssef Sabry",
+      "Adham Attia",
+      "Sherif Tamer",
+      "Khaled Eldaoudy",
+      "Ahmed Ali",
+      "Moamen Mohamed",
+      "Omar Mohamed",
+      "Saeed Mohamed",
+      "Moamen Ayman"
+    ],
+    "skills": [
+      "Robotics",
+      "Control Systems",
+      "Control System Design",
+      "System Tuning",
+      "Robot Performance Optimization",
+      "Team Collaboration"
+    ],
     "description": {
-      "en": "Secured 2nd place with Team ZNUS and 5th place with Team ZUNBots among top Egyptian universities. Led control system design and tuning for stable, precise robot performance during matches. Received a certificate signed by Egypt's Prime Minister, Mostafa Madbouly, for national-level recognition.",
-      "ar": "حققت المركز الثاني مع فريق ZNUS والمركز الخامس مع فريق ZUNBots بين كبرى الجامعات المصرية. قدت تصميم نظام التحكم وضبطه لأداء مستقر ودقيق للروبوت أثناء المباريات. حصلت على شهادة موقعة من رئيس مجلس الوزراء المصري، مصطفى مدبولي، تقديراً على المستوى الوطني."
+      "en": "Proud to have been a member of Team ZNUS in the RoboSoccer Competition organized by IEEE HTI Student Branch. I was responsible for control system design and tuning, helping ensure stable and precise robot performance on the field. This experience strengthened my practical understanding of robotics and the application of engineering theory.",
+      "ar": "شاركت كعضو في فريق ZNUS في مسابقة RoboSoccer التي نظمها IEEE HTI Student Branch، وكنت مسؤولًا عن تصميم وضبط نظام التحكم بالروبوت، بهدف ضمان أداء مستقر ودقيق أثناء المنافسة. ساهمت التجربة في تعزيز خبرتي العملية في مجال الروبوتات وتطبيق المفاهيم الهندسية."
     },
     "images": [],
     "cover": ""

@@ -30,6 +30,77 @@
     "image": "assets/certificates/3dexperience-solidworks-essential-seminar-2025.jpg"
   },
   {
+    "id": "cert-robosoccer-team-2025",
+    "title": {
+      "en": "RoboSoccer Competition – Second Place – Team ZNUS",
+      "ar": "مسابقة RoboSoccer – المركز الثاني – فريق ZNUS"
+    },
+    "issuer": {
+      "en": "IEEE HTI Student Branch",
+      "ar": "فرع IEEE للطلاب بمعهد التكنولوجيا العالي"
+    },
+    "type": {
+      "en": "Team Achievement — 2nd Place",
+      "ar": "إنجاز جماعي — المركز الثاني"
+    },
+    "category": {
+      "en": "Team Achievement",
+      "ar": "إنجاز جماعي"
+    },
+    "team": {
+      "en": "Team ZNUS",
+      "ar": "فريق ZNUS"
+    },
+    "date": "11 August 2025",
+    "competition_id": "comp-robosoccer-2025",
+    "skills": [
+      "Robotics",
+      "Control Systems",
+      "System Tuning",
+      "Robot Performance Optimization",
+      "Team Collaboration"
+    ],
+    "image": ""
+  },
+  {
+    "id": "cert-robosoccer-individual-2025",
+    "title": {
+      "en": "RoboSoccer Competition – Certificate of Participation",
+      "ar": "مسابقة RoboSoccer – شهادة مشاركة"
+    },
+    "issuer": {
+      "en": "IEEE HTI Student Branch",
+      "ar": "فرع IEEE للطلاب بمعهد التكنولوجيا العالي"
+    },
+    "type": {
+      "en": "Individual Participation",
+      "ar": "مشاركة فردية"
+    },
+    "category": {
+      "en": "Individual Participation",
+      "ar": "مشاركة فردية"
+    },
+    "team": {
+      "en": "Team ZNUS",
+      "ar": "فريق ZNUS"
+    },
+    "role": {
+      "en": "Control System Design & Tuning",
+      "ar": "تصميم وضبط نظام التحكم"
+    },
+    "date": "11 August 2025",
+    "competition_id": "comp-robosoccer-2025",
+    "skills": [
+      "Robotics",
+      "Control Systems",
+      "Control System Design",
+      "System Tuning",
+      "Robot Performance Optimization",
+      "Team Collaboration"
+    ],
+    "image": ""
+  },
+  {
     "id": "cert-solidworks-2026",
     "title": {
       "en": "SolidWorks Workshop",

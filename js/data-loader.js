@@ -670,14 +670,29 @@ export class PortfolioDataManager {
           </div>
 
           <h3 class="honor-title">${i18n.getText(comp.name)}</h3>
-          <div class="honor-organizer font-mono">🏛️ ${i18n.getText(comp.organizer)}</div>
+          <div class="honor-organizer font-mono">
+            <span>🏛️ ${i18n.getText(comp.organizer)}</span>
+            ${comp.team ? ` &bull; <span class="honor-team-label">👥 ${i18n.getText(comp.team)}</span>` : ''}
+          </div>
           
           <div class="honor-citation font-mono">
             <span class="citation-icon" aria-hidden="true">🏆</span>
             <span class="citation-text">${i18n.getText(comp.result)}</span>
           </div>
 
+          ${comp.role ? `
+            <div class="honor-role-line font-mono">
+              <span>⚙️ ${isRtl ? 'الدور والمسؤولية:' : 'Role & Responsibility:'} <strong>${i18n.getText(comp.role)}</strong></span>
+            </div>
+          ` : ''}
+
           <p class="honor-narrative">${i18n.getText(comp.description)}</p>
+
+          ${Array.isArray(comp.skills) && comp.skills.length > 0 ? `
+            <div class="honor-tags font-mono">
+              ${comp.skills.map(s => `<span class="tag-monochrome">${s}</span>`).join('')}
+            </div>
+          ` : ''}
         </article>
       `;
     }).join('');
@@ -733,11 +748,13 @@ export class PortfolioDataManager {
     container.innerHTML = this.data.certificates.map(cert => {
       const hasImage = Boolean(cert.image && cert.image.trim() !== '');
       const typeBadge = cert.type ? i18n.getText(cert.type) : (isRtl ? 'معتمد' : 'ACCREDITED');
+      const isTeam2nd = cert.type && (i18n.getText(cert.type).includes('2nd') || i18n.getText(cert.type).includes('الثاني'));
+      const stampIcon = isTeam2nd ? '🥈' : '✦';
 
       return `
         <article class="credential-item-card ${hasImage ? 'has-image' : ''}" data-cert-id="${cert.id}" ${hasImage ? 'role="button" tabindex="0" aria-label="' + (isRtl ? 'عرض الشهادة المعتمدة' : 'View Verified Credential') + '"' : ''}>
-          <div class="credential-stamp font-mono">
-            <span class="stamp-seal">✦</span>
+          <div class="credential-stamp font-mono ${isTeam2nd ? 'gold-stamp' : ''}">
+            <span class="stamp-seal">${stampIcon}</span>
             <span>${typeBadge}</span>
           </div>
 
@@ -756,9 +773,24 @@ export class PortfolioDataManager {
           <h4 class="credential-name">${i18n.getText(cert.title)}</h4>
           <p class="credential-issuer font-mono">
             🏛️ ${i18n.getText(cert.issuer)}
+            ${cert.team ? ` &bull; <span class="credential-team-badge">👥 ${i18n.getText(cert.team)}</span>` : ''}
             ${cert.host ? ` &bull; ${isRtl ? 'المستضيف:' : 'Host:'} ${i18n.getText(cert.host)}` : ''}
             &bull; ${localizeDateStr(cert.date, isRtl)}
           </p>
+
+          ${cert.role ? `
+            <div class="credential-role-line font-mono">
+              <span>⚙️ ${isRtl ? 'المسؤولية الشخصية:' : 'Personal Responsibility:'} <strong>${i18n.getText(cert.role)}</strong></span>
+            </div>
+          ` : ''}
+
+          ${cert.competition_id ? `
+            <div class="credential-honor-link font-mono">
+              <a href="#competitions" class="honor-anchor-link">
+                <span>🏆 ${isRtl ? 'مرتبط بإنجاز مسابقة RoboSoccer' : 'Linked to RoboSoccer Honor'} &rarr;</span>
+              </a>
+            </div>
+          ` : ''}
 
           ${Array.isArray(cert.skills) && cert.skills.length > 0 ? `
             <div class="credential-tags-row font-mono">

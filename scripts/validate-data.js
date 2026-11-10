@@ -120,6 +120,8 @@ function validateCompetitions() {
     checkBilingual(item.organizer, file, id, 'organizer');
     checkBilingual(item.result, file, id, 'result');
     checkBilingual(item.description, file, id, 'description');
+    if (item.team) checkBilingual(item.team, file, id, 'team');
+    if (item.role) checkBilingual(item.role, file, id, 'role');
 
     if (item.cover) checkFileExists(item.cover, file, id, 'cover');
     if (Array.isArray(item.images)) {
@@ -182,6 +184,9 @@ function validateCertificates() {
     checkBilingual(item.issuer, file, id, 'issuer');
     if (item.host) checkBilingual(item.host, file, id, 'host');
     if (item.type) checkBilingual(item.type, file, id, 'type');
+    if (item.category) checkBilingual(item.category, file, id, 'category');
+    if (item.team) checkBilingual(item.team, file, id, 'team');
+    if (item.role) checkBilingual(item.role, file, id, 'role');
     if (item.image) checkFileExists(item.image, file, id, 'image');
   });
 }
