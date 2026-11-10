@@ -30,6 +30,43 @@
     "image": "assets/certificates/3dexperience-solidworks-essential-seminar-2025.jpg"
   },
   {
+    "id": "cert-nvidia-deep-learning",
+    "title": {
+      "en": "Getting Started with Deep Learning",
+      "ar": "أساسيات البدء في التعلم العميق"
+    },
+    "issuer": {
+      "en": "NVIDIA",
+      "ar": "NVIDIA"
+    },
+    "credential_id": "M0S7oiZMQcO9R966P9O6-Q",
+    "category": {
+      "en": "Artificial Intelligence & Deep Learning",
+      "ar": "الذكاء الاصطناعي والتعلم العميق"
+    },
+    "type": {
+      "en": "Professional Certification",
+      "ar": "شهادة مهنية معتمدة"
+    },
+    "status": {
+      "en": "Successfully Completed",
+      "ar": "أُتمت بنجاح"
+    },
+    "date": null,
+    "description": {
+      "en": "Successfully completed NVIDIA's \"Getting Started with Deep Learning\" certification, developing a foundational understanding of Deep Learning, modern AI concepts, neural networks, and their applications.\n\nThis certification supports my ongoing learning journey in Machine Learning, Deep Learning, Artificial Intelligence, and Robotics.",
+      "ar": "أتممت بنجاح شهادة \"Getting Started with Deep Learning\" المقدمة من NVIDIA، والتي ساهمت في بناء فهم أساسي لمفاهيم التعلم العميق والذكاء الاصطناعي الحديث والشبكات العصبية وتطبيقاتها.\n\nتمثل هذه الشهادة خطوة ضمن رحلتي التعليمية في مجالات تعلم الآلة والتعلم العميق والذكاء الاصطناعي والروبوتات."
+    },
+    "skills": [
+      "Deep Learning",
+      "Artificial Intelligence",
+      "Neural Networks",
+      "Machine Learning",
+      "Robotics"
+    ],
+    "image": "assets/certificates/nvidia-getting-started-deep-learning.jpg"
+  },
+  {
     "id": "cert-robosoccer-team-2025",
     "title": {
       "en": "RoboSoccer Competition – Second Place – Team ZNUS",

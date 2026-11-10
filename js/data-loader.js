@@ -580,7 +580,14 @@ export class PortfolioDataManager {
     if (modalBadge) {
       modalBadge.textContent = cert.type ? i18n.getText(cert.type) : (isRtl ? 'شهادة معتمدة' : 'VERIFIED CREDENTIAL');
     }
-    if (modalYear) modalYear.textContent = cert.date || '2025';
+    if (modalYear) {
+      if (cert.date) {
+        modalYear.style.display = '';
+        modalYear.textContent = localizeDateStr(cert.date, isRtl);
+      } else {
+        modalYear.style.display = 'none';
+      }
+    }
 
     if (modalIssuerLbl) modalIssuerLbl.textContent = isRtl ? 'الجهة المانحة:' : 'ISSUING BODY:';
     if (modalIssuer) modalIssuer.textContent = i18n.getText(cert.issuer);
@@ -602,6 +609,42 @@ export class PortfolioDataManager {
         if (modalType) modalType.textContent = i18n.getText(cert.type);
       } else {
         modalTypeItem.style.display = 'none';
+      }
+    }
+
+    const modalCategoryItem = document.getElementById('certModalCategoryItem');
+    const modalCategoryLbl = document.getElementById('certModalCategoryLbl');
+    const modalCategory = document.getElementById('certModalCategory');
+    if (modalCategoryItem) {
+      if (cert.category) {
+        modalCategoryItem.style.display = '';
+        if (modalCategoryLbl) modalCategoryLbl.textContent = isRtl ? 'المجال:' : 'CATEGORY:';
+        if (modalCategory) modalCategory.textContent = i18n.getText(cert.category);
+      } else {
+        modalCategoryItem.style.display = 'none';
+      }
+    }
+
+    const modalIdItem = document.getElementById('certModalIdItem');
+    const modalIdLbl = document.getElementById('certModalIdLbl');
+    const modalId = document.getElementById('certModalId');
+    if (modalIdItem) {
+      if (cert.credential_id) {
+        modalIdItem.style.display = '';
+        if (modalIdLbl) modalIdLbl.textContent = isRtl ? 'رقم الاعتماد:' : 'CERTIFICATE ID:';
+        if (modalId) modalId.textContent = cert.credential_id;
+      } else {
+        modalIdItem.style.display = 'none';
+      }
+    }
+
+    const modalDesc = document.getElementById('certModalDescription');
+    if (modalDesc) {
+      if (cert.description) {
+        modalDesc.style.display = '';
+        modalDesc.textContent = i18n.getText(cert.description);
+      } else {
+        modalDesc.style.display = 'none';
       }
     }
 
@@ -818,18 +861,107 @@ export class PortfolioDataManager {
 
     const isRtl = i18n.getLang() === 'ar';
 
-    container.innerHTML = this.data.training.map(item => `
-      <article class="training-program-card">
-        <div class="training-top-row font-mono">
-          <span class="training-period-tag">${localizeDateStr(item.period, isRtl)}</span>
-          ${item.hours ? `<span class="training-monument-hours"><strong>${item.hours}</strong> ${i18n.t('training.hours_suffix')}</span>` : ''}
-        </div>
-        <h3 class="training-program-title">${i18n.getText(item.program)}</h3>
-        <div class="training-provider-line font-mono">🏢 ${i18n.getText(item.provider)}</div>
-        ${item.score ? `<div class="training-score-badge font-mono">${isRtl ? 'النتيجة:' : 'SCORE:'} <strong>${item.score}</strong></div>` : ''}
-        <p class="training-summary-p">${i18n.getText(item.description)}</p>
-      </article>
-    `).join('');
+    container.innerHTML = this.data.training.map(item => {
+      const isFeatured = Boolean(item.topics || item.image || item.final_project);
+      const descText = i18n.getText(item.description);
+      const descHtml = descText
+        .split('\n\n')
+        .map(paragraph => `<p>${paragraph.replace(/\n/g, '<br>')}</p>`)
+        .join('');
+
+      return `
+        <article class="training-program-card ${isFeatured ? 'featured-training' : ''}" data-train-id="${item.id}">
+          <div class="training-top-row font-mono">
+            <div class="training-badges-group">
+              ${item.duration ? `<span class="training-duration-tag">⏱️ ${i18n.getText(item.duration)}</span>` : ''}
+              ${item.format ? `<span class="training-format-tag">📡 ${i18n.getText(item.format)}</span>` : ''}
+              ${item.location ? `<span class="training-location-tag">📍 ${i18n.getText(item.location)}</span>` : ''}
+              ${item.period ? `<span class="training-period-tag">${localizeDateStr(item.period, isRtl)}</span>` : ''}
+            </div>
+            ${item.hours ? `<span class="training-monument-hours"><strong>${item.hours}</strong> ${i18n.t('training.hours_suffix')}</span>` : ''}
+          </div>
+
+          <h3 class="training-program-title">${i18n.getText(item.program)}</h3>
+
+          <div class="training-provider-line font-mono">
+            <span>🏢 ${i18n.getText(item.provider)}</span>
+            ${item.parent_organization ? `<span class="training-parent-org">• 🏛️ ${i18n.getText(item.parent_organization)}</span>` : ''}
+          </div>
+
+          ${item.score ? `
+            <div class="training-score-badge font-mono">
+              ${isRtl ? 'النتيجة:' : 'SCORE:'} <strong>${item.score}</strong>
+            </div>
+          ` : ''}
+
+          ${item.image ? `
+            <div class="training-visual-preview"
+                 role="button"
+                 tabindex="0"
+                 data-img-src="${item.image}"
+                 data-caption="${i18n.getText(item.program)}"
+                 aria-label="${isRtl ? 'تكبير صورة التدريب بدقة كاملة' : 'Enlarge training photograph in full resolution'}">
+              <img src="${item.image}" alt="${i18n.getText(item.program)}" class="training-img-thumb" loading="lazy" />
+              <div class="training-img-overlay">
+                <span class="gallery-zoom-icon font-mono">
+                  <span>🔍</span>
+                  <span>${isRtl ? 'تكبير الصورة' : 'View Full Image'}</span>
+                </span>
+              </div>
+            </div>
+          ` : ''}
+
+          <div class="training-narrative-group">
+            ${descHtml}
+          </div>
+
+          ${Array.isArray(item.topics) && item.topics.length > 0 ? `
+            <div class="training-curriculum-block">
+              <h4 class="curriculum-heading font-mono">
+                <span>⚡ ${isRtl ? 'الموضوعات التي تعلمتها (Core Curriculum)' : 'Core Curriculum & Technical Competencies'}</span>
+              </h4>
+              <div class="curriculum-grid">
+                ${item.topics.map(t => {
+                  const points = i18n.getText(t.points);
+                  const pointsArr = Array.isArray(points) ? points : [];
+                  return `
+                    <div class="curriculum-topic-card">
+                      <h5 class="topic-title font-mono">${i18n.getText(t.title)}</h5>
+                      <ul class="topic-points-list">
+                        ${pointsArr.map(pt => `<li>${pt}</li>`).join('')}
+                      </ul>
+                    </div>
+                  `;
+                }).join('')}
+              </div>
+            </div>
+          ` : ''}
+
+          ${item.final_project ? `
+            <div class="training-capstone-showcase">
+              <div class="capstone-header">
+                ${item.final_project.badge ? `<span class="capstone-badge font-mono">🏆 ${i18n.getText(item.final_project.badge)}</span>` : ''}
+                <h4 class="capstone-title font-mono">${i18n.getText(item.final_project.title)}</h4>
+              </div>
+              <p class="capstone-desc">${i18n.getText(item.final_project.description)}</p>
+            </div>
+          ` : ''}
+        </article>
+      `;
+    }).join('');
+
+    // Attach click and keyboard listeners for training visual preview
+    container.querySelectorAll('.training-visual-preview').forEach(previewEl => {
+      const src = previewEl.getAttribute('data-img-src');
+      const caption = previewEl.getAttribute('data-caption') || '';
+      previewEl.addEventListener('click', () => this.openLightbox(src, caption));
+      previewEl.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          this.openLightbox(src, caption);
+        }
+      });
+    });
   }
 
   renderCertificates() {
@@ -868,8 +1000,25 @@ export class PortfolioDataManager {
             🏛️ ${i18n.getText(cert.issuer)}
             ${cert.team ? ` &bull; <span class="credential-team-badge">👥 ${i18n.getText(cert.team)}</span>` : ''}
             ${cert.host ? ` &bull; ${isRtl ? 'المستضيف:' : 'Host:'} ${i18n.getText(cert.host)}` : ''}
-            &bull; ${localizeDateStr(cert.date, isRtl)}
+            ${cert.date ? ` &bull; ${localizeDateStr(cert.date, isRtl)}` : ''}
           </p>
+
+          ${cert.category ? `
+            <div class="credential-category-tag font-mono">
+              <span>🌐 ${i18n.getText(cert.category)}</span>
+            </div>
+          ` : ''}
+
+          ${cert.credential_id ? `
+            <div class="credential-id-badge font-mono">
+              <span class="cert-id-label">${isRtl ? 'رقم الاعتماد:' : 'ID:'}</span>
+              <code class="cert-id-code">${cert.credential_id}</code>
+            </div>
+          ` : ''}
+
+          ${cert.description ? `
+            <p class="credential-summary-p">${i18n.getText(cert.description).split('\n\n')[0]}</p>
+          ` : ''}
 
           ${cert.role ? `
             <div class="credential-role-line font-mono">

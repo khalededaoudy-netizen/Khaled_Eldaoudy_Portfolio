@@ -2,21 +2,160 @@
   {
     "id": "train-iti-embedded",
     "provider": {
-      "en": "Information Technology Institute (ITI), Smart Village, Egypt",
-      "ar": "معهد تكنولوجيا المعلومات (ITI)، القرية الذكية، مصر"
+      "en": "Information Technology Institute (ITI)",
+      "ar": "معهد تكنولوجيا المعلومات (ITI)"
+    },
+    "parent_organization": {
+      "en": "Ministry of Communications and Information Technology (MCIT), Egypt",
+      "ar": "وزارة الاتصالات وتكنولوجيا المعلومات، مصر"
     },
     "program": {
-      "en": "Embedded Systems Summer Training Program (162 Hours)",
-      "ar": "برنامج التدريب الصيفي في النظم المدمجة (162 ساعة)"
+      "en": "ITI Embedded Systems Program",
+      "ar": "برنامج الأنظمة المدمجة بمعهد تكنولوجيا المعلومات ITI"
     },
-    "hours": 162,
-    "period": "Jul – Aug 2025",
+    "duration": {
+      "en": "Five Weeks",
+      "ar": "خمسة أسابيع"
+    },
+    "format": {
+      "en": "Hybrid – Onsite Hands-on Sessions & Online Classes",
+      "ar": "هجين – محاضرات أونلاين وتدريب عملي داخل المعهد"
+    },
+    "location": {
+      "en": "Egypt",
+      "ar": "مصر"
+    },
+    "period": null,
+    "hours": null,
     "score": null,
+    "image": "assets/images/training/iti-embedded-systems/iti-embedded-1.jpg",
+    "images": [
+      "assets/images/training/iti-embedded-systems/iti-embedded-1.jpg"
+    ],
     "description": {
-      "en": "Completed an intensive, hands-on training program in Embedded Systems Design and Development. Covered C Programming, Microcontroller Interfacing, Communication Protocols, Real-Time Operating Systems (RTOS), and Embedded Systems Testing. Designed, built, and defended a team capstone project — a Smart Home Control System — demonstrating system integration and real-time control. Supervised by Dr. Heba Saleh, Chairman of ITI.",
-      "ar": "إتمام برنامج تدريبي تطبيقي ومكثف في تصميم وتطوير النظم المدمجة. شمل برمجة C، والتعامل مع ملحقات المتحكم، وبروتوكولات الاتصال، ونظم التشغيل اللحظية (RTOS)، واختبار النظم المدمجة. تم تصميم وبناء ومناقشة مشروع تخرج جماعي — نظام تحكم المنزل الذكي — يوضح تكامل النظام والتحكم في الوقت الحقيقي. تم التدريب تحت إشراف الدكتورة هبة صالح، رئيس معهد تكنولوجيا المعلومات ITI."
+      "en": "My Embedded Systems Learning Journey at ITI\n\nOver five weeks, I participated in the Embedded Systems Program at the Information Technology Institute (ITI), under the Ministry of Communications and Information Technology (MCIT), Egypt.\n\nThe hybrid program combined onsite sessions for hands-on practice and online classes for flexibility.",
+      "ar": "رحلتي في تعلم الأنظمة المدمجة بمعهد ITI\n\nعلى مدار خمسة أسابيع، شاركت في برنامج الأنظمة المدمجة بمعهد تكنولوجيا المعلومات (Information Technology Institute – ITI)، التابع لوزارة الاتصالات وتكنولوجيا المعلومات في مصر.\n\nجمع البرنامج بين المحاضرات الأونلاين والتدريب العملي داخل المعهد، مما أتاح لي الجمع بين الدراسة النظرية والتطبيق العملي."
     },
-    "images": []
+    "topics": [
+      {
+        "title": {
+          "en": "1. C Programming",
+          "ar": "1. لغة البرمجة C"
+        },
+        "points": {
+          "en": [
+            "C programming fundamentals.",
+            "Pointers.",
+            "Dynamic memory allocation.",
+            "User-defined data types.",
+            "Preprocessor directives."
+          ],
+          "ar": [
+            "أساسيات لغة C.",
+            "المؤشرات Pointers.",
+            "إدارة الذاكرة الديناميكية.",
+            "أنواع البيانات المعرفة بواسطة المستخدم.",
+            "توجيهات المعالج المسبق Preprocessor Directives."
+          ]
+        }
+      },
+      {
+        "title": {
+          "en": "2. Embedded Systems Concepts",
+          "ar": "2. مفاهيم الأنظمة المدمجة"
+        },
+        "points": {
+          "en": [
+            "Embedded systems architecture.",
+            "Fundamentals and applications."
+          ],
+          "ar": [
+            "معمارية الأنظمة المدمجة.",
+            "الأساسيات والتطبيقات."
+          ]
+        }
+      },
+      {
+        "title": {
+          "en": "3. AVR Microcontroller Interfacing",
+          "ar": "3. التعامل مع متحكمات AVR"
+        },
+        "points": {
+          "en": [
+            "Practical hardware connections.",
+            "Input/Output operations.",
+            "Peripheral control."
+          ],
+          "ar": [
+            "التوصيلات العملية للمكونات الإلكترونية.",
+            "منافذ الإدخال والإخراج.",
+            "التحكم في الوحدات الطرفية."
+          ]
+        }
+      },
+      {
+        "title": {
+          "en": "4. Automotive Communication Protocols",
+          "ar": "4. بروتوكولات الاتصال في السيارات"
+        },
+        "points": {
+          "en": [
+            "CAN fundamentals.",
+            "LIN fundamentals."
+          ],
+          "ar": [
+            "أساسيات CAN.",
+            "أساسيات LIN."
+          ]
+        }
+      },
+      {
+        "title": {
+          "en": "5. Testing & Debugging",
+          "ar": "5. الاختبار وتصحيح الأخطاء"
+        },
+        "points": {
+          "en": [
+            "Using industry-standard tools for embedded systems testing and debugging."
+          ],
+          "ar": [
+            "استخدام أدوات متخصصة لاختبار وتصحيح أخطاء الأنظمة المدمجة."
+          ]
+        }
+      },
+      {
+        "title": {
+          "en": "6. RTOS – Real-Time Operating Systems",
+          "ar": "6. أنظمة التشغيل ذات الزمن الحقيقي RTOS"
+        },
+        "points": {
+          "en": [
+            "RTOS concepts.",
+            "Scheduling.",
+            "Applications."
+          ],
+          "ar": [
+            "المفاهيم الأساسية.",
+            "جدولة المهام Scheduling.",
+            "التطبيقات العملية."
+          ]
+        }
+      }
+    ],
+    "final_project": {
+      "title": {
+        "en": "Smart Home System",
+        "ar": "نظام المنزل الذكي (Smart Home System)"
+      },
+      "badge": {
+        "en": "Final Capstone Project",
+        "ar": "المشروع النهائي للتخرج"
+      },
+      "description": {
+        "en": "For my graduation project, I developed a Smart Home prototype that integrates multiple embedded systems concepts, including microcontroller-based automation, sensor integration, and communication protocols, to control and monitor home devices efficiently and intelligently.",
+        "ar": "في المشروع النهائي للبرنامج، قمت بتطوير نموذج أولي لنظام منزل ذكي (Smart Home System)، يدمج مجموعة من مفاهيم الأنظمة المدمجة، بما في ذلك الأتمتة باستخدام المتحكمات الدقيقة، ودمج المستشعرات، وبروتوكولات الاتصال، بهدف التحكم في أجهزة المنزل ومراقبتها بكفاءة وذكاء."
+      }
+    }
   },
   {
     "id": "train-nti-machine-learning",

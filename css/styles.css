@@ -1598,6 +1598,217 @@ img {
   line-height: 1.65;
 }
 
+/* Featured Training Program (e.g. ITI Embedded Systems) */
+.training-program-card.featured-training {
+  border-color: rgba(198, 166, 107, 0.35);
+  background: linear-gradient(180deg, rgba(20, 20, 20, 0.97) 0%, rgba(13, 13, 13, 0.99) 100%);
+  gap: 1.25rem;
+}
+
+@media (min-width: 900px) {
+  .training-program-card.featured-training {
+    grid-column: 1 / -1;
+  }
+}
+
+.training-badges-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.training-duration-tag,
+.training-format-tag,
+.training-location-tag {
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  color: var(--accent-gold);
+  background: rgba(198, 166, 107, 0.08);
+  border: 1px solid rgba(198, 166, 107, 0.22);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-pill);
+}
+
+.training-parent-org {
+  color: var(--text-tertiary);
+}
+
+.training-visual-preview {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  margin: 0.35rem 0;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  background: #000;
+  cursor: pointer;
+  aspect-ratio: 16 / 10;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.training-visual-preview:hover,
+.training-visual-preview:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--accent-gold);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.7);
+  outline: none;
+}
+
+.training-img-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.training-visual-preview:hover .training-img-thumb {
+  transform: scale(1.03);
+}
+
+.training-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.75) 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0.75rem;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.training-visual-preview:hover .training-img-overlay,
+.training-visual-preview:focus-visible .training-img-overlay {
+  opacity: 1;
+}
+
+.training-narrative-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.training-narrative-group p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Core Curriculum Block */
+.training-curriculum-block {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.curriculum-heading {
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.curriculum-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 992px) {
+  .curriculum-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .curriculum-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.curriculum-topic-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  padding: 1rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: border-color 0.25s ease;
+}
+
+.curriculum-topic-card:hover {
+  border-color: rgba(198, 166, 107, 0.35);
+}
+
+.topic-title {
+  font-size: 0.85rem;
+  color: var(--gold-highlight);
+  margin: 0;
+}
+
+.topic-points-list {
+  margin: 0;
+  padding-inline-start: 1.1rem;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+/* Capstone / Final Project Showcase */
+.training-capstone-showcase {
+  margin-top: 0.5rem;
+  padding: 1.25rem 1.5rem;
+  background: rgba(198, 166, 107, 0.04);
+  border-inline-start: 3px solid var(--accent-gold);
+  border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+[dir="rtl"] .training-capstone-showcase {
+  border-radius: var(--radius-xs) 0 0 var(--radius-xs);
+}
+
+.capstone-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.capstone-badge {
+  font-size: 0.75rem;
+  color: var(--accent-gold);
+  background: rgba(198, 166, 107, 0.12);
+  border: 1px solid rgba(198, 166, 107, 0.25);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-pill);
+}
+
+.capstone-title {
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.capstone-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
 /* Verified Certificates */
 .certificates-editorial-wrapper {
   margin-top: 2rem;
@@ -1772,6 +1983,45 @@ img {
 
 [dir="rtl"] .honor-anchor-link:hover {
   transform: translateX(-2px);
+}
+
+.credential-category-tag {
+  font-size: 0.76rem;
+  color: var(--accent-gold);
+  margin-top: 0.15rem;
+}
+
+.credential-id-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.74rem;
+  color: var(--accent-gold);
+  background: rgba(198, 166, 107, 0.08);
+  border: 1px solid rgba(198, 166, 107, 0.25);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-xs);
+  margin-top: 0.25rem;
+  width: fit-content;
+}
+
+.cert-id-label {
+  color: var(--text-tertiary);
+  font-weight: 500;
+}
+
+.cert-id-code {
+  color: var(--gold-highlight);
+  font-family: inherit;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.credential-summary-p {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-top: 0.25rem;
 }
 
 .cert-modal-dialog {

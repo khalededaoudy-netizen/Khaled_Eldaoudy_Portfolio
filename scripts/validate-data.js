@@ -153,6 +153,38 @@ function validateLeadership() {
   });
 }
 
+/**
+ * Checks if a bilingual array object has both 'en' and 'ar' arrays of non-empty strings.
+ */
+function checkBilingualArray(obj, sourceFile, entryId, fieldName) {
+  if (!obj || typeof obj !== 'object' || Array.isArray(obj)) {
+    missingTranslations.push({
+      file: sourceFile,
+      id: entryId,
+      field: fieldName,
+      issue: 'Not a bilingual object {en, ar}'
+    });
+    totalIssues++;
+    return;
+  }
+
+  const en = obj.en;
+  const ar = obj.ar;
+  const missing = [];
+  if (!Array.isArray(en) || en.length === 0 || !en.every(s => typeof s === 'string' && s.trim() !== '')) missing.push('en');
+  if (!Array.isArray(ar) || ar.length === 0 || !ar.every(s => typeof s === 'string' && s.trim() !== '')) missing.push('ar');
+
+  if (missing.length > 0) {
+    missingTranslations.push({
+      file: sourceFile,
+      id: entryId,
+      field: fieldName,
+      issue: `Missing or empty array: [${missing.join(', ')}]`
+    });
+    totalIssues++;
+  }
+}
+
 // 4. Validate training.json
 function validateTraining() {
   const file = 'training.json';
@@ -167,8 +199,28 @@ function validateTraining() {
     checkBilingual(item.program, file, id, 'program');
     checkBilingual(item.description, file, id, 'description');
 
+    if (item.parent_organization) checkBilingual(item.parent_organization, file, id, 'parent_organization');
+    if (item.duration) checkBilingual(item.duration, file, id, 'duration');
+    if (item.format) checkBilingual(item.format, file, id, 'format');
+    if (item.location) checkBilingual(item.location, file, id, 'location');
+
+    if (item.image) checkFileExists(item.image, file, id, 'image');
+
     if (Array.isArray(item.images)) {
       item.images.forEach((img, i) => checkFileExists(img, file, id, `images[${i}]`));
+    }
+
+    if (Array.isArray(item.topics)) {
+      item.topics.forEach((top, tIdx) => {
+        checkBilingual(top.title, file, id, `topics[${tIdx}].title`);
+        checkBilingualArray(top.points, file, id, `topics[${tIdx}].points`);
+      });
+    }
+
+    if (item.final_project) {
+      checkBilingual(item.final_project.title, file, id, 'final_project.title');
+      checkBilingual(item.final_project.description, file, id, 'final_project.description');
+      if (item.final_project.badge) checkBilingual(item.final_project.badge, file, id, 'final_project.badge');
     }
   });
 }
@@ -188,6 +240,8 @@ function validateCertificates() {
     if (item.host) checkBilingual(item.host, file, id, 'host');
     if (item.type) checkBilingual(item.type, file, id, 'type');
     if (item.category) checkBilingual(item.category, file, id, 'category');
+    if (item.status) checkBilingual(item.status, file, id, 'status');
+    if (item.description) checkBilingual(item.description, file, id, 'description');
     if (item.team) checkBilingual(item.team, file, id, 'team');
     if (item.role) checkBilingual(item.role, file, id, 'role');
     if (item.image) checkFileExists(item.image, file, id, 'image');
