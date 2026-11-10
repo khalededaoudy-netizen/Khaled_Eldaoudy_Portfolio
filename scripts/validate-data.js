@@ -200,8 +200,12 @@ function validateTraining() {
     checkBilingual(item.description, file, id, 'description');
 
     if (item.parent_organization) checkBilingual(item.parent_organization, file, id, 'parent_organization');
+    if (item.organization) checkBilingual(item.organization, file, id, 'organization');
+    if (item.training_center) checkBilingual(item.training_center, file, id, 'training_center');
     if (item.duration) checkBilingual(item.duration, file, id, 'duration');
     if (item.format) checkBilingual(item.format, file, id, 'format');
+    if (item.type) checkBilingual(item.type, file, id, 'type');
+    if (item.trainer) checkBilingual(item.trainer, file, id, 'trainer');
     if (item.location) checkBilingual(item.location, file, id, 'location');
 
     if (item.image) checkFileExists(item.image, file, id, 'image');
@@ -241,6 +245,7 @@ function validateCertificates() {
     if (item.type) checkBilingual(item.type, file, id, 'type');
     if (item.category) checkBilingual(item.category, file, id, 'category');
     if (item.status) checkBilingual(item.status, file, id, 'status');
+    if (item.trainer) checkBilingual(item.trainer, file, id, 'trainer');
     if (item.description) checkBilingual(item.description, file, id, 'description');
     if (item.team) checkBilingual(item.team, file, id, 'team');
     if (item.role) checkBilingual(item.role, file, id, 'role');

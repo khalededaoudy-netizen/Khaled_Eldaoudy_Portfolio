@@ -638,6 +638,19 @@ export class PortfolioDataManager {
       }
     }
 
+    const modalTrainerItem = document.getElementById('certModalTrainerItem');
+    const modalTrainerLbl = document.getElementById('certModalTrainerLbl');
+    const modalTrainer = document.getElementById('certModalTrainer');
+    if (modalTrainerItem) {
+      if (cert.trainer) {
+        modalTrainerItem.style.display = '';
+        if (modalTrainerLbl) modalTrainerLbl.textContent = isRtl ? 'المدرب المشرف:' : 'INSTRUCTOR:';
+        if (modalTrainer) modalTrainer.textContent = i18n.getText(cert.trainer);
+      } else {
+        modalTrainerItem.style.display = 'none';
+      }
+    }
+
     const modalDesc = document.getElementById('certModalDescription');
     if (modalDesc) {
       if (cert.description) {
@@ -862,12 +875,15 @@ export class PortfolioDataManager {
     const isRtl = i18n.getLang() === 'ar';
 
     container.innerHTML = this.data.training.map(item => {
-      const isFeatured = Boolean(item.topics || item.image || item.final_project);
+      const isFeatured = Boolean(item.topics || item.image || (item.images && item.images.length > 0) || item.final_project);
       const descText = i18n.getText(item.description);
       const descHtml = descText
         .split('\n\n')
         .map(paragraph => `<p>${paragraph.replace(/\n/g, '<br>')}</p>`)
         .join('');
+
+      const hasMultiGallery = Array.isArray(item.images) && item.images.length > 1;
+      const singleImage = item.image || (Array.isArray(item.images) && item.images.length === 1 ? item.images[0] : null);
 
       return `
         <article class="training-program-card ${isFeatured ? 'featured-training' : ''}" data-train-id="${item.id}">
@@ -875,6 +891,7 @@ export class PortfolioDataManager {
             <div class="training-badges-group">
               ${item.duration ? `<span class="training-duration-tag">⏱️ ${i18n.getText(item.duration)}</span>` : ''}
               ${item.format ? `<span class="training-format-tag">📡 ${i18n.getText(item.format)}</span>` : ''}
+              ${item.type ? `<span class="training-type-tag">⚙️ ${i18n.getText(item.type)}</span>` : ''}
               ${item.location ? `<span class="training-location-tag">📍 ${i18n.getText(item.location)}</span>` : ''}
               ${item.period ? `<span class="training-period-tag">${localizeDateStr(item.period, isRtl)}</span>` : ''}
             </div>
@@ -884,9 +901,16 @@ export class PortfolioDataManager {
           <h3 class="training-program-title">${i18n.getText(item.program)}</h3>
 
           <div class="training-provider-line font-mono">
-            <span>🏢 ${i18n.getText(item.provider)}</span>
+            <span>🏢 ${i18n.getText(item.provider || item.organization)}</span>
+            ${item.training_center ? `<span class="training-center-span">• 🏛️ ${i18n.getText(item.training_center)}</span>` : ''}
             ${item.parent_organization ? `<span class="training-parent-org">• 🏛️ ${i18n.getText(item.parent_organization)}</span>` : ''}
           </div>
+
+          ${item.trainer ? `
+            <div class="training-trainer-line font-mono">
+              <span>👨‍🏫 ${isRtl ? 'المدرب المشرف:' : 'Instructor / Trainer:'} <strong>${i18n.getText(item.trainer)}</strong></span>
+            </div>
+          ` : ''}
 
           ${item.score ? `
             <div class="training-score-badge font-mono">
@@ -894,14 +918,33 @@ export class PortfolioDataManager {
             </div>
           ` : ''}
 
-          ${item.image ? `
+          ${hasMultiGallery ? `
+            <div class="training-gallery-grid">
+              ${item.images.map((imgSrc, imgIdx) => `
+                <div class="training-gallery-item"
+                     role="button"
+                     tabindex="0"
+                     data-img-src="${imgSrc}"
+                     data-caption="${i18n.getText(item.program)}"
+                     aria-label="${isRtl ? 'تكبير صورة التدريب ' + (imgIdx + 1) : 'Enlarge training photograph ' + (imgIdx + 1)}">
+                  <img src="${imgSrc}" alt="${i18n.getText(item.program)} - ${imgIdx + 1}" class="training-gallery-thumb" loading="lazy" />
+                  <div class="gallery-item-overlay">
+                    <span class="gallery-zoom-icon font-mono">
+                      <span>🔍</span>
+                      <span>${isRtl ? 'تكبير' : 'Enlarge'}</span>
+                    </span>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          ` : singleImage ? `
             <div class="training-visual-preview"
                  role="button"
                  tabindex="0"
-                 data-img-src="${item.image}"
+                 data-img-src="${singleImage}"
                  data-caption="${i18n.getText(item.program)}"
                  aria-label="${isRtl ? 'تكبير صورة التدريب بدقة كاملة' : 'Enlarge training photograph in full resolution'}">
-              <img src="${item.image}" alt="${i18n.getText(item.program)}" class="training-img-thumb" loading="lazy" />
+              <img src="${singleImage}" alt="${i18n.getText(item.program)}" class="training-img-thumb" loading="lazy" />
               <div class="training-img-overlay">
                 <span class="gallery-zoom-icon font-mono">
                   <span>🔍</span>
@@ -946,6 +989,15 @@ export class PortfolioDataManager {
               <p class="capstone-desc">${i18n.getText(item.final_project.description)}</p>
             </div>
           ` : ''}
+
+          ${item.certificate_id ? `
+            <div class="training-certificate-action">
+              <button type="button" class="training-cert-btn font-mono" data-open-cert="${item.certificate_id}">
+                <span>📜 ${isRtl ? 'عرض الشهادة المعتمدة' : 'View Accredited Certificate'}</span>
+                <span class="cert-btn-arrow" aria-hidden="true">&rarr;</span>
+              </button>
+            </div>
+          ` : ''}
         </article>
       `;
     }).join('');
@@ -961,6 +1013,25 @@ export class PortfolioDataManager {
           this.openLightbox(src, caption);
         }
       });
+    });
+
+    // Attach click and keyboard listeners for training gallery thumbnails
+    container.querySelectorAll('.training-gallery-item').forEach(itemEl => {
+      const src = itemEl.getAttribute('data-img-src');
+      const caption = itemEl.getAttribute('data-caption') || '';
+      itemEl.addEventListener('click', () => this.openLightbox(src, caption));
+      itemEl.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          this.openLightbox(src, caption);
+        }
+      });
+    });
+
+    // Attach click listeners for training certificate buttons
+    container.querySelectorAll('.training-cert-btn').forEach(btn => {
+      const certId = btn.getAttribute('data-open-cert');
+      btn.addEventListener('click', () => this.openCertificateModal(certId));
     });
   }
 
@@ -1000,6 +1071,7 @@ export class PortfolioDataManager {
             🏛️ ${i18n.getText(cert.issuer)}
             ${cert.team ? ` &bull; <span class="credential-team-badge">👥 ${i18n.getText(cert.team)}</span>` : ''}
             ${cert.host ? ` &bull; ${isRtl ? 'المستضيف:' : 'Host:'} ${i18n.getText(cert.host)}` : ''}
+            ${cert.trainer ? ` &bull; ${isRtl ? 'المدرب:' : 'Trainer:'} ${i18n.getText(cert.trainer)}` : ''}
             ${cert.date ? ` &bull; ${localizeDateStr(cert.date, isRtl)}` : ''}
           </p>
 
@@ -1030,6 +1102,14 @@ export class PortfolioDataManager {
             <div class="credential-honor-link font-mono">
               <a href="#competitions" class="honor-anchor-link">
                 <span>🏆 ${isRtl ? 'مرتبط بإنجاز مسابقة RoboSoccer' : 'Linked to RoboSoccer Honor'} &rarr;</span>
+              </a>
+            </div>
+          ` : ''}
+
+          ${cert.training_id ? `
+            <div class="credential-honor-link font-mono">
+              <a href="#training" class="honor-anchor-link">
+                <span>⚙️ ${isRtl ? 'مرتبط ببرنامج التدريب الفني' : 'Linked to Technical Training Experience'} &rarr;</span>
               </a>
             </div>
           ` : ''}

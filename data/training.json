@@ -179,21 +179,153 @@
   {
     "id": "train-tetra-pak",
     "provider": {
-      "en": "Obour Land for Food Industries – Training Center",
-      "ar": "مركز تدريب شركة عبور لاند للصناعات الغذائية"
+      "en": "Obourland for Food Industries",
+      "ar": "شركة عبور لاند للصناعات الغذائية"
+    },
+    "organization": {
+      "en": "Obourland for Food Industries",
+      "ar": "شركة عبور لاند للصناعات الغذائية"
+    },
+    "training_center": {
+      "en": "Obourland Training Center",
+      "ar": "مركز تدريب شركة عبور لاند"
     },
     "program": {
-      "en": "Beginner Technical Training, Tetra Pak A3-Speed Machines (120 Hours)",
-      "ar": "تدريب تقني للمبتدئين على ماكينات Tetra Pak A3-Speed (120 ساعة)"
+      "en": "Tetra Pak A3-Speed Machines – Industrial Technical Training",
+      "ar": "التدريب الفني على ماكينات Tetra Pak A3-Speed"
+    },
+    "duration": {
+      "en": "120 Hours",
+      "ar": "120 ساعة تدريبية"
     },
     "hours": 120,
-    "period": "Aug – Sep 2025",
-    "score": null,
-    "description": {
-      "en": "Gained practical experience in food packaging technology and aseptic processing. Covered machine overview, utilities (power, steam, air, H2O2), and automatic splicing & tube forming. Learned filling & sterilization systems, drive & jaw mechanisms, and final folder operations. Participated in an on-site factory tour observing large-scale automation and production workflows.",
-      "ar": "اكتساب خبرة عملية في تكنولوجيا تعبئة الأغذية والمعالجة المعقمة. شمل التدريب نظرة عامة على الماكينات، وخطوط الإمداد (كهرباء، بخار، هواء مضغوط، بيروكسيد الهيدروجين)، واللحام التلقائي وتشكيل الأنابيب، وأنظمة التعبئة والتعقيم، وآليات القيادة والفكوك، وعمليات الطي النهائي، مع جولة ميدانية بالمصنع لمشاهدة الأتمتة وخطوط الإنتاج الكبرى."
+    "period": "15 August – 16 September 2025",
+    "trainer": {
+      "en": "Eng. Ahmed Sobhy",
+      "ar": "م. أحمد صبحي"
     },
-    "images": []
+    "type": {
+      "en": "Industrial Technical Training",
+      "ar": "تدريب فني صناعي"
+    },
+    "location": {
+      "en": "Egypt",
+      "ar": "مصر"
+    },
+    "score": null,
+    "certificate_id": "cert-obourland-tetra-pak",
+    "description": {
+      "en": "Completed a 120-hour Beginner Technical Training Program on Tetra Pak A3-Speed Machines at Obourland Training Center, gaining practical exposure to industrial food packaging technology, machine operation, automation systems, and manufacturing workflows.\n\nThe program combined technical training with an on-site factory tour, providing insight into real production-line operations and industrial processes.",
+      "ar": "أتممت برنامج التدريب الفني للمبتدئين على ماكينات Tetra Pak A3-Speed بمركز تدريب شركة عبور لاند للصناعات الغذائية، بإجمالي 120 ساعة تدريبية خلال الفترة من 15 أغسطس إلى 16 سبتمبر 2025.\n\nأتاح التدريب فرصة للتعرف عمليًا على تكنولوجيا تعبئة وتغليف المنتجات الغذائية، وأنظمة التشغيل والأتمتة الصناعية، ومكونات الماكينات وخطوط الإنتاج، بالإضافة إلى جولة ميدانية داخل المصنع للتعرف على بيئة التصنيع الفعلية."
+    },
+    "images": [
+      "assets/images/training/obourland-a3-speed/obourland-training-1.jpg",
+      "assets/images/training/obourland-a3-speed/obourland-training-2.jpg"
+    ],
+    "topics": [
+      {
+        "title": {
+          "en": "1. Machine Overview",
+          "ar": "1. نظرة عامة على الماكينات"
+        },
+        "points": {
+          "en": [
+            "Main machine components.",
+            "Operating environment and utilities: power, steam, air, and hydrogen peroxide."
+          ],
+          "ar": [
+            "المكونات الرئيسية للماكينة.",
+            "بيئة التشغيل والمرافق: الكهرباء، البخار، الهواء المضغوط، وبيروكسيد الهيدروجين."
+          ]
+        }
+      },
+      {
+        "title": {
+          "en": "2. Automatic Splicing Unit & Tube Forming",
+          "ar": "2. وحدة اللحام التلقائي وتشكيل الأنابيب"
+        },
+        "points": {
+          "en": [
+            "Packaging material preparation.",
+            "Automatic forming and welding."
+          ],
+          "ar": [
+            "تجهيز مواد التعبئة والتغليف.",
+            "التشكيل واللحام التلقائي."
+          ]
+        }
+      },
+      {
+        "title": {
+          "en": "3. Filling & Sterilization System",
+          "ar": "3. نظام التعبئة والتعقيم"
+        },
+        "points": {
+          "en": [
+            "Aseptic technology.",
+            "H₂O₂ sterilization.",
+            "Level detection and flow control."
+          ],
+          "ar": [
+            "تكنولوجيا المعالجة المعقمة (Aseptic).",
+            "التعقيم باستخدام بيروكسيد الهيدروجين H₂O₂.",
+            "استشعار المستوى والتحكم في التدفق."
+          ]
+        }
+      },
+      {
+        "title": {
+          "en": "4. Drive & Jaw System",
+          "ar": "4. نظام القيادة والفكوك (Drive & Jaw)"
+        },
+        "points": {
+          "en": [
+            "Cutting and sealing.",
+            "Package volume adjustment.",
+            "Servo drive applications."
+          ],
+          "ar": [
+            "عمليات القطع واللحام.",
+            "ضبط حجم العبوة.",
+            "تطبيقات محركات السيرفو (Servo Drive)."
+          ]
+        }
+      },
+      {
+        "title": {
+          "en": "5. Final Folder System",
+          "ar": "5. نظام الطي النهائي (Final Folder)"
+        },
+        "points": {
+          "en": [
+            "Final package shaping.",
+            "Flap sealing.",
+            "Product discharge process."
+          ],
+          "ar": [
+            "التشكيل النهائي للعبوة.",
+            "لحام الأطراف (Flap sealing).",
+            "تفريغ وخروج المنتج النهائي."
+          ]
+        }
+      },
+      {
+        "title": {
+          "en": "6. Factory Tour",
+          "ar": "6. جولة ميدانية بالمصنع"
+        },
+        "points": {
+          "en": [
+            "On-site visit to Obourland production lines.",
+            "Observation of industrial automation and manufacturing workflows."
+          ],
+          "ar": [
+            "زيارة ميدانية لخطوط إنتاج شركة عبور لاند.",
+            "مشاهدة الأتمتة الصناعية ومسارات التصنيع وسير العمل."
+          ]
+        }
+      }
+    ]
   },
   {
     "id": "train-labtronic",

@@ -67,6 +67,43 @@
     "image": "assets/certificates/nvidia-getting-started-deep-learning.jpg"
   },
   {
+    "id": "cert-obourland-tetra-pak",
+    "title": {
+      "en": "Tetra Pak A3-Speed Machines – Industrial Technical Training",
+      "ar": "التدريب الفني على ماكينات Tetra Pak A3-Speed"
+    },
+    "issuer": {
+      "en": "Obourland for Food Industries – Obourland Training Center",
+      "ar": "شركة عبور لاند للصناعات الغذائية – مركز تدريب عبور لاند"
+    },
+    "type": {
+      "en": "Industrial Technical Training Certificate",
+      "ar": "شهادة تدريب فني صناعي"
+    },
+    "category": {
+      "en": "Manufacturing Automation & Packaging Technology",
+      "ar": "الأتمتة الصناعية وتكنولوجيا التعبئة والتغليف"
+    },
+    "training_id": "train-tetra-pak",
+    "date": "16 September 2025",
+    "trainer": {
+      "en": "Eng. Ahmed Sobhy",
+      "ar": "م. أحمد صبحي"
+    },
+    "description": {
+      "en": "Official Certificate of Completion awarded by Obourland Training Center for successfully completing the 120-hour Beginner Technical Training Program on Tetra Pak A3-Speed Machines.",
+      "ar": "شهادة إتمام رسمية معتمدة من مركز تدريب شركة عبور لاند للصناعات الغذائية لاجتياز البرنامج التدريبي الفني للمبتدئين على ماكينات Tetra Pak A3-Speed بإجمالي 120 ساعة تدريبية."
+    },
+    "skills": [
+      "Tetra Pak A3-Speed",
+      "Packaging Technology",
+      "Aseptic Systems",
+      "Industrial Automation",
+      "Servo Drives"
+    ],
+    "image": "assets/certificates/obourland-a3-speed-certificate.jpg"
+  },
+  {
     "id": "cert-robosoccer-team-2025",
     "title": {
       "en": "RoboSoccer Competition – Second Place – Team ZNUS",
