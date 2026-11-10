@@ -71,8 +71,8 @@
       "ar": "عند نقطة التقاء الميكانيكا والبرمجيات الدقيقة."
     },
     "lead": {
-      "en": "Mechatronics Engineering scholar (Year 4, ZNU) combining low-level C/C++ firmware, kinematics, and closed-loop control to build resilient autonomous systems.",
-      "ar": "طالب هندسة ميكاترونكس بالفرقة الرابعة بجامعة الزقازيق الأهلية، يجمع بين برمجيات C/C++ المدمجة وعلم الحركيات ونظم التحكم المغلقة لبناء أنظمة ذاتية ذكية."
+      "en": "Mechatronics Engineering scholar (Year 5, ZNU) combining low-level C/C++ firmware, kinematics, and closed-loop control to build resilient autonomous systems.",
+      "ar": "طالب هندسة ميكاترونكس بالفرقة الخامسة بجامعة الزقازيق الأهلية، يجمع بين برمجيات C/C++ المدمجة وعلم الحركيات ونظم التحكم المغلقة لبناء أنظمة ذاتية ذكية."
     },
     "cta_projects": {
       "en": "Explore Works",
@@ -157,8 +157,8 @@
       "ar": "المستوى الأكاديمي:"
     },
     "attr_academic_val": {
-      "en": "Year 4 Mechatronics • Expected Graduation: 2027",
-      "ar": "الفرقة الرابعة هندسة ميكاترونكس • سنة التخرج المتوقعة: 2027"
+      "en": "Year 5 Mechatronics • Expected Graduation: 2027",
+      "ar": "الفرقة الخامسة هندسة ميكاترونكس • سنة التخرج المتوقعة: 2027"
     },
     "title": {
       "en": "Engineering across mechanics, electronics & code",
