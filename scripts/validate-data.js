@@ -180,6 +180,8 @@ function validateCertificates() {
     const id = item.id || `index-${idx}`;
     checkBilingual(item.title, file, id, 'title');
     checkBilingual(item.issuer, file, id, 'issuer');
+    if (item.host) checkBilingual(item.host, file, id, 'host');
+    if (item.type) checkBilingual(item.type, file, id, 'type');
     if (item.image) checkFileExists(item.image, file, id, 'image');
   });
 }

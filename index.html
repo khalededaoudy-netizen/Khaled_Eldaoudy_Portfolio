@@ -612,6 +612,62 @@
   </div>
 
   <!-- ======================================================================
+       EDITORIAL CERTIFICATE PREVIEW MODAL
+       ====================================================================== -->
+  <div class="modal-backdrop-luxury" id="certificateModal" role="dialog" aria-modal="true" aria-labelledby="certModalTitle" tabindex="-1">
+    <div class="modal-dialog-luxury cert-modal-dialog">
+      <!-- Modal Top Bar -->
+      <div class="modal-top-bar">
+        <div class="modal-eyebrow font-mono">
+          <span class="gold-pill" id="certModalBadge">CREDENTIAL</span>
+          <span class="dim-pill" id="certModalYear">2025</span>
+        </div>
+        <button class="modal-dismiss-btn" id="certModalCloseBtn" aria-label="Close Certificate Preview">&times;</button>
+      </div>
+
+      <!-- Modal Body Content -->
+      <div class="modal-editorial-body">
+        <h2 class="modal-heading-title" id="certModalTitle">Certificate Title</h2>
+
+        <div class="modal-metadata-strip font-mono" id="certModalMetaStrip">
+          <div class="meta-strip-item">
+            <span class="meta-strip-label" id="certModalIssuerLbl">ISSUING BODY:</span>
+            <span class="meta-strip-val" id="certModalIssuer">Dassault Systèmes</span>
+          </div>
+          <div class="meta-strip-item" id="certModalHostItem">
+            <span class="meta-strip-label" id="certModalHostLbl">EVENT HOST:</span>
+            <span class="meta-strip-val" id="certModalHost">EUE – European Universities in Egypt</span>
+          </div>
+          <div class="meta-strip-item" id="certModalTypeItem">
+            <span class="meta-strip-label" id="certModalTypeLbl">TYPE:</span>
+            <span class="meta-strip-val" id="certModalType">Certificate of Participation</span>
+          </div>
+        </div>
+
+        <!-- High-Resolution Certificate Visual Showcase -->
+        <div class="modal-visual-showcase cert-modal-showcase">
+          <img id="certModalImage" src="" alt="Certificate Preview" class="modal-gallery-img cert-modal-img" loading="lazy" />
+        </div>
+
+        <!-- Related Skills / Tags -->
+        <div class="modal-specs-container" id="certModalSkillsContainer">
+          <div class="spec-block">
+            <h3 class="spec-label font-mono">
+              <span class="spec-num">✦</span>
+              <span class="spec-name" id="certModalSkillsLbl">RELATED COMPETENCIES &amp; SKILLS</span>
+            </h3>
+            <div class="modal-tags-grid font-mono" id="certModalSkillsList">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ======================================================================
        LUXURY FOOTER
        ====================================================================== -->
   <footer class="luxury-footer">

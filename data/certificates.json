@@ -1,5 +1,35 @@
 [
   {
+    "id": "cert-dassault-solidworks-2025",
+    "title": {
+      "en": "3DEXPERIENCE SOLIDWORKS Essential Seminar",
+      "ar": "ندوة 3DEXPERIENCE SOLIDWORKS الأساسية"
+    },
+    "issuer": {
+      "en": "Dassault Systèmes",
+      "ar": "Dassault Systèmes"
+    },
+    "host": {
+      "en": "EUE – European Universities in Egypt",
+      "ar": "الجامعات الأوروبية في مصر (EUE)"
+    },
+    "type": {
+      "en": "Certificate of Participation",
+      "ar": "شهادة مشاركة"
+    },
+    "date": "2025",
+    "skills": [
+      "3DEXPERIENCE",
+      "SOLIDWORKS",
+      "CAD",
+      "3D Modeling",
+      "Cloud Collaboration",
+      "Version Control",
+      "Engineering Project Management"
+    ],
+    "image": "assets/certificates/3dexperience-solidworks-essential-seminar-2025.jpg"
+  },
+  {
     "id": "cert-solidworks-2026",
     "title": {
       "en": "SolidWorks Workshop",
@@ -62,19 +92,6 @@
       "ar": "MaharaTech"
     },
     "date": "August 2025",
-    "image": ""
-  },
-  {
-    "id": "cert-dassault-solidworks-2025",
-    "title": {
-      "en": "3DExperience SOLIDWORKS Essentials Seminar",
-      "ar": "ندوة أساسيات 3DExperience SOLIDWORKS"
-    },
-    "issuer": {
-      "en": "Dassault Systèmes / EUE",
-      "ar": "Dassault Systèmes / EUE"
-    },
-    "date": "2025",
     "image": ""
   },
   {

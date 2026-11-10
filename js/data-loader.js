@@ -551,6 +551,90 @@ export class PortfolioDataManager {
     }
   }
 
+  // Certificate Preview Modal
+  openCertificateModal(id) {
+    const cert = this.data.certificates.find(c => c.id === id);
+    if (!cert) return;
+
+    const modal = document.getElementById('certificateModal');
+    if (!modal) return;
+
+    const isRtl = i18n.getLang() === 'ar';
+    const modalTitle = document.getElementById('certModalTitle');
+    const modalBadge = document.getElementById('certModalBadge');
+    const modalYear = document.getElementById('certModalYear');
+    const modalIssuerLbl = document.getElementById('certModalIssuerLbl');
+    const modalIssuer = document.getElementById('certModalIssuer');
+    const modalHostItem = document.getElementById('certModalHostItem');
+    const modalHostLbl = document.getElementById('certModalHostLbl');
+    const modalHost = document.getElementById('certModalHost');
+    const modalTypeItem = document.getElementById('certModalTypeItem');
+    const modalTypeLbl = document.getElementById('certModalTypeLbl');
+    const modalType = document.getElementById('certModalType');
+    const modalImage = document.getElementById('certModalImage');
+    const modalSkillsContainer = document.getElementById('certModalSkillsContainer');
+    const modalSkillsLbl = document.getElementById('certModalSkillsLbl');
+    const modalSkillsList = document.getElementById('certModalSkillsList');
+
+    if (modalTitle) modalTitle.textContent = i18n.getText(cert.title);
+    if (modalBadge) {
+      modalBadge.textContent = cert.type ? i18n.getText(cert.type) : (isRtl ? 'شهادة معتمدة' : 'VERIFIED CREDENTIAL');
+    }
+    if (modalYear) modalYear.textContent = cert.date || '2025';
+
+    if (modalIssuerLbl) modalIssuerLbl.textContent = isRtl ? 'الجهة المانحة:' : 'ISSUING BODY:';
+    if (modalIssuer) modalIssuer.textContent = i18n.getText(cert.issuer);
+
+    if (modalHostItem) {
+      if (cert.host) {
+        modalHostItem.style.display = '';
+        if (modalHostLbl) modalHostLbl.textContent = isRtl ? 'الجهة المستضيفة:' : 'EVENT HOST:';
+        if (modalHost) modalHost.textContent = i18n.getText(cert.host);
+      } else {
+        modalHostItem.style.display = 'none';
+      }
+    }
+
+    if (modalTypeItem) {
+      if (cert.type) {
+        modalTypeItem.style.display = '';
+        if (modalTypeLbl) modalTypeLbl.textContent = isRtl ? 'نوع الاعتماد:' : 'TYPE:';
+        if (modalType) modalType.textContent = i18n.getText(cert.type);
+      } else {
+        modalTypeItem.style.display = 'none';
+      }
+    }
+
+    if (modalImage && cert.image) {
+      modalImage.src = cert.image;
+      modalImage.alt = i18n.getText(cert.title);
+    }
+
+    if (modalSkillsContainer) {
+      if (Array.isArray(cert.skills) && cert.skills.length > 0) {
+        modalSkillsContainer.style.display = '';
+        if (modalSkillsLbl) modalSkillsLbl.textContent = isRtl ? 'المهارات والخبرات المرتبطة' : 'RELATED COMPETENCIES & SKILLS';
+        if (modalSkillsList) {
+          modalSkillsList.innerHTML = cert.skills.map(s => `<span class="tag-monochrome font-mono">${s}</span>`).join('');
+        }
+      } else {
+        modalSkillsContainer.style.display = 'none';
+      }
+    }
+
+    modal.classList.add('active');
+    document.body.classList.add('modal-open');
+    modal.focus();
+  }
+
+  closeCertificateModal() {
+    const modal = document.getElementById('certificateModal');
+    if (modal) {
+      modal.classList.remove('active');
+      document.body.classList.remove('modal-open');
+    }
+  }
+
   // 5. Honors & Competitions (Prestigious Chronicle)
   renderCompetitions() {
     const container = document.getElementById('competitionsTimeline');
@@ -646,16 +730,57 @@ export class PortfolioDataManager {
 
     const isRtl = i18n.getLang() === 'ar';
 
-    container.innerHTML = this.data.certificates.map(cert => `
-      <article class="credential-item-card" data-cert-id="${cert.id}">
-        <div class="credential-stamp font-mono">
-          <span class="stamp-seal">✦</span>
-          <span>${isRtl ? 'معتمد' : 'ACCREDITED'}</span>
-        </div>
-        <h4 class="credential-name">${i18n.getText(cert.title)}</h4>
-        <p class="credential-issuer font-mono">${i18n.getText(cert.issuer)} &bull; ${localizeDateStr(cert.date, isRtl)}</p>
-      </article>
-    `).join('');
+    container.innerHTML = this.data.certificates.map(cert => {
+      const hasImage = Boolean(cert.image && cert.image.trim() !== '');
+      const typeBadge = cert.type ? i18n.getText(cert.type) : (isRtl ? 'معتمد' : 'ACCREDITED');
+
+      return `
+        <article class="credential-item-card ${hasImage ? 'has-image' : ''}" data-cert-id="${cert.id}" ${hasImage ? 'role="button" tabindex="0" aria-label="' + (isRtl ? 'عرض الشهادة المعتمدة' : 'View Verified Credential') + '"' : ''}>
+          <div class="credential-stamp font-mono">
+            <span class="stamp-seal">✦</span>
+            <span>${typeBadge}</span>
+          </div>
+
+          ${hasImage ? `
+            <div class="credential-preview-frame">
+              <img src="${cert.image}" alt="${i18n.getText(cert.title)}" loading="lazy" />
+              <div class="credential-preview-overlay">
+                <span class="credential-zoom-badge font-mono">
+                  <span>🔍</span>
+                  <span>${isRtl ? 'عرض الشهادة بدقة كاملة' : 'Click to View Full Certificate'}</span>
+                </span>
+              </div>
+            </div>
+          ` : ''}
+
+          <h4 class="credential-name">${i18n.getText(cert.title)}</h4>
+          <p class="credential-issuer font-mono">
+            🏛️ ${i18n.getText(cert.issuer)}
+            ${cert.host ? ` &bull; ${isRtl ? 'المستضيف:' : 'Host:'} ${i18n.getText(cert.host)}` : ''}
+            &bull; ${localizeDateStr(cert.date, isRtl)}
+          </p>
+
+          ${Array.isArray(cert.skills) && cert.skills.length > 0 ? `
+            <div class="credential-tags-row font-mono">
+              ${cert.skills.slice(0, 4).map(s => `<span class="tag-monochrome">${s}</span>`).join('')}
+              ${cert.skills.length > 4 ? `<span class="tag-monochrome tag-more">+${cert.skills.length - 4}</span>` : ''}
+            </div>
+          ` : ''}
+        </article>
+      `;
+    }).join('');
+
+    // Attach click and keyboard listeners for certificate preview
+    container.querySelectorAll('.credential-item-card.has-image').forEach(card => {
+      const id = card.getAttribute('data-cert-id');
+      card.addEventListener('click', () => this.openCertificateModal(id));
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          this.openCertificateModal(id);
+        }
+      });
+    });
   }
 
   // 8. Entrepreneurship & Commercial Ventures

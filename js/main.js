@@ -92,9 +92,25 @@ function initModalListeners() {
     });
   }
 
+  // Certificate Preview Modal Listeners
+  const certModal = document.getElementById('certificateModal');
+  const certCloseBtn = document.getElementById('certModalCloseBtn');
+
+  if (certCloseBtn) certCloseBtn.addEventListener('click', () => dataManager.closeCertificateModal());
+  if (certModal) {
+    certModal.addEventListener('click', (e) => {
+      if (e.target === certModal) dataManager.closeCertificateModal();
+    });
+  }
+
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
-      dataManager.closeProjectModal();
+    if (e.key === 'Escape') {
+      if (modal && modal.classList.contains('active')) {
+        dataManager.closeProjectModal();
+      }
+      if (certModal && certModal.classList.contains('active')) {
+        dataManager.closeCertificateModal();
+      }
     }
   });
 }
