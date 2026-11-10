@@ -190,14 +190,40 @@
   {
     "id": "cert-nti-ml-2025",
     "title": {
-      "en": "Machine Learning Summer Training (120 Hours)",
-      "ar": "التدريب الصيفي في تعلم الآلة (120 ساعة)"
+      "en": "Machine Learning Summer Training Program – NTI (2025)",
+      "ar": "برنامج التدريب الصيفي في تعلم الآلة – NTI (2025)"
     },
     "issuer": {
-      "en": "NTI / ITIDA",
-      "ar": "NTI / ITIDA"
+      "en": "National Telecommunication Institute (NTI)",
+      "ar": "المعهد القومي للاتصالات"
     },
-    "date": "Jul – Aug 2025",
+    "type": {
+      "en": "Summer Training Program",
+      "ar": "برنامج تدريب صيفي"
+    },
+    "category": {
+      "en": "Artificial Intelligence & Machine Learning",
+      "ar": "الذكاء الاصطناعي وتعلم الآلة"
+    },
+    "status": {
+      "en": "Successfully Completed",
+      "ar": "أُتم بنجاح"
+    },
+    "duration": {
+      "en": "120 Hours (90 Technical + 30 Freelancing)",
+      "ar": "120 ساعة (90 تقنية + 30 عمل حر)"
+    },
+    "score": "89%",
+    "date": "27 July 2025 – 21 August 2025",
+    "description": {
+      "en": "Successfully completed the Machine Learning Summer Training Program at the National Telecommunication Institute (NTI), achieving a final score of 89%.\n\nThe 120-hour program included 90 hours of technical training focused on Machine Learning foundations and practical applications, alongside 30 hours dedicated to freelancing skills.\n\nThis experience strengthened my understanding of Machine Learning concepts and their practical applications while developing my awareness of freelancing and professional work.",
+      "ar": "إتمام برنامج التدريب الصيفي في تعلم الآلة (Machine Learning) بالمعهد القومي للاتصالات (NTI)، بتحقيق نتيجة نهائية بلغت 89%.\n\nامتد البرنامج لمدة 120 ساعة تدريبية، شملت 90 ساعة من التدريب التقني المركّز على أساسيات تعلم الآلة وتطبيقاته العملية، إلى جانب 30 ساعة مخصصة لمهارات العمل الحر.\n\nساهمت هذه التجربة في تعزيز فهمي لمفاهيم تعلم الآلة وتطبيقاتها العملية، مع تنمية الوعي بمتطلبات العمل الحر والمسار المهني."
+    },
+    "skills": [
+      "Machine Learning",
+      "Artificial Intelligence",
+      "Freelancing"
+    ],
     "image": ""
   },
   {

@@ -1095,6 +1095,12 @@ export class PortfolioDataManager {
             </div>
           ` : ''}
 
+          ${cert.score ? `
+            <div class="training-score-badge font-mono" style="margin: 0.35rem 0;">
+              ${isRtl ? 'النتيجة النهائية:' : 'FINAL SCORE:'} <strong>${cert.score}</strong>
+            </div>
+          ` : ''}
+
           ${cert.credential_id ? `
             <div class="credential-id-badge font-mono">
               <span class="cert-id-label">${isRtl ? 'رقم الاعتماد:' : 'ID:'}</span>
