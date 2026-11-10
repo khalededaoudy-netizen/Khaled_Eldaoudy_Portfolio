@@ -5,17 +5,27 @@
       "en": "Information Technology Institute (ITI)",
       "ar": "معهد تكنولوجيا المعلومات (ITI)"
     },
+    "organization": {
+      "en": "Information Technology Institute (ITI)",
+      "ar": "معهد تكنولوجيا المعلومات (ITI)"
+    },
     "parent_organization": {
       "en": "Ministry of Communications and Information Technology (MCIT), Egypt",
       "ar": "وزارة الاتصالات وتكنولوجيا المعلومات، مصر"
     },
     "program": {
-      "en": "ITI Embedded Systems Program",
-      "ar": "برنامج الأنظمة المدمجة بمعهد تكنولوجيا المعلومات ITI"
+      "en": "Embedded Systems Program – ITI",
+      "ar": "برنامج الأنظمة المدمجة – معهد تكنولوجيا المعلومات"
     },
     "duration": {
-      "en": "Five Weeks",
-      "ar": "خمسة أسابيع"
+      "en": "162 Hours",
+      "ar": "162 ساعة تدريبية"
+    },
+    "hours": 162,
+    "period": "1 July 2025 – 15 August 2025",
+    "type": {
+      "en": "Technical Training Program",
+      "ar": "برنامج تدريب تقني"
     },
     "format": {
       "en": "Hybrid – Onsite Hands-on Sessions & Online Classes",
@@ -25,37 +35,34 @@
       "en": "Egypt",
       "ar": "مصر"
     },
-    "period": null,
-    "hours": null,
     "score": null,
+    "certificate_id": "cert-iti-embedded-2025",
     "image": "assets/images/training/iti-embedded-systems/iti-embedded-1.jpg",
     "images": [
-      "assets/images/training/iti-embedded-systems/iti-embedded-1.jpg"
+      "assets/images/training/iti-embedded-systems/iti-embedded-1.jpg",
+      "assets/images/training/iti-embedded-systems/iti-embedded-2.jpg",
+      "assets/images/training/iti-embedded-systems/iti-embedded-3.jpg"
     ],
     "description": {
-      "en": "My Embedded Systems Learning Journey at ITI\n\nOver five weeks, I participated in the Embedded Systems Program at the Information Technology Institute (ITI), under the Ministry of Communications and Information Technology (MCIT), Egypt.\n\nThe hybrid program combined onsite sessions for hands-on practice and online classes for flexibility.",
-      "ar": "رحلتي في تعلم الأنظمة المدمجة بمعهد ITI\n\nعلى مدار خمسة أسابيع، شاركت في برنامج الأنظمة المدمجة بمعهد تكنولوجيا المعلومات (Information Technology Institute – ITI)، التابع لوزارة الاتصالات وتكنولوجيا المعلومات في مصر.\n\nجمع البرنامج بين المحاضرات الأونلاين والتدريب العملي داخل المعهد، مما أتاح لي الجمع بين الدراسة النظرية والتطبيق العملي."
+      "en": "Successfully completed the 162-hour Embedded Systems Program at the Information Technology Institute (ITI), from July 1 to August 15, 2025.\n\nDuring this intensive training, I gained hands-on experience in:\n\n- C Programming (42 hours)\n- Embedded Systems Concepts\n- Microcontroller Interfacing (60 hours)\n- Communication Protocols\n- Automotive Bus Technology\n- Real-Time Operating Systems (RTOS)\n- Embedded Systems Testing\n- Project Development & Defense\n\nThis experience strengthened my skills in embedded systems design, testing, microcontroller interfacing, and real-time applications, providing a stronger foundation for my future work in robotics and embedded systems engineering.",
+      "ar": "إتمام برنامج الأنظمة المدمجة (Embedded Systems) بمعهد تكنولوجيا المعلومات (ITI)، بإجمالي 162 ساعة تدريبية، خلال الفترة من 1 يوليو إلى 15 أغسطس 2025.\n\nخلال هذا التدريب المكثف، اكتسبت خبرة عملية في مجموعة من الموضوعات، تشمل:\n\n- برمجة لغة C (42 ساعة).\n- مفاهيم الأنظمة المدمجة.\n- التعامل مع المتحكمات الدقيقة (60 ساعة).\n- بروتوكولات الاتصال.\n- تقنيات شبكات الاتصال المستخدمة في السيارات.\n- أنظمة التشغيل في الزمن الحقيقي (RTOS).\n- اختبار الأنظمة المدمجة.\n- تطوير المشروعات ومناقشتها.\n\nساهمت هذه التجربة في تعزيز مهاراتي في تصميم الأنظمة المدمجة واختبارها والتعامل مع المتحكمات الدقيقة وتطبيقات الزمن الحقيقي، مما يدعم مساري الهندسي في مجالي الروبوتات والأنظمة المدمجة."
     },
     "topics": [
       {
         "title": {
-          "en": "1. C Programming",
-          "ar": "1. لغة البرمجة C"
+          "en": "1. C Programming — 42 Hours",
+          "ar": "1. برمجة لغة C (42 ساعة)"
         },
         "points": {
           "en": [
-            "C programming fundamentals.",
-            "Pointers.",
-            "Dynamic memory allocation.",
-            "User-defined data types.",
-            "Preprocessor directives."
+            "C programming fundamentals and syntax.",
+            "Pointers and dynamic memory management.",
+            "User-defined data types and preprocessor directives."
           ],
           "ar": [
-            "أساسيات لغة C.",
-            "المؤشرات Pointers.",
-            "إدارة الذاكرة الديناميكية.",
-            "أنواع البيانات المعرفة بواسطة المستخدم.",
-            "توجيهات المعالج المسبق Preprocessor Directives."
+            "أساسيات وقواعد لغة C.",
+            "المؤشرات وإدارة الذاكرة الديناميكية.",
+            "أنواع البيانات المعرفة وتوجيهات المعالج المسبق."
           ]
         }
       },
@@ -66,78 +73,110 @@
         },
         "points": {
           "en": [
-            "Embedded systems architecture.",
-            "Fundamentals and applications."
+            "Embedded systems architecture and hardware-software co-design.",
+            "Core principles and industrial applications."
           ],
           "ar": [
-            "معمارية الأنظمة المدمجة.",
-            "الأساسيات والتطبيقات."
+            "معمارية الأنظمة المدمجة والتصميم المتكامل للعتاد والبرمجيات.",
+            "المبادئ الأساسية والتطبيقات الصناعية."
           ]
         }
       },
       {
         "title": {
-          "en": "3. AVR Microcontroller Interfacing",
-          "ar": "3. التعامل مع متحكمات AVR"
+          "en": "3. Microcontroller Interfacing — 60 Hours",
+          "ar": "3. التعامل مع المتحكمات الدقيقة (60 ساعة)"
         },
         "points": {
           "en": [
-            "Practical hardware connections.",
-            "Input/Output operations.",
-            "Peripheral control."
+            "Hardware interfacing and GPIO configurations.",
+            "Interrupts, timers, and counter mechanisms.",
+            "Peripheral driver development."
           ],
           "ar": [
-            "التوصيلات العملية للمكونات الإلكترونية.",
-            "منافذ الإدخال والإخراج.",
-            "التحكم في الوحدات الطرفية."
+            "التوصيل المادي وضبط منافذ GPIO.",
+            "آليات المقاطعات والمؤقتات والعدادات.",
+            "تطوير مشغلات الوحدات الطرفية."
           ]
         }
       },
       {
         "title": {
-          "en": "4. Automotive Communication Protocols",
-          "ar": "4. بروتوكولات الاتصال في السيارات"
+          "en": "4. Communication Protocols",
+          "ar": "4. بروتوكولات الاتصال"
         },
         "points": {
           "en": [
-            "CAN fundamentals.",
-            "LIN fundamentals."
+            "Synchronous and asynchronous communication.",
+            "Standard interfaces: UART, SPI, and I2C."
           ],
           "ar": [
-            "أساسيات CAN.",
-            "أساسيات LIN."
+            "الاتصال المتزامن وغير المتزامن.",
+            "الواجهات القياسية: UART و SPI و I2C."
           ]
         }
       },
       {
         "title": {
-          "en": "5. Testing & Debugging",
-          "ar": "5. الاختبار وتصحيح الأخطاء"
+          "en": "5. Automotive Bus Technology",
+          "ar": "5. تقنيات شبكات الاتصال المستخدمة في السيارات"
         },
         "points": {
           "en": [
-            "Using industry-standard tools for embedded systems testing and debugging."
+            "Controller Area Network (CAN bus) fundamentals and frame structure.",
+            "Local Interconnect Network (LIN) bus principles."
           ],
           "ar": [
-            "استخدام أدوات متخصصة لاختبار وتصحيح أخطاء الأنظمة المدمجة."
+            "أساسيات شبكات CAN وهيكل حزم البيانات.",
+            "مبادئ شبكات LIN."
           ]
         }
       },
       {
         "title": {
-          "en": "6. RTOS – Real-Time Operating Systems",
-          "ar": "6. أنظمة التشغيل ذات الزمن الحقيقي RTOS"
+          "en": "6. Real-Time Operating Systems (RTOS)",
+          "ar": "6. أنظمة التشغيل في الزمن الحقيقي (RTOS)"
         },
         "points": {
           "en": [
-            "RTOS concepts.",
-            "Scheduling.",
-            "Applications."
+            "RTOS concepts, kernel architecture, and task scheduling.",
+            "Inter-task communication and synchronization mechanisms."
           ],
           "ar": [
-            "المفاهيم الأساسية.",
-            "جدولة المهام Scheduling.",
-            "التطبيقات العملية."
+            "مفاهيم RTOS ومعمارية النواة وجدولة المهام.",
+            "آليات الاتصال والتزامن بين المهام."
+          ]
+        }
+      },
+      {
+        "title": {
+          "en": "7. Embedded Systems Testing",
+          "ar": "7. اختبار الأنظمة المدمجة"
+        },
+        "points": {
+          "en": [
+            "Testing methodologies for embedded software.",
+            "Hardware-in-the-loop debugging and verification."
+          ],
+          "ar": [
+            "منهجيات اختبار برمجيات الأنظمة المدمجة.",
+            "تصحيح الأخطاء والتحقق العملي من تكامل النظام."
+          ]
+        }
+      },
+      {
+        "title": {
+          "en": "8. Project Development & Defense",
+          "ar": "8. تطوير المشروعات ومناقشتها"
+        },
+        "points": {
+          "en": [
+            "End-to-end embedded project implementation.",
+            "Technical presentation, evaluation, and defense."
+          ],
+          "ar": [
+            "تنفيذ مشروع متكامل في الأنظمة المدمجة.",
+            "العرض التقديمي والمناقشة والتقييم الفني."
           ]
         }
       }

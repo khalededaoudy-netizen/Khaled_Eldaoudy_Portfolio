@@ -1703,7 +1703,7 @@ img {
 
 .training-gallery-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.25rem;
   margin: 0.5rem 0;
 }

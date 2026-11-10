@@ -104,6 +104,47 @@
     "image": "assets/certificates/obourland-a3-speed-certificate.jpg"
   },
   {
+    "id": "cert-iti-embedded-2025",
+    "title": {
+      "en": "Embedded Systems Program – ITI (2025)",
+      "ar": "برنامج الأنظمة المدمجة – ITI (2025)"
+    },
+    "issuer": {
+      "en": "Information Technology Institute (ITI)",
+      "ar": "معهد تكنولوجيا المعلومات (ITI)"
+    },
+    "type": {
+      "en": "Technical Training Program",
+      "ar": "برنامج تدريب تقني"
+    },
+    "category": {
+      "en": "Embedded Systems & Programming",
+      "ar": "الأنظمة المدمجة والبرمجة"
+    },
+    "status": {
+      "en": "Successfully Completed",
+      "ar": "أُتم بنجاح"
+    },
+    "duration": {
+      "en": "162 Hours",
+      "ar": "162 ساعة تدريبية"
+    },
+    "training_id": "train-iti-embedded",
+    "date": "1 July – 15 August 2025",
+    "description": {
+      "en": "Official Certificate of Completion awarded by the Information Technology Institute (ITI) for successfully completing the 162-hour Embedded Systems Program.\n\nCovered C Programming (42 hours), Embedded Systems Concepts, Microcontroller Interfacing (60 hours), Communication Protocols, Automotive Bus Technology, RTOS, Embedded Systems Testing, and Project Development & Defense.",
+      "ar": "شهادة إتمام رسمية معتمدة من معهد تكنولوجيا المعلومات (ITI) لاجتياز برنامج الأنظمة المدمجة بإجمالي 162 ساعة تدريبية.\n\nشمل البرنامج برمجة C (42 ساعة)، مفاهيم الأنظمة المدمجة، التعامل مع المتحكمات الدقيقة (60 ساعة)، بروتوكولات الاتصال، شبكات السيارات، أنظمة التشغيل في الزمن الحقيقي، واختبار الأنظمة وتطوير المشروعات."
+    },
+    "skills": [
+      "Embedded Systems",
+      "C Programming",
+      "Microcontroller Interfacing",
+      "RTOS",
+      "Automotive Bus Technology"
+    ],
+    "image": "assets/certificates/iti-embedded-systems-certificate-2025.jpg"
+  },
+  {
     "id": "cert-robosoccer-team-2025",
     "title": {
       "en": "RoboSoccer Competition – Second Place – Team ZNUS",
